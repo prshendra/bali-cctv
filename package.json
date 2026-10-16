@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node scripts/serve.mjs",
     "test": "node --test",
-    "sync": "node scripts/sync-cameras.mjs"
+    "sync": "node scripts/sync-cameras.mjs",
+    "sync:spbu": "node scripts/sync-fuel.mjs"
   },
   "engines": { "node": ">=20" }
 }

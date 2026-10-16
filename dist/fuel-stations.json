@@ -1,0 +1,823 @@
+{
+  "source": "OpenStreetMap contributors",
+  "sourceUrl": "https://www.openstreetmap.org/copyright",
+  "updatedAt": "2026-10-16T06:04:11.614Z",
+  "bounds": [
+    -8.750615000000002,
+    115.130975,
+    -8.5611,
+    115.319318
+  ],
+  "stations": [
+    {
+      "id": "node/10997051997",
+      "name": "SPBU Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Raya Kerobokan, Kerobokan Kelod, North Kuta, Bali",
+      "latitude": -8.6736455,
+      "longitude": 115.1778051,
+      "osmUrl": "https://www.openstreetmap.org/node/10997051997"
+    },
+    {
+      "id": "node/11002446836",
+      "name": "Pertamina SPBU",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.6245512,
+      "longitude": 115.208976,
+      "osmUrl": "https://www.openstreetmap.org/node/11002446836"
+    },
+    {
+      "id": "node/11002446837",
+      "name": "SPBU Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.5624985,
+      "longitude": 115.2204386,
+      "osmUrl": "https://www.openstreetmap.org/node/11002446837"
+    },
+    {
+      "id": "node/11002450532",
+      "name": "SPBU Darmasaba",
+      "brand": "Pertamina",
+      "address": "Darmasaba",
+      "latitude": -8.589582,
+      "longitude": 115.2157029,
+      "osmUrl": "https://www.openstreetmap.org/node/11002450532"
+    },
+    {
+      "id": "node/11707649769",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.7109197,
+      "longitude": 115.2335044,
+      "osmUrl": "https://www.openstreetmap.org/node/11707649769"
+    },
+    {
+      "id": "node/12661989424",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6504538,
+      "longitude": 115.2090517,
+      "osmUrl": "https://www.openstreetmap.org/node/12661989424"
+    },
+    {
+      "id": "node/1292872676",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.7208505,
+      "longitude": 115.1801911,
+      "osmUrl": "https://www.openstreetmap.org/node/1292872676"
+    },
+    {
+      "id": "node/14060362657",
+      "name": "Pertamini",
+      "brand": "",
+      "address": "",
+      "latitude": -8.7066005,
+      "longitude": 115.2531206,
+      "osmUrl": "https://www.openstreetmap.org/node/14060362657"
+    },
+    {
+      "id": "node/1502919830",
+      "name": "Pertamina Gas Station 54.803.20",
+      "brand": "Pertamina",
+      "address": "Jalan Dewi Sri, Legian, Kuta, Kabupaten Badung, Bali, Indonesia",
+      "latitude": -8.7026066,
+      "longitude": 115.1757054,
+      "osmUrl": "https://www.openstreetmap.org/node/1502919830"
+    },
+    {
+      "id": "node/1534960000",
+      "name": "Pertamina",
+      "brand": "Independent",
+      "address": "Jalan Bypass Ngurah Rai, Denpasar",
+      "latitude": -8.6723394,
+      "longitude": 115.2588015,
+      "osmUrl": "https://www.openstreetmap.org/node/1534960000"
+    },
+    {
+      "id": "node/1675080290",
+      "name": "SPBU Pertamina 54.801.32",
+      "brand": "Pertamina",
+      "address": "Jalan Gunung Soputan 29, Denpasar",
+      "latitude": -8.687005,
+      "longitude": 115.1867265,
+      "osmUrl": "https://www.openstreetmap.org/node/1675080290"
+    },
+    {
+      "id": "node/1963415557",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6308861,
+      "longitude": 115.132762,
+      "osmUrl": "https://www.openstreetmap.org/node/1963415557"
+    },
+    {
+      "id": "node/1963471597",
+      "name": "SPBU (OSM node/1963471597)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6023075,
+      "longitude": 115.2608468,
+      "osmUrl": "https://www.openstreetmap.org/node/1963471597"
+    },
+    {
+      "id": "node/1963471634",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Jalan Bypass Ngurah Rai, Denpasar",
+      "latitude": -8.6516352,
+      "longitude": 115.2541822,
+      "osmUrl": "https://www.openstreetmap.org/node/1963471634"
+    },
+    {
+      "id": "node/2272949196",
+      "name": "SPBU (OSM node/2272949196)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6241762,
+      "longitude": 115.2571205,
+      "osmUrl": "https://www.openstreetmap.org/node/2272949196"
+    },
+    {
+      "id": "node/2276389503",
+      "name": "Pom Bensin",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.6294555,
+      "longitude": 115.1729756,
+      "osmUrl": "https://www.openstreetmap.org/node/2276389503"
+    },
+    {
+      "id": "node/2279234528",
+      "name": "Pompa Bensin",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.6490072,
+      "longitude": 115.1863788,
+      "osmUrl": "https://www.openstreetmap.org/node/2279234528"
+    },
+    {
+      "id": "node/2279259061",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Sunset Road, Kuta",
+      "latitude": -8.7151528,
+      "longitude": 115.1863077,
+      "osmUrl": "https://www.openstreetmap.org/node/2279259061"
+    },
+    {
+      "id": "node/2487544914",
+      "name": "SPBU Pertamina 54.803.19",
+      "brand": "Pertamina",
+      "address": "Sunset Road, Seminyak, Benoa, Kuta Selatan, Kabupaten Badung, Bali, Indonesia",
+      "latitude": -8.6890239,
+      "longitude": 115.1717806,
+      "osmUrl": "https://www.openstreetmap.org/node/2487544914"
+    },
+    {
+      "id": "node/2488170415",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6742892,
+      "longitude": 115.2542247,
+      "osmUrl": "https://www.openstreetmap.org/node/2488170415"
+    },
+    {
+      "id": "node/2498046486",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6772839,
+      "longitude": 115.2321022,
+      "osmUrl": "https://www.openstreetmap.org/node/2498046486"
+    },
+    {
+      "id": "node/2498046487",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Raya Puputan, Denpasar",
+      "latitude": -8.6730122,
+      "longitude": 115.2262101,
+      "osmUrl": "https://www.openstreetmap.org/node/2498046487"
+    },
+    {
+      "id": "node/2498046488",
+      "name": "SPBU (OSM node/2498046488)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.67308,
+      "longitude": 115.2401219,
+      "osmUrl": "https://www.openstreetmap.org/node/2498046488"
+    },
+    {
+      "id": "node/2872212679",
+      "name": "Pertamina 54.803.06 Gas Station",
+      "brand": "Pertamina",
+      "address": "Jalan Raya Kerobokan, Kerobokan Kelod, Kuta Utara, Kabupaten Badung, Bali, Indonesia",
+      "latitude": -8.6729773,
+      "longitude": 115.1651785,
+      "osmUrl": "https://www.openstreetmap.org/node/2872212679"
+    },
+    {
+      "id": "node/3175963462",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6668111,
+      "longitude": 115.2315163,
+      "osmUrl": "https://www.openstreetmap.org/node/3175963462"
+    },
+    {
+      "id": "node/3219129615",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.7240617,
+      "longitude": 115.2312805,
+      "osmUrl": "https://www.openstreetmap.org/node/3219129615"
+    },
+    {
+      "id": "node/3292077086",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Kamboja, Denpasar",
+      "latitude": -8.6566631,
+      "longitude": 115.2250801,
+      "osmUrl": "https://www.openstreetmap.org/node/3292077086"
+    },
+    {
+      "id": "node/3646990902",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Jalan Hayam Wuruk, Denpasar",
+      "latitude": -8.6663729,
+      "longitude": 115.2415592,
+      "osmUrl": "https://www.openstreetmap.org/node/3646990902"
+    },
+    {
+      "id": "node/3671677724",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Tukad Pakerisan, Denpasar",
+      "latitude": -8.6862208,
+      "longitude": 115.2263815,
+      "osmUrl": "https://www.openstreetmap.org/node/3671677724"
+    },
+    {
+      "id": "node/3675164637",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Jalan Hayam Wuruk, Denpasar",
+      "latitude": -8.6603673,
+      "longitude": 115.2393983,
+      "osmUrl": "https://www.openstreetmap.org/node/3675164637"
+    },
+    {
+      "id": "node/3718349380",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Raya Sesetan, Denpasar",
+      "latitude": -8.678971,
+      "longitude": 115.2149141,
+      "osmUrl": "https://www.openstreetmap.org/node/3718349380"
+    },
+    {
+      "id": "node/3780445716",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Suwung Batan Kendal, Denpasar",
+      "latitude": -8.7107789,
+      "longitude": 115.2234888,
+      "osmUrl": "https://www.openstreetmap.org/node/3780445716"
+    },
+    {
+      "id": "node/3781991815",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.714504,
+      "longitude": 115.2158046,
+      "osmUrl": "https://www.openstreetmap.org/node/3781991815"
+    },
+    {
+      "id": "node/3784338063",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Gunung Batukaru, Denpasar",
+      "latitude": -8.6597129,
+      "longitude": 115.2031647,
+      "osmUrl": "https://www.openstreetmap.org/node/3784338063"
+    },
+    {
+      "id": "node/3787237309",
+      "name": "SPBU Pertamina 54.801.35",
+      "brand": "Pertamina",
+      "address": "Jalan Bypass Gatot Subroto, Denpasar",
+      "latitude": -8.6382619,
+      "longitude": 115.2089748,
+      "osmUrl": "https://www.openstreetmap.org/node/3787237309"
+    },
+    {
+      "id": "node/3791203569",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Jalan Bypass Gatot Subroto, Denpasar",
+      "latitude": -8.6359432,
+      "longitude": 115.2187343,
+      "osmUrl": "https://www.openstreetmap.org/node/3791203569"
+    },
+    {
+      "id": "node/3828371871",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6359364,
+      "longitude": 115.2377311,
+      "osmUrl": "https://www.openstreetmap.org/node/3828371871"
+    },
+    {
+      "id": "node/3834339466",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6364386,
+      "longitude": 115.2519375,
+      "osmUrl": "https://www.openstreetmap.org/node/3834339466"
+    },
+    {
+      "id": "node/4157284889",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Imam Bonjol, Denpasar",
+      "latitude": -8.675199,
+      "longitude": 115.2023412,
+      "osmUrl": "https://www.openstreetmap.org/node/4157284889"
+    },
+    {
+      "id": "node/4198773706",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.5748859,
+      "longitude": 115.2762409,
+      "osmUrl": "https://www.openstreetmap.org/node/4198773706"
+    },
+    {
+      "id": "node/4198773752",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.5668758,
+      "longitude": 115.2747603,
+      "osmUrl": "https://www.openstreetmap.org/node/4198773752"
+    },
+    {
+      "id": "node/4217406976",
+      "name": "Pertamina Petrol Station",
+      "brand": "Pertamina",
+      "address": "Jalan Imam Bonjol, Denpasar",
+      "latitude": -8.6958654,
+      "longitude": 115.18713,
+      "osmUrl": "https://www.openstreetmap.org/node/4217406976"
+    },
+    {
+      "id": "node/4236778069",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Pura Demak, Denpasar",
+      "latitude": -8.6814158,
+      "longitude": 115.1926231,
+      "osmUrl": "https://www.openstreetmap.org/node/4236778069"
+    },
+    {
+      "id": "node/4249837879",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Jalan Kebo Iwa, Denpasar",
+      "latitude": -8.6364156,
+      "longitude": 115.1853451,
+      "osmUrl": "https://www.openstreetmap.org/node/4249837879"
+    },
+    {
+      "id": "node/4422250828",
+      "name": "SPBU Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.6415338,
+      "longitude": 115.2782915,
+      "osmUrl": "https://www.openstreetmap.org/node/4422250828"
+    },
+    {
+      "id": "node/4426603389",
+      "name": "Pompa bensin",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6060724,
+      "longitude": 115.2360732,
+      "osmUrl": "https://www.openstreetmap.org/node/4426603389"
+    },
+    {
+      "id": "node/4438497483",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Bypass Gatot Subroto, Denpasar",
+      "latitude": -8.6389264,
+      "longitude": 115.2039161,
+      "osmUrl": "https://www.openstreetmap.org/node/4438497483"
+    },
+    {
+      "id": "node/4593501492",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.5655166,
+      "longitude": 115.2880082,
+      "osmUrl": "https://www.openstreetmap.org/node/4593501492"
+    },
+    {
+      "id": "node/4593501496",
+      "name": "Pom bensin blahbatuh",
+      "brand": "",
+      "address": "",
+      "latitude": -8.5662499,
+      "longitude": 115.3049769,
+      "osmUrl": "https://www.openstreetmap.org/node/4593501496"
+    },
+    {
+      "id": "node/4593932704",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.6121569,
+      "longitude": 115.3092889,
+      "osmUrl": "https://www.openstreetmap.org/node/4593932704"
+    },
+    {
+      "id": "node/4593932705",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.635779,
+      "longitude": 115.2872241,
+      "osmUrl": "https://www.openstreetmap.org/node/4593932705"
+    },
+    {
+      "id": "node/4938684923",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Jalan WR Supratman, Denpasar",
+      "latitude": -8.6413927,
+      "longitude": 115.2517962,
+      "osmUrl": "https://www.openstreetmap.org/node/4938684923"
+    },
+    {
+      "id": "node/4959546626",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Pulau Kawe, Denpasar",
+      "latitude": -8.6767582,
+      "longitude": 115.2070972,
+      "osmUrl": "https://www.openstreetmap.org/node/4959546626"
+    },
+    {
+      "id": "node/5015970023",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6372122,
+      "longitude": 115.1769705,
+      "osmUrl": "https://www.openstreetmap.org/node/5015970023"
+    },
+    {
+      "id": "node/5017453423",
+      "name": "SPBU (OSM node/5017453423)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.563332,
+      "longitude": 115.261646,
+      "osmUrl": "https://www.openstreetmap.org/node/5017453423"
+    },
+    {
+      "id": "node/5103311413",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Bypass Gatot Subroto, Denpasar",
+      "latitude": -8.6365252,
+      "longitude": 115.1947454,
+      "osmUrl": "https://www.openstreetmap.org/node/5103311413"
+    },
+    {
+      "id": "node/5104508763",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6705534,
+      "longitude": 115.190962,
+      "osmUrl": "https://www.openstreetmap.org/node/5104508763"
+    },
+    {
+      "id": "node/5126061305",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.7132748,
+      "longitude": 115.2248385,
+      "osmUrl": "https://www.openstreetmap.org/node/5126061305"
+    },
+    {
+      "id": "node/5317781709",
+      "name": "SPBU Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.5941571,
+      "longitude": 115.1867456,
+      "osmUrl": "https://www.openstreetmap.org/node/5317781709"
+    },
+    {
+      "id": "node/5317781710",
+      "name": "SPBU (OSM node/5317781710)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.572125,
+      "longitude": 115.1391495,
+      "osmUrl": "https://www.openstreetmap.org/node/5317781710"
+    },
+    {
+      "id": "node/5441794405",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.7177928,
+      "longitude": 115.2022082,
+      "osmUrl": "https://www.openstreetmap.org/node/5441794405"
+    },
+    {
+      "id": "node/5529682390",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.6953833,
+      "longitude": 115.2590717,
+      "osmUrl": "https://www.openstreetmap.org/node/5529682390"
+    },
+    {
+      "id": "node/5546845704",
+      "name": "SPBU (OSM node/5546845704)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6385964,
+      "longitude": 115.1742066,
+      "osmUrl": "https://www.openstreetmap.org/node/5546845704"
+    },
+    {
+      "id": "node/5575035954",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Teuku Umar Barat, Denpasar",
+      "latitude": -8.6821361,
+      "longitude": 115.1913587,
+      "osmUrl": "https://www.openstreetmap.org/node/5575035954"
+    },
+    {
+      "id": "node/5936396585",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6725055,
+      "longitude": 115.1651379,
+      "osmUrl": "https://www.openstreetmap.org/node/5936396585"
+    },
+    {
+      "id": "node/610371699",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Bypass Ngurah Rai, Denpasar",
+      "latitude": -8.721233,
+      "longitude": 115.1942868,
+      "osmUrl": "https://www.openstreetmap.org/node/610371699"
+    },
+    {
+      "id": "node/610371788",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.7137109,
+      "longitude": 115.2231589,
+      "osmUrl": "https://www.openstreetmap.org/node/610371788"
+    },
+    {
+      "id": "node/6400253085",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6456055,
+      "longitude": 115.1604306,
+      "osmUrl": "https://www.openstreetmap.org/node/6400253085"
+    },
+    {
+      "id": "node/941307526",
+      "name": "SPBU Gas Station Sunset Road 54.803.31",
+      "brand": "Pertamina",
+      "address": "Sunset Road 27, Kuta, Kabupaten Badung, Bali, Indonesia",
+      "latitude": -8.7129491,
+      "longitude": 115.1859091,
+      "osmUrl": "https://www.openstreetmap.org/node/941307526"
+    },
+    {
+      "id": "node/963276323",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.7433555,
+      "longitude": 115.1750055,
+      "osmUrl": "https://www.openstreetmap.org/node/963276323"
+    },
+    {
+      "id": "node/9768297246",
+      "name": "Pom Bensin 54.803.01",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.6121311,
+      "longitude": 115.1924875,
+      "osmUrl": "https://www.openstreetmap.org/node/9768297246"
+    },
+    {
+      "id": "node/9969087618",
+      "name": "SPBU (OSM node/9969087618)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6640732,
+      "longitude": 115.1533538,
+      "osmUrl": "https://www.openstreetmap.org/node/9969087618"
+    },
+    {
+      "id": "way/1089980892",
+      "name": "SPBU (OSM way/1089980892)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6363006,
+      "longitude": 115.1852717,
+      "osmUrl": "https://www.openstreetmap.org/way/1089980892"
+    },
+    {
+      "id": "way/1090641137",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "Jalan Buana Raya 101, Padang Sambian, Denpasar, Bali, Indonesia",
+      "latitude": -8.6671225,
+      "longitude": 115.1877229,
+      "osmUrl": "https://www.openstreetmap.org/way/1090641137"
+    },
+    {
+      "id": "way/1090665871",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.673465,
+      "longitude": 115.1777807,
+      "osmUrl": "https://www.openstreetmap.org/way/1090665871"
+    },
+    {
+      "id": "way/1090920815",
+      "name": "SPBU (OSM way/1090920815)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6488875,
+      "longitude": 115.1861743,
+      "osmUrl": "https://www.openstreetmap.org/way/1090920815"
+    },
+    {
+      "id": "way/1091987493",
+      "name": "SPBU (OSM way/1091987493)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6729367,
+      "longitude": 115.1651577,
+      "osmUrl": "https://www.openstreetmap.org/way/1091987493"
+    },
+    {
+      "id": "way/1093717433",
+      "name": "SPBU (OSM way/1093717433)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6456538,
+      "longitude": 115.1605009,
+      "osmUrl": "https://www.openstreetmap.org/way/1093717433"
+    },
+    {
+      "id": "way/1329030189",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.623218,
+      "longitude": 115.2363679,
+      "osmUrl": "https://www.openstreetmap.org/way/1329030189"
+    },
+    {
+      "id": "way/1547522483",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6189193,
+      "longitude": 115.1831218,
+      "osmUrl": "https://www.openstreetmap.org/way/1547522483"
+    },
+    {
+      "id": "way/1557359089",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6914637,
+      "longitude": 115.227932,
+      "osmUrl": "https://www.openstreetmap.org/way/1557359089"
+    },
+    {
+      "id": "way/374650214",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Jalan Raya Sesetan, Denpasar",
+      "latitude": -8.6996475,
+      "longitude": 115.2194621,
+      "osmUrl": "https://www.openstreetmap.org/way/374650214"
+    },
+    {
+      "id": "way/374650232",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.7091641,
+      "longitude": 115.2210697,
+      "osmUrl": "https://www.openstreetmap.org/way/374650232"
+    },
+    {
+      "id": "way/375347728",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "Jalan H.O.S. Cokroaminoto, Denpasar",
+      "latitude": -8.6447571,
+      "longitude": 115.209575,
+      "osmUrl": "https://www.openstreetmap.org/way/375347728"
+    },
+    {
+      "id": "way/419467852",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.7389783,
+      "longitude": 115.1798409,
+      "osmUrl": "https://www.openstreetmap.org/way/419467852"
+    },
+    {
+      "id": "way/522920168",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6777714,
+      "longitude": 115.2116215,
+      "osmUrl": "https://www.openstreetmap.org/way/522920168"
+    },
+    {
+      "id": "way/577920894",
+      "name": "Gas Station Buluh Indah (54.801.31)",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.643363,
+      "longitude": 115.1962934,
+      "osmUrl": "https://www.openstreetmap.org/way/577920894"
+    },
+    {
+      "id": "way/714724146",
+      "name": "SPBU Pertamina Sunset Road 54.803.34",
+      "brand": "",
+      "address": "Sunset Road, Kuta, Kabupaten Badung, Bali, Indonesia",
+      "latitude": -8.6986899,
+      "longitude": 115.1780504,
+      "osmUrl": "https://www.openstreetmap.org/way/714724146"
+    },
+    {
+      "id": "way/714724147",
+      "name": "SPBU Pertamina Pererenan 54.803.21",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6308846,
+      "longitude": 115.1327634,
+      "osmUrl": "https://www.openstreetmap.org/way/714724147"
+    },
+    {
+      "id": "way/753245598",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6028465,
+      "longitude": 115.1716363,
+      "osmUrl": "https://www.openstreetmap.org/way/753245598"
+    }
+  ]
+}

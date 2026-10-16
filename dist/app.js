@@ -1,7 +1,9 @@
 import { normalizeCatalogue, filterCameras, paginate } from './catalog.js';
+import { normalizeStations, nearbyCameras, nearestStation, validCoordinate } from './geo.js';
+import { createCameraMap, formatDistance, stationDisplayName } from './camera-map.js';
 
 const $ = id => document.getElementById(id);
-const state = { cameras: [], favorites: new Set(), favoritesOnly: false, page: 1, pageSize: 9, players: new Map(), focus: null };
+const state = { cameras: [], stations: [], fuelReady: false, favorites: new Set(), favoritesOnly: false, page: 1, pageSize: 9, players: new Map(), focus: null, map: null };
 try { const stored = JSON.parse(localStorage.getItem('denpasar-favorites') || '[]'); if (Array.isArray(stored)) state.favorites = new Set(stored.filter(x => typeof x === 'string')); } catch {}
 
 function element(tag, className, text) {
@@ -145,33 +147,44 @@ function card(camera) {
   head.append(favorite);
   const title = element('h2', '', camera.name.replace(/^SIMPANG /, ''));
   meta.append(head, title, element('p', 'description', camera.description));
+  const nearest = nearestStation(camera, selectedStations());
+  if (nearest) meta.append(element('span', 'fuel-distance', `${formatDistance(nearest.distanceMeters)} · ${stationDisplayName(nearest.station)}`));
   const controls = element('div', 'card-controls');
   controls.append(element('span', 'status', 'On demand'));
   const actions = element('div', 'card-actions');
   actions.append(button('play-toggle', '▶ Play', `Play ${camera.name}`, () => state.players.has(camera.id) ? stopCard(camera) : playCard(camera)));
   actions.append(button('expand', '⛶', `Expand ${camera.name}`, () => openFocus(camera)));
-  if (Number.isFinite(camera.latitude) && Number.isFinite(camera.longitude)) {
-    const map = element('a', 'map-link', '↗');
-    map.setAttribute('aria-label', `Map location of ${camera.name}`);
-    map.title = 'Open map'; map.target = '_blank'; map.rel = 'noopener noreferrer';
-    map.href = `https://www.openstreetmap.org/?mlat=${camera.latitude}&mlon=${camera.longitude}#map=17/${camera.latitude}/${camera.longitude}`;
-    actions.append(map);
+  if (validCoordinate(camera)) {
+    actions.append(button('map-link map-location-button', '⌖', `Tampilkan ${camera.name} di peta`, () => {
+      if (!state.map) { notify('Peta tidak tersedia. Coba muat ulang halaman.'); return; }
+      setMapVisible(true);
+      $('map-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      state.map.showCamera(camera);
+    }));
   }
   controls.append(actions); meta.append(controls); node.append(media, meta);
   return node;
 }
+function selectedStations() {
+  return $('fuel-filter').value ? state.stations.filter(station => station.id === $('fuel-filter').value) : state.stations;
+}
+function filteredCameras() {
+  let cameras = filterCameras(state.cameras, { query: $('search').value, location: $('location-filter').value, favoritesOnly: state.favoritesOnly, favorites: state.favorites });
+  if ($('near-fuel').checked) cameras = nearbyCameras(cameras, state.stations, { stationId: $('fuel-filter').value, radiusMeters: Number($('fuel-radius').value) }).map(result => result.camera);
+  return cameras;
+}
 function currentPage() {
-  const cameras = filterCameras(state.cameras, { query: $('search').value, location: $('location-filter').value, favoritesOnly: state.favoritesOnly, favorites: state.favorites });
+  const cameras = filteredCameras();
   return { ...paginate(cameras, state.page, state.pageSize), total: cameras.length };
 }
-function render() {
+function render({ fitMap = false } = {}) {
   stopGrid();
   const page = currentPage(); state.page = page.page;
   $('grid').dataset.layout = String(state.pageSize);
   $('grid').replaceChildren(...page.items.map(card));
   $('empty-state').hidden = page.total > 0;
-  $('empty-state').textContent = state.favoritesOnly && !state.favorites.size ? 'Your favorites will appear here. Star a camera to save it.' : 'No cameras match. Try another street or clear the filters.';
-  $('result-summary').textContent = `${page.total} camera${page.total === 1 ? '' : 's'}${state.favoritesOnly ? ' in favorites' : ' in the catalogue'}`;
+  $('empty-state').textContent = state.favoritesOnly && !state.favorites.size ? 'Your favorites will appear here. Star a camera to save it.' : $('near-fuel').checked ? 'Tidak ada CCTV dalam radius dan filter ini. Perbesar radius, pilih SPBU lain, atau hapus pencarian.' : 'No cameras match. Try another street or clear the filters.';
+  $('result-summary').textContent = `${page.total} camera${page.total === 1 ? '' : 's'}${state.favoritesOnly ? ' in favorites' : ' in the catalogue'}${$('near-fuel').checked ? ' · terdekat dari SPBU lebih dulu' : ''}`;
   $('page-label').textContent = `Page ${page.page} of ${page.pages}`;
   $('previous').disabled = page.page <= 1; $('next').disabled = page.page >= page.pages;
   $('play-page').disabled = !page.items.length;
@@ -181,8 +194,16 @@ function render() {
   $('favorites-tab').classList.toggle('is-active', state.favoritesOnly);
   $('favorite-count').textContent = String(state.favorites.size);
   $('grid').setAttribute('aria-busy', 'false');
+  if (state.fuelReady) {
+    const station = state.stations.find(item => item.id === $('fuel-filter').value);
+    $('fuel-summary').textContent = $('near-fuel').checked
+      ? `${page.total} CCTV dalam radius ${formatDistance(Number($('fuel-radius').value))} dari ${station ? stationDisplayName(station) : 'salah satu SPBU'}. Pencarian, lokasi, dan favorit tetap berlaku.`
+      : `${state.stations.length} titik SPBU tersedia. Aktifkan “CCTV dekat SPBU” atau pilih titik SPBU di peta untuk menyaring kamera.`;
+  }
+  state.map?.update(filteredCameras(), state.stations, { selectedStationId: $('fuel-filter').value, nearbyOnly: $('near-fuel').checked, radiusMeters: Number($('fuel-radius').value) });
+  if (fitMap && !$('map-content').hidden) state.map?.fit();
 }
-const resetAndRender = () => { state.page = 1; render(); };
+const resetAndRender = () => { state.page = 1; render({ fitMap: true }); };
 $('search').addEventListener('input', resetAndRender);
 $('location-filter').addEventListener('change', resetAndRender);
 $('layout').addEventListener('change', () => { state.pageSize = Number($('layout').value); resetAndRender(); });
@@ -197,6 +218,18 @@ $('play-page').addEventListener('click', () => {
 $('stop-all').addEventListener('click', () => { stopGrid(); if ($('focus-dialog').open) $('focus-dialog').close(); notify('All streams stopped.'); });
 $('focus-close').addEventListener('click', () => $('focus-dialog').close());
 $('focus-dialog').addEventListener('close', () => { destroyPlayer('focus'); $('focus-media').replaceChildren(); state.focus = null; });
+$('near-fuel').addEventListener('change', resetAndRender);
+$('fuel-filter').addEventListener('change', () => { $('near-fuel').checked = true; resetAndRender(); });
+$('fuel-radius').addEventListener('change', () => { $('near-fuel').checked = true; resetAndRender(); });
+$('fuel-reset').addEventListener('click', () => { $('near-fuel').checked = false; $('fuel-filter').value = ''; $('fuel-radius').value = '500'; resetAndRender(); });
+function setMapVisible(visible) {
+  $('map-content').hidden = !visible;
+  $('map-toggle').textContent = visible ? 'Sembunyikan peta' : 'Tampilkan peta';
+  $('map-toggle').setAttribute('aria-expanded', String(visible));
+  if (visible) state.map?.invalidate();
+}
+$('map-toggle').addEventListener('click', () => setMapVisible($('map-content').hidden));
+$('map-fit').addEventListener('click', () => state.map?.fit());
 window.addEventListener('pagehide', () => { for (const key of [...state.players.keys()]) destroyPlayer(key); });
 document.addEventListener('keydown', event => {
   if (event.key === '/' && !['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName) && !$('focus-dialog').open) { event.preventDefault(); $('search').focus(); }
@@ -205,6 +238,9 @@ function clock() { $('clock').textContent = new Intl.DateTimeFormat('en-GB', { t
 clock(); setInterval(clock, 1000);
 async function init() {
   try {
+    const fuelRequest = fetch('./fuel-stations.json', { cache: 'no-cache', signal: AbortSignal.timeout(10000) })
+      .then(response => { if (!response.ok) throw new Error('SPBU unavailable'); return response.json(); })
+      .then(normalizeStations).catch(() => null);
     const response = await fetch('./cameras.json', { cache: 'no-cache' });
     if (!response.ok) throw new Error('Camera catalogue request failed');
     const data = normalizeCatalogue(await response.json());
@@ -215,7 +251,40 @@ async function init() {
     $('location-count').textContent = String(locations.length);
     for (const location of locations) { const option = element('option', '', location); option.value = location; $('location-filter').append(option); }
     $('catalog-date').textContent = data.updatedAt;
-    render();
+    try {
+      state.map = createCameraMap({
+        onPlayCamera: openFocus,
+        onSelectStation: id => { $('fuel-filter').value = id; $('near-fuel').checked = true; resetAndRender(); },
+        onMapWarning: message => { $('map-status').textContent = message; }
+      });
+    } catch {
+      $('camera-map').classList.add('map-unavailable');
+      $('camera-map').textContent = 'Peta tidak dapat dimuat. Daftar kamera dan filter SPBU tetap tersedia.';
+      $('map-fit').disabled = true;
+    }
+    render({ fitMap: true });
+    const fuel = await fuelRequest;
+    if (fuel?.stations.length) {
+      state.stations = fuel.stations;
+      state.fuelReady = true;
+      const stationOptions = [...fuel.stations].map(station => {
+        const camera = nearestStation(station, state.cameras);
+        const area = station.address || (camera ? `dekat ${camera.station.location}` : `${station.latitude.toFixed(4)}, ${station.longitude.toFixed(4)}`);
+        return { station, label: `${stationDisplayName(station)} — ${area}` };
+      }).sort((a, b) => a.label.localeCompare(b.label));
+      for (const { station, label } of stationOptions) {
+        const duplicateLabel = stationOptions.filter(option => option.label === label).length > 1;
+        const option = element('option', '', `${label}${duplicateLabel ? ` (${station.latitude.toFixed(4)}, ${station.longitude.toFixed(4)})` : ''}`);
+        option.value = station.id; $('fuel-filter').append(option);
+      }
+      for (const id of ['near-fuel', 'fuel-filter', 'fuel-radius', 'fuel-reset']) $(id).disabled = false;
+      const attribution = element('a', '', '© OpenStreetMap contributors');
+      attribution.href = 'https://www.openstreetmap.org/copyright'; attribution.target = '_blank'; attribution.rel = 'noopener noreferrer';
+      $('fuel-attribution').replaceChildren(attribution, document.createTextNode(` · Data SPBU: ${fuel.updatedAt.slice(0, 10)}`));
+      render();
+    } else {
+      $('fuel-summary').textContent = 'Data SPBU tidak tersedia. Peta CCTV tetap bisa digunakan; muat ulang untuk mencoba lagi.';
+    }
   } catch {
     $('empty-state').hidden = false;
     $('empty-state').textContent = 'Unable to load the camera catalogue. Refresh this page to try again.';

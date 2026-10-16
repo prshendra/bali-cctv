@@ -10,7 +10,10 @@
     />
     <title>Denpasar / Live traffic</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./assets/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="./map.css" />
     <script defer src="./assets/hls.min.js"></script>
+    <script defer src="./assets/leaflet/leaflet.js"></script>
     <script type="module" src="./app.js"></script>
   </head>
   <body>
@@ -111,6 +114,33 @@
             <div class="stat-copy"><span class="stat-label">STREAM SOURCE</span><strong>ATCS Denpasar</strong></div>
             <span class="stat-note">public network</span>
           </article>
+        </section>
+
+        <section id="map-section" class="map-section" aria-labelledby="map-title">
+          <div class="section-heading map-heading">
+            <div>
+              <div class="section-overline">JELAJAHI DENPASAR</div>
+              <h2 id="map-title">Peta CCTV &amp; SPBU</h2>
+            </div>
+            <button id="map-toggle" class="button button-stop" type="button" aria-expanded="true" aria-controls="map-content">Sembunyikan peta</button>
+          </div>
+          <div class="fuel-toolbar" aria-label="Filter CCTV dekat SPBU">
+            <label class="near-toggle"><input id="near-fuel" type="checkbox" disabled /> <span>CCTV dekat SPBU</span></label>
+            <label class="fuel-select"><span>SPBU acuan</span><select id="fuel-filter" disabled><option value="">Semua SPBU</option></select></label>
+            <label class="fuel-select radius-select"><span>Radius</span><select id="fuel-radius" disabled><option value="250">250 m</option><option value="500" selected>500 m</option><option value="1000">1 km</option><option value="2000">2 km</option><option value="5000">5 km</option></select></label>
+            <button id="fuel-reset" class="button button-stop" type="button" disabled>Reset filter SPBU</button>
+          </div>
+          <p id="fuel-summary" class="fuel-summary" role="status">Memuat data SPBU…</p>
+          <div id="map-content">
+            <div class="map-topline">
+              <div class="map-legend"><span><i class="legend-camera" aria-hidden="true"></i> CCTV</span><span><i class="legend-fuel" aria-hidden="true"></i> SPBU</span><span id="map-count"></span></div>
+              <button id="map-fit" class="button button-stop" type="button">Sesuaikan peta</button>
+            </div>
+            <div id="camera-map" class="camera-map" role="region" aria-label="Peta interaktif CCTV dan SPBU Denpasar"></div>
+            <p id="map-status" class="map-status" role="status"></p>
+            <div class="map-caption"><span>Klik titik CCTV untuk menonton; klik SPBU untuk mencari kamera di sekitarnya.</span><span id="fuel-attribution">Data SPBU: OpenStreetMap</span></div>
+          </div>
+          <p class="distance-note">Radius memakai jarak garis lurus, bukan jarak jalan. Titik dekat SPBU tidak menjamin arah kamera menghadap SPBU. Data OpenStreetMap mungkin belum lengkap.</p>
         </section>
 
         <section id="camera-panel" class="camera-panel" aria-label="Camera directory">
