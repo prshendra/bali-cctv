@@ -1,0 +1,1482 @@
+{
+  "source": "https://atcs.denpasarkota.go.id/streaming",
+  "cameras": [
+    {
+      "id": "A001GUNUNGAGUNGPTZ",
+      "name": "SIMPANG GUNUNG AGUNG",
+      "location": "GUNUNG AGUNG",
+      "description": "Simpang Wahidin - Gunung Agung",
+      "url": "https://atcs.denpasarkota.go.id/stream/A001GUNUNGAGUNGPTZ/",
+      "latitude": -8.654504,
+      "longitude": 115.208528
+    },
+    {
+      "id": "A002KAPTENSUJANAPTZ",
+      "name": "SIMPANG KAPTEN SUJANA",
+      "location": "KAPTEN SUJANA",
+      "description": "Simpang Buluh indah - Gunung Agung",
+      "url": "https://atcs.denpasarkota.go.id/stream/A002KAPTENSUJANAPTZ/",
+      "latitude": -8.651533,
+      "longitude": 115.195416
+    },
+    {
+      "id": "A003GUNUNGSALAKPTZ",
+      "name": "SIMPANG GUNUNG SALAK",
+      "location": "GUNUNG SALAK",
+      "description": "Simpang Teuku Umar Barat - Gunung Salak",
+      "url": "https://atcs.denpasarkota.go.id/stream/A003GUNUNGSALAKPTZ/",
+      "latitude": -8.673437,
+      "longitude": 115.180975
+    },
+    {
+      "id": "A004TEUKUUMARPTZ1",
+      "name": "SIMPANG TEUKU UMAR 1",
+      "location": "TEUKU UMAR",
+      "description": "Simpang Imam Bonjol -Teuku Umar",
+      "url": "https://atcs.denpasarkota.go.id/stream/A004TEUKUUMARPTZ1/",
+      "latitude": -8.681704,
+      "longitude": 115.197039
+    },
+    {
+      "id": "A004TEUKUUMARPTZ2",
+      "name": "SIMPANG TEUKU UMAR 2",
+      "location": "TEUKU UMAR",
+      "description": "Simpang Imam Bonjol -Teuku Umar",
+      "url": "https://atcs.denpasarkota.go.id/stream/A004TEUKUUMARPTZ2/",
+      "latitude": -8.681704,
+      "longitude": 115.197039
+    },
+    {
+      "id": "A005BATANTAPTZ",
+      "name": "SIMPANG BATANTA",
+      "location": "BATANTA",
+      "description": "Simpang Teuku Umar - Batanta",
+      "url": "https://atcs.denpasarkota.go.id/stream/A005BATANTAPTZ/",
+      "latitude": -8.681066,
+      "longitude": 115.201098
+    },
+    {
+      "id": "A006SOPUTANPTZ",
+      "name": "SIMPANG SOPUTAN",
+      "location": "SOPUTAN",
+      "description": "Simpang Imam Bonjol - Gunung Soputan",
+      "url": "https://atcs.denpasarkota.go.id/stream/A006SOPUTANPTZ/",
+      "latitude": -8.68923,
+      "longitude": 115.191711
+    },
+    {
+      "id": "A008MAHENDRADATTAPTZ",
+      "name": "SIMPANG MAHENDRADATTA",
+      "location": "MAHENDRADATTA",
+      "description": "Simpang Teuku Umar Barat - Western Ring Road",
+      "url": "https://atcs.denpasarkota.go.id/stream/A008MAHENDRADATTAPTZ/",
+      "latitude": -8.681271,
+      "longitude": 115.189278
+    },
+    {
+      "id": "A007BALUNPTZ",
+      "name": "SIMPANG BALUN",
+      "location": "BALUN",
+      "description": "Simpang Cokroaminoto - Maruti",
+      "url": "https://atcs.denpasarkota.go.id/stream/A007BALUNPTZ/",
+      "latitude": -8.644593,
+      "longitude": 115.20929
+    },
+    {
+      "id": "A009PERUMNASPTZ",
+      "name": "SIMPANG PERUMNAS",
+      "location": "PERUMNAS",
+      "description": "Simpang Western Ring Road - Buana Raya",
+      "url": "https://atcs.denpasarkota.go.id/stream/A009PERUMNASPTZ/",
+      "latitude": -8.668488,
+      "longitude": 115.190472
+    },
+    {
+      "id": "A010PERMATAHIJAUPTZ",
+      "name": "SIMPANG PERMATA HIJAU",
+      "location": "PERMATA HIJAU",
+      "description": "Simpang Western Ring Road - Permata Hijau ",
+      "url": "https://atcs.denpasarkota.go.id/stream/A010PERMATAHIJAUPTZ/",
+      "latitude": -8.660082,
+      "longitude": 115.190896
+    },
+    {
+      "id": "A011MERPATIPTZ",
+      "name": "SIMPANG MERPATI",
+      "location": "MERPATI",
+      "description": "Simpang Mahendradatta Utara - Merpati",
+      "url": "https://atcs.denpasarkota.go.id/stream/A011MERPATIPTZ/",
+      "latitude": -8.653811,
+      "longitude": 115.194837
+    },
+    {
+      "id": "A012PULAUSAELUSPTZ",
+      "name": "SIMPANG PULAU SAELUS",
+      "location": "PULAU SAELUS",
+      "description": "Simpang Diponegoro - Pulau Saelus",
+      "url": "https://atcs.denpasarkota.go.id/stream/A012PULAUSAELUSPTZ/",
+      "latitude": -8.684409,
+      "longitude": 115.215794
+    },
+    {
+      "id": "A013SIDAKARYAPTZ",
+      "name": "SIMPANG SIDAKARYA",
+      "location": "SIDAKARYA",
+      "description": "Simpang Diponegoro - Sidakarya",
+      "url": "https://atcs.denpasarkota.go.id/stream/A013SIDAKARYAPTZ/",
+      "latitude": -8.700536,
+      "longitude": 115.219351
+    },
+    {
+      "id": "A014KAPTENJAPAPTZ",
+      "name": "SIMPANG KAPTEN JAPA",
+      "location": "KAPTEN JAPA",
+      "description": "Simpang Hayam Wuruk - Kapten Japa",
+      "url": "https://atcs.denpasarkota.go.id/stream/A014KAPTENJAPAPTZ/",
+      "latitude": -8.65701,
+      "longitude": 115.225096
+    },
+    {
+      "id": "A015MELATIPTZ",
+      "name": "SIMPANG MELATI",
+      "location": "MELATI",
+      "description": "Simpang Hayam Wuruk - Melati",
+      "url": "https://atcs.denpasarkota.go.id/stream/A015MELATIPTZ/",
+      "latitude": -8.656731,
+      "longitude": 115.222208
+    },
+    {
+      "id": "A016YOSSUDARSOPTZ",
+      "name": "SIMPANG YOS SUDARSO",
+      "location": "YOS SUDARSO",
+      "description": "Simpang PB Sudirman - Yos Sudarso",
+      "url": "https://atcs.denpasarkota.go.id/stream/A016YOSSUDARSOPTZ/",
+      "latitude": -8.667677,
+      "longitude": 115.217885
+    },
+    {
+      "id": "A017PUPUTANPTZ",
+      "name": "SIMPANG PUPUTAN",
+      "location": "PUPUTAN",
+      "description": "Simpang PB Sudirman - Raya Puputan",
+      "url": "https://atcs.denpasarkota.go.id/stream/A017PUPUTANPTZ/",
+      "latitude": -8.669779,
+      "longitude": 115.21807
+    },
+    {
+      "id": "A018DEWISARTIKAPTZ",
+      "name": "SIMPANG DEWI SARTIKA",
+      "location": "DEWI SARTIKA",
+      "description": "Simpang Diponegoro - Dewi Sartika",
+      "url": "https://atcs.denpasarkota.go.id/stream/A018DEWISARTIKAPTZ/",
+      "latitude": -8.669495,
+      "longitude": 115.215466
+    },
+    {
+      "id": "A019FEUNUDPTZ",
+      "name": "SIMPANG FE UNUD",
+      "location": "FE UNUD",
+      "description": "Simpang PB Sudirman - Serma Mendra",
+      "url": "https://atcs.denpasarkota.go.id/stream/A019FEUNUDPTZ/",
+      "latitude": -8.673658,
+      "longitude": 115.217913
+    },
+    {
+      "id": "A020WATURENGGONGPTZ",
+      "name": "SIMPANG WATURENGGONG",
+      "location": "WATURENGGONG",
+      "description": "Simpang PB Sudirman - Waturenggong",
+      "url": "https://atcs.denpasarkota.go.id/stream/A020WATURENGGONGPTZ/",
+      "latitude": -8.677048,
+      "longitude": 115.217383
+    },
+    {
+      "id": "A021PULAUBUTONPTZ",
+      "name": "SIMPANG PULAU BUTON",
+      "location": "PULAU BUTON",
+      "description": "Simpang Diponegoro - Pulau Buton",
+      "url": "https://atcs.denpasarkota.go.id/stream/A021PULAUBUTONPTZ/",
+      "latitude": -8.677417,
+      "longitude": 115.215227
+    },
+    {
+      "id": "A021PULAUBUTONPANORAMIC",
+      "name": "SIMPANG PULAU BUTON PANORAMIC",
+      "location": "PULAU BUTON",
+      "description": "Simpang Diponegoro - Pulau Buton",
+      "url": "https://atcs.denpasarkota.go.id/stream/A021PULAUBUTONPANORAMIC/",
+      "latitude": -8.677417,
+      "longitude": 115.215227
+    },
+    {
+      "id": "A022UBUNGPTZ1",
+      "name": "SIMPANG UBUNG 1",
+      "location": "UBUNG",
+      "description": "Simpang Gatot Subroto - Cokroaminoto",
+      "url": "https://atcs.denpasarkota.go.id/stream/A022UBUNGPTZ1/",
+      "latitude": -8.638915,
+      "longitude": 115.207555
+    },
+    {
+      "id": "A022UBUNGPTZ2",
+      "name": "SIMPANG UBUNG 2",
+      "location": "UBUNG",
+      "description": "Simpang Gatot Subroto - Cokroaminoto",
+      "url": "https://atcs.denpasarkota.go.id/stream/A022UBUNGPTZ2/",
+      "latitude": -8.638915,
+      "longitude": 115.207555
+    },
+    {
+      "id": "A023CATURMUKAPTZ",
+      "name": "SIMPANG CATURMUKA",
+      "location": "CATURMUKA",
+      "description": "Simpang Udayana - Surapati",
+      "url": "https://atcs.denpasarkota.go.id/stream/A023CATURMUKAPTZ/",
+      "latitude": -8.655997,
+      "longitude": 115.216935
+    },
+    {
+      "id": "A024ARJUNAPTZ",
+      "name": "SIMPANG ARJUNA",
+      "location": "ARJUNA",
+      "description": "Simpang Gajah Mada - Arjuna",
+      "url": "https://atcs.denpasarkota.go.id/stream/A024ARJUNAPTZ/",
+      "latitude": -8.655727,
+      "longitude": 115.214959
+    },
+    {
+      "id": "A025THAMRINPTZ",
+      "name": "SIMPANG THAMRIN",
+      "location": "THAMRIN",
+      "description": "Simpang Imam Bonjol - Thamrin",
+      "url": "https://atcs.denpasarkota.go.id/stream/A025THAMRINPTZ/",
+      "latitude": -8.658417,
+      "longitude": 115.209792
+    },
+    {
+      "id": "A026PULAUBIAKPTZ",
+      "name": "SIMPANG PULAU BIAK",
+      "location": "PULAU BIAK",
+      "description": "Simpang Imam Bonjol - Pulau Biak",
+      "url": "https://atcs.denpasarkota.go.id/stream/A026PULAUBIAKPTZ/",
+      "latitude": -8.666804,
+      "longitude": 115.206455
+    },
+    {
+      "id": "A027GUNUNGSUBURPTZ",
+      "name": "SIMPANG GUNUNG SUBUR",
+      "location": "GUNUNG SUBUR",
+      "description": "Simpang Imam Bonjol - Gunung Subur",
+      "url": "https://atcs.denpasarkota.go.id/stream/A027GUNUNGSUBURPTZ/",
+      "latitude": -8.669307,
+      "longitude": 115.205273
+    },
+    {
+      "id": "A028PULAUGALANGPTZ",
+      "name": "SIMPANG PULAU GALANG",
+      "location": "PULAU GALANG",
+      "description": "Simpang Imam Bonjol - Pulau Galang",
+      "url": "https://atcs.denpasarkota.go.id/stream/A028PULAUGALANGPTZ/",
+      "latitude": -8.695513,
+      "longitude": 115.187122
+    },
+    {
+      "id": "A029TANGKUBANPERAHUPTZ",
+      "name": "SIMPANG TANGKUBAN PERAHU",
+      "location": "TANGKUBAN PERAHU",
+      "description": "Simpang Teuku Umar Barat - Gunung Lumut",
+      "url": "https://atcs.denpasarkota.go.id/stream/A029TANGKUBANPERAHUPTZ/",
+      "latitude": -8.673392,
+      "longitude": 115.182498
+    },
+    {
+      "id": "A030CARGOPTZ",
+      "name": "SIMPANG CARGO",
+      "location": "CARGO",
+      "description": "Simpang Gatot Subroto - Cargo",
+      "url": "https://atcs.denpasarkota.go.id/stream/A030CARGOPTZ/",
+      "latitude": -8.63684,
+      "longitude": 115.196699
+    },
+    {
+      "id": "A031PIDADAPTZ",
+      "name": "SIMPANG PIDADA",
+      "location": "PIDADA",
+      "description": "Simpang Gatot Subroto - Pidada",
+      "url": "https://atcs.denpasarkota.go.id/stream/A031PIDADAPTZ/",
+      "latitude": -8.638815,
+      "longitude": 115.202483
+    },
+    {
+      "id": "A032AHMADYANIPTZ",
+      "name": "SIMPANG AHMAD YANI",
+      "location": "AHMAD YANI",
+      "description": "Simpang Gatot Subroto - Ahmad Yani",
+      "url": "https://atcs.denpasarkota.go.id/stream/A032AHMADYANIPTZ/",
+      "latitude": -8.637791,
+      "longitude": 115.210857
+    },
+    {
+      "id": "A033NANGKAPTZ1",
+      "name": "SIMPANG NANGKA 1",
+      "location": "NANGKA",
+      "description": "Simpang Gatot Subroto - Nangka",
+      "url": "https://atcs.denpasarkota.go.id/stream/A033NANGKAPTZ1/",
+      "latitude": -8.635554,
+      "longitude": 115.22301
+    },
+    {
+      "id": "A033NANGKAPTZ2",
+      "name": "SIMPANG NANGKA 2",
+      "location": "NANGKA",
+      "description": "Simpang Gatot Subroto - Nangka",
+      "url": "https://atcs.denpasarkota.go.id/stream/A033NANGKAPTZ2/",
+      "latitude": -8.635554,
+      "longitude": 115.22301
+    },
+    {
+      "id": "A034KENYERIPTZ",
+      "name": "SIMPANG KENYERI",
+      "location": "KENYERI",
+      "description": "Simpang Gatot Subroto - Kenyeri",
+      "url": "https://atcs.denpasarkota.go.id/stream/A034KENYERIPTZ/",
+      "latitude": -8.635617,
+      "longitude": 115.229601
+    },
+    {
+      "id": "A035NOJAPTZ",
+      "name": "SIMPANG NOJA",
+      "location": "NOJA",
+      "description": "Simpang Gatot Subroto - Noja",
+      "url": "https://atcs.denpasarkota.go.id/stream/A035NOJAPTZ/",
+      "latitude": -8.635957,
+      "longitude": 115.235335
+    },
+    {
+      "id": "A036TRENGGULIPTZ",
+      "name": "SIMPANG TRENGGULI",
+      "location": "TRENGGULI",
+      "description": "Simpang Gatot Subroto - Trenggana",
+      "url": "https://atcs.denpasarkota.go.id/stream/A036TRENGGULIPTZ/",
+      "latitude": -8.635862,
+      "longitude": 115.241562
+    },
+    {
+      "id": "A037KENAROKPTZ",
+      "name": "SIMPANG KEN AROK",
+      "location": "KEN AROK",
+      "description": "Simpang Ahmad Yani - Ken Arok",
+      "url": "https://atcs.denpasarkota.go.id/stream/A037KENAROKPTZ/",
+      "latitude": -8.628757,
+      "longitude": 115.208686
+    },
+    {
+      "id": "A038TOHPATIPTZ",
+      "name": "SIMPANG TOHPATI",
+      "location": "TOHPATI",
+      "description": "Simpang Gatot Subroto - WR Supratman",
+      "url": "https://atcs.denpasarkota.go.id/stream/A038TOHPATIPTZ/",
+      "latitude": -8.639083,
+      "longitude": 115.253783
+    },
+    {
+      "id": "A039KEBOIWAPTZ",
+      "name": "SIMPANG KEBO IWA",
+      "location": "KEBO IWA",
+      "description": "Simpang Gatot Subroto - Kebo Iwa",
+      "url": "https://atcs.denpasarkota.go.id/stream/A039KEBOIWAPTZ/",
+      "latitude": -8.63667,
+      "longitude": 115.185144
+    },
+    {
+      "id": "A040SEKARSARIPTZ",
+      "name": "SIMPANG SEKARSARI",
+      "location": "SEKARSARI",
+      "description": "Simpang IB Mantra - Sekarsari ",
+      "url": "https://atcs.denpasarkota.go.id/stream/A040SEKARSARIPTZ/",
+      "latitude": -8.649191,
+      "longitude": 115.262936
+    },
+    {
+      "id": "A041GEMITIRPTZ",
+      "name": "SIMPANG GEMITIR",
+      "location": "GEMITIR",
+      "description": "Simpang IB Mantra - Gemitir",
+      "url": "https://atcs.denpasarkota.go.id/stream/A041GEMITIRPTZ/",
+      "latitude": -8.648386,
+      "longitude": 115.269318
+    },
+    {
+      "id": "A042SEDAPMALAMPTZ",
+      "name": "SIMPANG SEDAP MALAM",
+      "location": "SEDAP MALAM",
+      "description": "Simpang Hang Tuah - Sedap Malam",
+      "url": "https://atcs.denpasarkota.go.id/stream/A042SEDAPMALAMPTZ/",
+      "latitude": -8.67415,
+      "longitude": 115.252166
+    },
+    {
+      "id": "A043GUNUNGGALUNGGUNGPTZ",
+      "name": "SIMPANG GUNUNG GALUNGGUNG",
+      "location": "GUNUNG GALUNGGUNG",
+      "description": "Simpang Cokroaminoto - Gunung Galunggung",
+      "url": "https://atcs.denpasarkota.go.id/stream/A043GUNUNGGALUNGGUNGPTZ/",
+      "latitude": -8.617052,
+      "longitude": 115.194985
+    },
+    {
+      "id": "A044WARIBANGPTZ",
+      "name": "SIMPANG WARIBANG",
+      "location": "WARIBANG",
+      "description": "Simpang WR Supratman - Waribang",
+      "url": "https://atcs.denpasarkota.go.id/stream/A044WARIBANGPTZ/",
+      "latitude": -8.646279,
+      "longitude": 115.245138
+    },
+    {
+      "id": "A045SURABIPTZ",
+      "name": "SIMPANG SURABI",
+      "location": "SURABI",
+      "description": "Simpang WR Supratman - Surabi",
+      "url": "https://atcs.denpasarkota.go.id/stream/A045SURABIPTZ/",
+      "latitude": -8.64813,
+      "longitude": 115.23987
+    },
+    {
+      "id": "A046SUBITAPTZ",
+      "name": "SIMPANG SUBITA",
+      "location": "SUBITA",
+      "description": "Simpang WR Supratman - Subita",
+      "url": "https://atcs.denpasarkota.go.id/stream/A046SUBITAPTZ/",
+      "latitude": -8.648683,
+      "longitude": 115.23358
+    },
+    {
+      "id": "A047KECUBUNGPTZ",
+      "name": "SIMPANG KECUBUNG",
+      "location": "KECUBUNG",
+      "description": "Simpang WR Supratman - Kecubung",
+      "url": "https://atcs.denpasarkota.go.id/stream/A047KECUBUNGPTZ/",
+      "latitude": -8.648971,
+      "longitude": 115.229862
+    },
+    {
+      "id": "A048NUSAINDAHPTZ",
+      "name": "SIMPANG NUSA INDAH",
+      "location": "NUSA INDAH",
+      "description": "Simpang Hayam Wuruk - Nusa Indah",
+      "url": "https://atcs.denpasarkota.go.id/stream/A048NUSAINDAHPTZ/",
+      "latitude": -8.657105,
+      "longitude": 115.235051
+    },
+    {
+      "id": "A049TUKADUNDAPTZ",
+      "name": "SIMPANG TUKAD UNDA",
+      "location": "TUKAD UNDA",
+      "description": "Simpang Raya Puputan - Tukad Unda",
+      "url": "https://atcs.denpasarkota.go.id/stream/A049TUKADUNDAPTZ/",
+      "latitude": -8.673085,
+      "longitude": 115.232181
+    },
+    {
+      "id": "A113TUKADBARITOPTZ",
+      "name": "SIMPANG TUKAD BARITO",
+      "location": "TUKAD BARITO",
+      "description": "Simpang Tukad Barito - Tukad Batanghari",
+      "url": "https://atcs.denpasarkota.go.id/stream/A113TUKADBARITOPTZ/",
+      "latitude": -8.684425,
+      "longitude": 115.230308
+    },
+    {
+      "id": "A113TUKADBARITOPANORAMIC",
+      "name": "SIMPANG TUKAD BARITO PANORAMIC",
+      "location": "TUKAD BARITO",
+      "description": "Simpang Tukad Barito - Tukad Batanghari",
+      "url": "https://atcs.denpasarkota.go.id/stream/A113TUKADBARITOPANORAMIC/",
+      "latitude": -8.684425,
+      "longitude": 115.230308
+    },
+    {
+      "id": "A114SURADIPAPTZ",
+      "name": "SIMPANG SURADIPA",
+      "location": "SURADIPA",
+      "description": "Simpang Ahmad Yani Utara - Suradipa",
+      "url": "https://atcs.denpasarkota.go.id/stream/A114SURADIPAPTZ/",
+      "latitude": -8.612413,
+      "longitude": 115.213186
+    },
+    {
+      "id": "A114SURADIPAPANORAMIC",
+      "name": "SIMPANG SURADIPA PANORAMIC",
+      "location": "SURADIPA",
+      "description": "Simpang Ahmad Yani Utara - Suradipa",
+      "url": "https://atcs.denpasarkota.go.id/stream/A114SURADIPAPANORAMIC/",
+      "latitude": -8.612413,
+      "longitude": 115.213186
+    },
+    {
+      "id": "A115ANTASURAPTZ",
+      "name": "SIMPANG ANTASURA",
+      "location": "ANTASURA",
+      "description": "Simpang Antasura - Astasura",
+      "url": "https://atcs.denpasarkota.go.id/stream/A115ANTASURAPTZ/",
+      "latitude": -8.6111,
+      "longitude": 115.22136
+    },
+    {
+      "id": "A115ANTASURAPANORAMIC",
+      "name": "SIMPANG ANTASURA PANORAMIC",
+      "location": "ANTASURA",
+      "description": "Simpang Antasura - Astasura",
+      "url": "https://atcs.denpasarkota.go.id/stream/A115ANTASURAPANORAMIC/",
+      "latitude": -8.6111,
+      "longitude": 115.22136
+    },
+    {
+      "id": "A116PEMOGANPTZ",
+      "name": "SIMPANG PEMOGAN",
+      "location": "PEMOGAN",
+      "description": "Simpang Pemogan - Pulau Galang",
+      "url": "https://atcs.denpasarkota.go.id/stream/A116PEMOGANPTZ/",
+      "latitude": -8.694226,
+      "longitude": 115.197449
+    },
+    {
+      "id": "A116PEMOGANPANORAMIC",
+      "name": "SIMPANG PEMOGAN PANORAMIC",
+      "location": "PEMOGAN",
+      "description": "Simpang Pemogan - Pulau Galang",
+      "url": "https://atcs.denpasarkota.go.id/stream/A116PEMOGANPANORAMIC/",
+      "latitude": -8.694226,
+      "longitude": 115.197449
+    },
+    {
+      "id": "A117GUNUNGSANGHYANGPTZ",
+      "name": "SIMPANG GUNUNG SANGHYANG",
+      "location": "GUNUNG SANGHYANG",
+      "description": "Simpang Gunung Agung - Gunung Tangkuban Perahu",
+      "url": "https://atcs.denpasarkota.go.id/stream/A117GUNUNGSANGHYANGPTZ/",
+      "latitude": -8.650745,
+      "longitude": 115.186492
+    },
+    {
+      "id": "A117GUNUNGSANGHYANGPANORAMIC",
+      "name": "SIMPANG GUNUNG SANGHYANG PANORAMIC",
+      "location": "GUNUNG SANGHYANG",
+      "description": "Simpang Gunung Agung - Gunung Tangkuban Perahu",
+      "url": "https://atcs.denpasarkota.go.id/stream/A117GUNUNGSANGHYANGPANORAMIC/",
+      "latitude": -8.650745,
+      "longitude": 115.186492
+    },
+    {
+      "id": "A052KAPTENAGUNGPTZ",
+      "name": "SIMPANG KAPTEN AGUNG",
+      "location": "KAPTEN AGUNG",
+      "description": "Simpang Surapati - Kapten Agung",
+      "url": "https://atcs.denpasarkota.go.id/stream/A052KAPTENAGUNGPTZ/",
+      "latitude": -8.656452,
+      "longitude": 115.220013
+    },
+    {
+      "id": "A053SIMPANG6TEUKUUMARPTZ",
+      "name": "SIMPANG 6 TEUKU UMAR",
+      "location": "SIMPANG 6 TEUKU UMAR",
+      "description": "Simpang 6 Teuku Umar",
+      "url": "https://atcs.denpasarkota.go.id/stream/A053SIMPANG6TEUKUUMARPTZ/",
+      "latitude": -8.676351,
+      "longitude": 115.206754
+    },
+    {
+      "id": "A053SIMPANG6TEUKUUMARPANORAMIC",
+      "name": "SIMPANG 6 TEUKU UMAR PANORAMIC",
+      "location": "SIMPANG 6 TEUKU UMAR",
+      "description": "Simpang 6 Teuku Umar",
+      "url": "https://atcs.denpasarkota.go.id/stream/A053SIMPANG6TEUKUUMARPANORAMIC/",
+      "latitude": -8.676351,
+      "longitude": 115.206754
+    },
+    {
+      "id": "A054GAJAHMADATIMURPTZ",
+      "name": "SIMPANG GAJAH MADA BARAT",
+      "location": "GAJAH MADA BARAT",
+      "description": "Simpang Wahidin - Gajah Mada",
+      "url": "https://atcs.denpasarkota.go.id/stream/A054GAJAHMADATIMURPTZ/",
+      "latitude": -8.655006,
+      "longitude": 115.210509
+    },
+    {
+      "id": "A103GAJAHBADABARATPANORAMIC",
+      "name": "GAJAH MADA BARAT PANORAMIC",
+      "location": "GAJAH MADA BARAT",
+      "description": "Simpang Wahidin - Gajah Mada",
+      "url": "https://atcs.denpasarkota.go.id/stream/A103GAJAHBADABARATPANORAMIC/",
+      "latitude": -8.655006,
+      "longitude": 115.210509
+    },
+    {
+      "id": "A063PANTAIMATAHARITERBITPTZ",
+      "name": "PELABUHAN SANUR 1",
+      "location": "PELABUHAN SANUR",
+      "description": "Pelabuhan Matahari Terbit",
+      "url": "https://atcs.denpasarkota.go.id/stream/A063PANTAIMATAHARITERBITPTZ/",
+      "latitude": -8.67106,
+      "longitude": 115.261123
+    },
+    {
+      "id": "A064PANTAIMATAHARITERBITPTZ2",
+      "name": "PELABUHAN SANUR 2",
+      "location": "PELABUHAN SANUR",
+      "description": "Pelabuhan Matahari Terbit",
+      "url": "https://atcs.denpasarkota.go.id/stream/A064PANTAIMATAHARITERBITPTZ2/",
+      "latitude": -8.67106,
+      "longitude": 115.261123
+    },
+    {
+      "id": "A065UDAYANAPTZ",
+      "name": "RUAS JALAN UDAYANA",
+      "location": "JALAN UDAYANA",
+      "description": "Jalan Udayana ",
+      "url": "https://atcs.denpasarkota.go.id/stream/A065UDAYANAPTZ/",
+      "latitude": -8.657155,
+      "longitude": 115.216821
+    },
+    {
+      "id": "A066PUPUTANPTZ",
+      "name": "RUAS JALAN RAYA PUPUTAN",
+      "location": "RAYA PUPUTAN - BAJRA SANDHI",
+      "description": "Jalan Raya Puputan",
+      "url": "https://atcs.denpasarkota.go.id/stream/A066PUPUTANPTZ/",
+      "latitude": -8.673208,
+      "longitude": 115.234403
+    },
+    {
+      "id": "A067NANGKAUTARAPTZ",
+      "name": "SIMPANG NANGKA UTARA-KEMUDA",
+      "location": "NANGKA - KEMUDA",
+      "description": "Simpang Nangka Utara - Kemuda",
+      "url": "https://atcs.denpasarkota.go.id/stream/A067NANGKAUTARAPTZ/",
+      "latitude": -8.625117,
+      "longitude": 115.223868
+    },
+    {
+      "id": "A068SEROJAPTZ",
+      "name": "SIMPANG SEROJA-KEMUDA",
+      "location": "SEROJA - KEMUDA",
+      "description": "Simpang Kemuda - Seroja",
+      "url": "https://atcs.denpasarkota.go.id/stream/A068SEROJAPTZ/",
+      "latitude": -8.625458,
+      "longitude": 115.226717
+    },
+    {
+      "id": "A069PADMAPTZ",
+      "name": "SIMPANG TRENGGANA-PADMA",
+      "location": "TRENGGULI - PADMA",
+      "description": "Simpang Trenggana - Padma",
+      "url": "https://atcs.denpasarkota.go.id/stream/A069PADMAPTZ/",
+      "latitude": -8.623589,
+      "longitude": 115.241037
+    },
+    {
+      "id": "A070TITIBANDAPTZ",
+      "name": "PATUNG TITI BANDA",
+      "location": "TITI BANDA",
+      "description": "Patung Titi Banda",
+      "url": "https://atcs.denpasarkota.go.id/stream/A070TITIBANDAPTZ/",
+      "latitude": -8.649487,
+      "longitude": 115.255443
+    },
+    {
+      "id": "A071BUNDARANHANGTUAHPTZ",
+      "name": "BUNDARAN HANG TUAH",
+      "location": "BUNDARAN HANG TUAH",
+      "description": "Bundaran Hang Tuah",
+      "url": "https://atcs.denpasarkota.go.id/stream/A071BUNDARANHANGTUAHPTZ/",
+      "latitude": -8.67353,
+      "longitude": 115.244644
+    },
+    {
+      "id": "A072DURIAN-KALIASEMPTZ",
+      "name": "DURIAN - KALIASEM",
+      "location": "DURIAN - KALIASEM",
+      "description": "Simpang Durian - Kaliasem",
+      "url": "https://atcs.denpasarkota.go.id/stream/A072DURIAN-KALIASEMPTZ/",
+      "latitude": -8.654323,
+      "longitude": 115.218775
+    },
+    {
+      "id": "072DURIAN-KALIASEMPANORAMIC",
+      "name": "DURIAN - KALIASEM PANORAMIC",
+      "location": "DURIAN - KALIASEM",
+      "description": "Simpang Durian - Kaliasem",
+      "url": "https://atcs.denpasarkota.go.id/stream/072DURIAN-KALIASEMPANORAMIC/",
+      "latitude": -8.654323,
+      "longitude": 115.218775
+    },
+    {
+      "id": "A073AHMADYANI-MARUTIPTZ",
+      "name": "AHMAD YANI - MARUTI",
+      "location": "AHMAD YANI - MARUTI",
+      "description": "Simpang Ahmad Yani - Maruti",
+      "url": "https://atcs.denpasarkota.go.id/stream/A073AHMADYANI-MARUTIPTZ/",
+      "latitude": -8.64478,
+      "longitude": 115.212768
+    },
+    {
+      "id": "A073AHMADYANI-MARUTIPANORAMIC",
+      "name": "AHMAD YANI - MARUTI PANORAMIC",
+      "location": "AHMAD YANI - MARUTI",
+      "description": "Simpang Ahmad Yani - Maruti",
+      "url": "https://atcs.denpasarkota.go.id/stream/A073AHMADYANI-MARUTIPANORAMIC/",
+      "latitude": -8.64478,
+      "longitude": 115.212768
+    },
+    {
+      "id": "A074AHMADYANI-MULAWARMANPTZ",
+      "name": "AHMAD YANI - MULAWARMAN",
+      "location": "AHMAD YANI - MULAWARMAN",
+      "description": "Simpang Ahmad Yani - Mulawarman",
+      "url": "https://atcs.denpasarkota.go.id/stream/A074AHMADYANI-MULAWARMANPTZ/",
+      "latitude": -8.634948,
+      "longitude": 115.210516
+    },
+    {
+      "id": "A074AHMADYANI-MULAWARMANPANORAMIC",
+      "name": "AHMAD YANI - MULAWARMAN PANORAMIC",
+      "location": "AHMAD YANI - MULAWARMAN",
+      "description": "Simpang Ahmad Yani - Mulawarman",
+      "url": "https://atcs.denpasarkota.go.id/stream/A074AHMADYANI-MULAWARMANPANORAMIC/",
+      "latitude": -8.634948,
+      "longitude": 115.210516
+    },
+    {
+      "id": "A075PASARSATRIAPTZ",
+      "name": "PASAR SATRIA",
+      "location": "PASAR SATRIA",
+      "description": "Ruas Jalan Veteran",
+      "url": "https://atcs.denpasarkota.go.id/stream/A075PASARSATRIAPTZ/",
+      "latitude": -8.650485,
+      "longitude": 115.217447
+    },
+    {
+      "id": "A075PASARSATRIAPANORAMIC",
+      "name": "PASAR SATRIA PANORAMIC",
+      "location": "PASAR SATRIA",
+      "description": "Ruas Jalan Veteran",
+      "url": "https://atcs.denpasarkota.go.id/stream/A075PASARSATRIAPANORAMIC/",
+      "latitude": -8.650485,
+      "longitude": 115.217447
+    },
+    {
+      "id": "A076BANJARTAINSIATPTZ",
+      "name": "BANJAR TAINSIAT",
+      "location": "BANJAR TAINSIAT",
+      "description": "Simpang Nangka Selatan - Pattimura",
+      "url": "https://atcs.denpasarkota.go.id/stream/A076BANJARTAINSIATPTZ/",
+      "latitude": -8.649025,
+      "longitude": 115.217574
+    },
+    {
+      "id": "A076BANJARTAINSIATPANORAMIC",
+      "name": "BANJAR TAINSIAT PANORAMIC",
+      "location": "BANJAR TAINSIAT",
+      "description": "Simpang Nangka Selatan - Pattimura",
+      "url": "https://atcs.denpasarkota.go.id/stream/A076BANJARTAINSIATPANORAMIC/",
+      "latitude": -8.649025,
+      "longitude": 115.217574
+    },
+    {
+      "id": "A077BANJARBALUNPTZ",
+      "name": "BANJAR BALUN",
+      "location": "BANJAR BALUN",
+      "description": "Simpang Setiabudi - Sutomo",
+      "url": "https://atcs.denpasarkota.go.id/stream/A077BANJARBALUNPTZ/",
+      "latitude": -8.647429,
+      "longitude": 115.209338
+    },
+    {
+      "id": "A077BANJARBALUNPANORAMIC",
+      "name": "BANJAR BALUN PANORAMIC",
+      "location": "BANJAR BALUN",
+      "description": "Simpang Setiabudi - Sutomo",
+      "url": "https://atcs.denpasarkota.go.id/stream/A077BANJARBALUNPANORAMIC/",
+      "latitude": -8.647429,
+      "longitude": 115.209338
+    },
+    {
+      "id": "A078WIBISANA-SETIABUDIPTZ",
+      "name": "WIBISANA - SETIABUDI",
+      "location": "WIBISANA - SETIABUDI",
+      "description": "Simpang Setiabudi - Wibisana",
+      "url": "https://atcs.denpasarkota.go.id/stream/A078WIBISANA-SETIABUDIPTZ/",
+      "latitude": -8.650645,
+      "longitude": 115.208828
+    },
+    {
+      "id": "A078WIBISANA-SETIABUDIPANORAMIC",
+      "name": "WIBISANA - SETIABUDI PANORAMIC",
+      "location": "WIBISANA - SETIABUDI",
+      "description": "Simpang Setiabudi - Wibisana",
+      "url": "https://atcs.denpasarkota.go.id/stream/A078WIBISANA-SETIABUDIPANORAMIC/",
+      "latitude": -8.650645,
+      "longitude": 115.208828
+    },
+    {
+      "id": "A079LAPANGPUPUTANUTARAPTZ",
+      "name": "LAPANG PUPUTAN UTARA",
+      "location": "LAPANGAN PUPUTAN UTARA",
+      "description": "Ruas Jalan Surapati",
+      "url": "https://atcs.denpasarkota.go.id/stream/A079LAPANGPUPUTANUTARAPTZ/",
+      "latitude": -8.656091,
+      "longitude": 115.217569
+    },
+    {
+      "id": "A079LAPANGPUPUTANUTARAPANORAMIC",
+      "name": "LAPANG PUPUTAN UTARA PANORAMIC",
+      "location": "LAPANGAN PUPUTAN UTARA",
+      "description": "Ruas Jalan Surapati",
+      "url": "https://atcs.denpasarkota.go.id/stream/A079LAPANGPUPUTANUTARAPANORAMIC/",
+      "latitude": -8.656091,
+      "longitude": 115.217569
+    },
+    {
+      "id": "A080SULI-SARIGADINGPTZ",
+      "name": "SULI - SARI GADING",
+      "location": "SULI - SARI GADING",
+      "description": "Simpang Suli - Sari Gading",
+      "url": "https://atcs.denpasarkota.go.id/stream/A080SULI-SARIGADINGPTZ/",
+      "latitude": -8.636585,
+      "longitude": 115.225267
+    },
+    {
+      "id": "A080SULI-SARIGADINGPANORAMIC",
+      "name": "SULI - SARI GADING PANORAMIC",
+      "location": "SULI - SARI GADING",
+      "description": "Simpang Suli - Sari Gading",
+      "url": "https://atcs.denpasarkota.go.id/stream/A080SULI-SARIGADINGPANORAMIC/",
+      "latitude": -8.636585,
+      "longitude": 115.225267
+    },
+    {
+      "id": "A081BANJARTAMPAKGANGSULPTZ",
+      "name": "BANJAR TAMPAK GANGSUL",
+      "location": "BANJAR TAMPAK GANGSUL",
+      "description": "Simpang Nakula - Werkudara",
+      "url": "https://atcs.denpasarkota.go.id/stream/A081BANJARTAMPAKGANGSULPTZ/",
+      "latitude": -8.651422,
+      "longitude": 115.215655
+    },
+    {
+      "id": "A081BANJARTAMPAKGANGSULPANORAMIC",
+      "name": "BANJAR TAMPAK GANGSUL PANORAMIC",
+      "location": "BANJAR TAMPAK GANGSUL",
+      "description": "Simpang Nakula - Werkudara",
+      "url": "https://atcs.denpasarkota.go.id/stream/A081BANJARTAMPAKGANGSULPANORAMIC/",
+      "latitude": -8.651422,
+      "longitude": 115.215655
+    },
+    {
+      "id": "A082VETERAN-ABIMANYUPTZ",
+      "name": "VETERAN - ABIMANYU",
+      "location": "VETERAN - ABIMANYU",
+      "description": "Simpang Veteran - Abimanyu",
+      "url": "https://atcs.denpasarkota.go.id/stream/A082VETERAN-ABIMANYUPTZ/",
+      "latitude": -8.651511,
+      "longitude": 115.217356
+    },
+    {
+      "id": "A082VETERAN-ABIMANYUPANORAMIC",
+      "name": "VETERAN - ABIMANYU PANORAMIC",
+      "location": "VETERAN - ABIMANYU",
+      "description": "Simpang Veteran - Abimanyu",
+      "url": "https://atcs.denpasarkota.go.id/stream/A082VETERAN-ABIMANYUPANORAMIC/",
+      "latitude": -8.651511,
+      "longitude": 115.217356
+    },
+    {
+      "id": "A083PURADALEMYANGBATUPTZ",
+      "name": "PURA DALEM YANG BATU",
+      "location": "PURA DALEM YANG BATU",
+      "description": "Ruas Jalan Cok Agung Tresna",
+      "url": "https://atcs.denpasarkota.go.id/stream/A083PURADALEMYANGBATUPTZ/",
+      "latitude": -8.666791,
+      "longitude": 115.224992
+    },
+    {
+      "id": "A083PURADALEMYANGBATUPANORAMIC",
+      "name": "PURA DALEM YANG BATU PANORAMIC",
+      "location": "PURA DALEM YANG BATU",
+      "description": "Ruas Jalan Cok Agung Tresna",
+      "url": "https://atcs.denpasarkota.go.id/stream/A083PURADALEMYANGBATUPANORAMIC/",
+      "latitude": -8.666791,
+      "longitude": 115.224992
+    },
+    {
+      "id": "A084POJOKSELATANMUSEUMBALIPTZ",
+      "name": "POJOK SELATAN MUSEUM BALI",
+      "location": "MUSEUM BALI",
+      "description": "Simpang Sugianyar - Mudita",
+      "url": "https://atcs.denpasarkota.go.id/stream/A084POJOKSELATANMUSEUMBALIPTZ/",
+      "latitude": -8.658257,
+      "longitude": 115.218274
+    },
+    {
+      "id": "A084POJOKSELATANMUSEUMBALIPANORAMIC",
+      "name": "POJOK SELATAN MUSEUM BALI PANORAMIC",
+      "location": "MUSEUM BALI",
+      "description": "Simpang Sugianyar - Mudita",
+      "url": "https://atcs.denpasarkota.go.id/stream/A084POJOKSELATANMUSEUMBALIPANORAMIC/",
+      "latitude": -8.658257,
+      "longitude": 115.218274
+    },
+    {
+      "id": "A085POJOKUTARAJAGATNATHAPTZ",
+      "name": "POJOK UTARA JAGATNATHA",
+      "location": "PURA JAGATNATHA",
+      "description": "Simpang Surapati - Kaliasem",
+      "url": "https://atcs.denpasarkota.go.id/stream/A085POJOKUTARAJAGATNATHAPTZ/",
+      "latitude": -8.656148,
+      "longitude": 115.218609
+    },
+    {
+      "id": "A085POJOKUTARAJAGATNATHAPANORAMIC",
+      "name": "POJOK UTARA JAGATNATHA PANORAMIC",
+      "location": "PURA JAGATNATHA",
+      "description": "Simpang Surapati - Kaliasem",
+      "url": "https://atcs.denpasarkota.go.id/stream/A085POJOKUTARAJAGATNATHAPANORAMIC/",
+      "latitude": -8.656148,
+      "longitude": 115.218609
+    },
+    {
+      "id": "A086TRENGGANA-SIULANPTZ",
+      "name": "TRENGGANA - SIULAN",
+      "location": "TRENGGANA - SIULAN",
+      "description": "Simpang Trenggana - Siulan",
+      "url": "https://atcs.denpasarkota.go.id/stream/A086TRENGGANA-SIULANPTZ/",
+      "latitude": -8.617573,
+      "longitude": 115.240702
+    },
+    {
+      "id": "A086TRENGGANA-SIULANPANORAMIC",
+      "name": "TRENGGANA - SIULAN PANORAMIC",
+      "location": "TRENGGANA - SIULAN",
+      "description": "Simpang Trenggana - Siulan",
+      "url": "https://atcs.denpasarkota.go.id/stream/A086TRENGGANA-SIULANPANORAMIC/",
+      "latitude": -8.617573,
+      "longitude": 115.240702
+    },
+    {
+      "id": "A087PASARAGUNGPENINJOANPTZ",
+      "name": "PASAR AGUNG PENINJOAN",
+      "location": "PASAR AGUNG PENINJOAN",
+      "description": "Simpang Padma - Cekomaria",
+      "url": "https://atcs.denpasarkota.go.id/stream/A087PASARAGUNGPENINJOANPTZ/",
+      "latitude": -8.623191,
+      "longitude": 115.230313
+    },
+    {
+      "id": "A087PASARAGUNGPENINJOANPANORAMIC",
+      "name": "PASAR AGUNG PENINJOAN PANORAMIC",
+      "location": "PASAR AGUNG PENINJOAN",
+      "description": "Simpang Padma - Cekomaria",
+      "url": "https://atcs.denpasarkota.go.id/stream/A087PASARAGUNGPENINJOANPANORAMICZ/",
+      "latitude": -8.623191,
+      "longitude": 115.230313
+    },
+    {
+      "id": "A088TERMINALKERENENGPTZ",
+      "name": "TERMINAL KERENENG",
+      "location": "TERMINAL KERENENG",
+      "description": "Simpang Lely - Rampai",
+      "url": "https://atcs.denpasarkota.go.id/stream/A088TERMINALKERENENGPTZ/",
+      "latitude": -8.655851,
+      "longitude": 115.224251
+    },
+    {
+      "id": "A088TERMINALKERENENGPANORAMIC",
+      "name": "TERMINAL KERENENG PANORAMIC",
+      "location": "TERMINAL KERENENG",
+      "description": "Simpang Lely - Rampai",
+      "url": "https://atcs.denpasarkota.go.id/stream/A088TERMINALKERENENGPANORAMIC/",
+      "latitude": -8.655851,
+      "longitude": 115.224251
+    },
+    {
+      "id": "A089RAYAPUPUTAN-LETDATANTULARPTZ",
+      "name": "RAYA PUPUTAN - TANTULAR",
+      "location": "RAYA PUPUTAN - TANTULAR",
+      "description": "Simpang Raya Puputan - Tantular",
+      "url": "https://atcs.denpasarkota.go.id/stream/A089RAYAPUPUTAN-LETDATANTULARPTZ/",
+      "latitude": -8.672975,
+      "longitude": 115.228219
+    },
+    {
+      "id": "A089RAYAPUPUTAN-LETDATANTULARPANORAMIC",
+      "name": "RAYA PUPUTAN - TANTULAR PANORAMIC",
+      "location": "RAYA PUPUTAN - TANTULAR",
+      "description": "Simpang Raya Puputan - Tantular",
+      "url": "https://atcs.denpasarkota.go.id/stream/A089RAYAPUPUTAN-LETDATANTULARPANORAMIC/",
+      "latitude": -8.672975,
+      "longitude": 115.228219
+    },
+    {
+      "id": "A090KAPTENAGUNG-KAPTENREGUGPTZ",
+      "name": "KAPTEN AGUNG - KAPTEN REGUG",
+      "location": "KAPTEN AGUNG - KAPTEN REGUG",
+      "description": "Simpang Kapten Agung - Kapten Regug",
+      "url": "https://atcs.denpasarkota.go.id/stream/A090KAPTENAGUNG-KAPTENREGUGPTZ/",
+      "latitude": -8.658304,
+      "longitude": 115.219882
+    },
+    {
+      "id": "A090KAPTENAGUNG-KAPTENREGUGPANORAMIC",
+      "name": "KAPTEN AGUNG - KAPTEN REGUG PANORAMIC",
+      "location": "KAPTEN AGUNG - KAPTEN REGUG",
+      "description": "Simpang Kapten Agung - Kapten Regug",
+      "url": "https://atcs.denpasarkota.go.id/stream/A090KAPTENAGUNG-KAPTENREGUGPANORAMIC/",
+      "latitude": -8.658304,
+      "longitude": 115.219882
+    },
+    {
+      "id": "A091KAMBOJA-ANGSOKAPTZ",
+      "name": "KAMBOJA - ANGSOKA",
+      "location": "KAMBOJA - ANGSOKA",
+      "description": "Simpang Kamboja - Angsoka",
+      "url": "https://atcs.denpasarkota.go.id/stream/A091KAMBOJA-ANGSOKAPTZ/",
+      "latitude": -8.65211,
+      "longitude": 115.224543
+    },
+    {
+      "id": "A091KAMBOJA-ANGSOKAPANORAMIC",
+      "name": "KAMBOJA - ANGSOKA PANORAMIC",
+      "location": "KAMBOJA - ANGSOKA",
+      "description": "Simpang Kamboja - Angsoka",
+      "url": "https://atcs.denpasarkota.go.id/stream/A091KAMBOJA-ANGSOKAPANORAMIC/",
+      "latitude": -8.65211,
+      "longitude": 115.224543
+    },
+    {
+      "id": "A092KAMBOJA-RIJASAPTZ",
+      "name": "KAMBOJA - RIJASA",
+      "location": "KAMBOJA RIJASA",
+      "description": "Simpang Kamboja - Rijasa",
+      "url": "https://atcs.denpasarkota.go.id/stream/A092KAMBOJA-RIJASAPTZ/",
+      "latitude": -8.656227,
+      "longitude": 115.225563
+    },
+    {
+      "id": "A092KAMBOJA-RIJASAPANORAMIC",
+      "name": "KAMBOJA - RIJASA PANORAMIC",
+      "location": "KAMBOJA RIJASA",
+      "description": "Simpang Kamboja - Rijasa",
+      "url": "https://atcs.denpasarkota.go.id/stream/A092KAMBOJA-RIJASAPANORAMIC/",
+      "latitude": -8.656227,
+      "longitude": 115.225563
+    },
+    {
+      "id": "A093DPRDKOTADENPASARPTZ",
+      "name": "DPRD KOTA DENPASAR",
+      "location": "DPRD KOTA DENPASAR",
+      "description": "Simpang Melati - Cempaka",
+      "url": "https://atcs.denpasarkota.go.id/stream/A093DPRDKOTADENPASARPTZ/",
+      "latitude": -8.655554,
+      "longitude": 115.222527
+    },
+    {
+      "id": "A093DPRDKOTADENPASARPANORAMIC",
+      "name": "DPRD KOTA DENPASAR PANORAMIC",
+      "location": "DPRD KOTA DENPASAR",
+      "description": "Simpang Melati - Cempaka",
+      "url": "https://atcs.denpasarkota.go.id/stream/A093DPRDKOTADENPASARPANORAMIC/",
+      "latitude": -8.655554,
+      "longitude": 115.222527
+    },
+    {
+      "id": "A094KAMBOJA-RAMPAIPTZ",
+      "name": "KAMBOJA - RAMPAI",
+      "location": "KAMBOJA RAMPAI",
+      "description": "Simpang Kamboja - Rampai",
+      "url": "https://atcs.denpasarkota.go.id/stream/A094KAMBOJA-RAMPAIPTZ/",
+      "latitude": -8.654875,
+      "longitude": 115.225309
+    },
+    {
+      "id": "A094KAMBOJA-RAMPAIPANORAMIC",
+      "name": "KAMBOJA - RAMPAI PANORAMIC",
+      "location": "KAMBOJA RAMPAI",
+      "description": "Simpang Kamboja - Rampai",
+      "url": "https://atcs.denpasarkota.go.id/stream/A094KAMBOJA-RAMPAIPANORAMIC/",
+      "latitude": -8.654875,
+      "longitude": 115.225309
+    },
+    {
+      "id": "A095HAYAMWURUK-LELYPTZ",
+      "name": "HAYAM WURUK - LELY",
+      "location": "HAYAM WURUK - LELY",
+      "description": "Simpang Hayam Wuruk - Lely",
+      "url": "https://atcs.denpasarkota.go.id/stream/A095HAYAMWURUK-LELYPTZ/",
+      "latitude": -8.65697,
+      "longitude": 115.224158
+    },
+    {
+      "id": "A095HAYAMWURUK-LELYPANORAMIC",
+      "name": "HAYAM WURUK - LELY PANORAMIC",
+      "location": "HAYAM WURUK - LELY",
+      "description": "Simpang Hayam Wuruk - Lely",
+      "url": "https://atcs.denpasarkota.go.id/stream/A095HAYAMWURUK-LELYPTZPANORAMIC/",
+      "latitude": -8.65697,
+      "longitude": 115.224158
+    },
+    {
+      "id": "A096SIDAKARYA-BEDUGULPTZ",
+      "name": "SIDAKARYA - BEDUGUL",
+      "location": "BEDUGUL - SIDAKARYA",
+      "description": "Simpang Bedugul - Sidakarya",
+      "url": "https://atcs.denpasarkota.go.id/stream/A096SIDAKARYA-BEDUGULPTZ/",
+      "latitude": -8.700615,
+      "longitude": 115.227192
+    },
+    {
+      "id": "A096SIDAKARYA-BEDUGULPANORAMIC",
+      "name": "SIDAKARYA - BEDUGUL PANORAMIC",
+      "location": "BEDUGUL - SIDAKARYA",
+      "description": "Simpang Bedugul - Sidakarya",
+      "url": "https://atcs.denpasarkota.go.id/stream/A096SIDAKARYA-BEDUGULPANORAMIC/",
+      "latitude": -8.700615,
+      "longitude": 115.227192
+    },
+    {
+      "id": "A097WATURENGGONG-TUKADYEHAYAPTZ",
+      "name": "WATURENGGONG - TUKAD YEH AYA",
+      "location": "WATURENGGONG - TUKAD YEH AYA",
+      "description": "Simpang Waturenggong - Tukad Yeh Aya",
+      "url": "https://atcs.denpasarkota.go.id/stream/A097WATURENGGONG-TUKADYEHAYAPTZ/",
+      "latitude": -8.678759,
+      "longitude": 115.225824
+    },
+    {
+      "id": "A097WATURENGGONG-TUKADYEHAYAPANORAMIC",
+      "name": "WATURENGGONG - TUKAD YEH AYA PANORAMIC",
+      "location": "WATURENGGONG - TUKAD YEH AYA",
+      "description": "Simpang Waturenggong - Tukad Yeh Aya",
+      "url": "https://atcs.denpasarkota.go.id/stream/A097WATURENGGONG-TUKADYEHAYAPANORAMIC/",
+      "latitude": -8.678759,
+      "longitude": 115.225824
+    },
+    {
+      "id": "A098TUKADBARITO-TUKADBADUNGPTZ",
+      "name": "TUKAD BARITO - TUKAD BADUNG",
+      "location": "TUKAD BARITO - TUKAD BADUNG",
+      "description": "Simpang Tukad Barito - Tukad Badung",
+      "url": "https://atcs.denpasarkota.go.id/stream/A098TUKADBARITO-TUKADBADUNGPTZ/",
+      "latitude": -8.68415,
+      "longitude": 115.23789
+    },
+    {
+      "id": "A098TUKADBARITO-TUKADBADUNGPANORAMIC",
+      "name": "TUKAD BARITO - TUKAD BADUNG PANORAMIC",
+      "location": "TUKAD BARITO - TUKAD BADUNG",
+      "description": "Simpang Tukad Barito - Tukad Badung",
+      "url": "https://atcs.denpasarkota.go.id/stream/A098TUKADBARITO-TUKADBADUNGPANORAMIC/",
+      "latitude": -8.68415,
+      "longitude": 115.23789
+    },
+    {
+      "id": "A099SUCIPTZ",
+      "name": "HASANUDIN - SUMATERA",
+      "location": "HASANUDIN - SUMATERA",
+      "description": "Simpang Hasanudin - Sumatera",
+      "url": "https://atcs.denpasarkota.go.id/stream/A099SUCIPTZ/",
+      "latitude": -8.658713,
+      "longitude": 115.214574
+    },
+    {
+      "id": "A099SUCIPANORAMIC",
+      "name": "HASANUDIN - SUMATERA PANORAMIC",
+      "location": "HASANUDIN - SUMATERA",
+      "description": "Simpang Hasanudin - Sumatera",
+      "url": "https://atcs.denpasarkota.go.id/stream/A099SUCIPANORAMIC/",
+      "latitude": -8.658713,
+      "longitude": 115.214574
+    },
+    {
+      "id": "A100PURADEMAKPTZ",
+      "name": "TEUKU UMAR BARAT - PURA DEMAK",
+      "location": "TEUKU UMAR BARAT - PURA DEMAK",
+      "description": "Simpang Teuku Umar Barat - Pura Demak",
+      "url": "https://atcs.denpasarkota.go.id/stream/A100PURADEMAKPTZ/",
+      "latitude": -8.681748,
+      "longitude": 115.192763
+    },
+    {
+      "id": "A100PURADEMAKPANORAMIC",
+      "name": "TEUKU UMAR BARAT - PURA DEMAK PANORAMIC",
+      "location": "TEUKU UMAR BARAT - PURA DEMAK",
+      "description": "Simpang Teuku Umar Barat - Pura Demak",
+      "url": "https://atcs.denpasarkota.go.id/stream/A100PURADEMAKPANORAMIC/",
+      "latitude": -8.681748,
+      "longitude": 115.192763
+    },
+    {
+      "id": "/A101BATUKARU-RINJANIPTZ",
+      "name": "BATUKARU - RINJANI",
+      "location": "BATUKARU - RINJANI",
+      "description": "Simpang Batukaru - Rinjani",
+      "url": "https://atcs.denpasarkota.go.id/stream//A101BATUKARU-RINJANIPTZ/",
+      "latitude": -8.660056,
+      "longitude": 115.198809
+    },
+    {
+      "id": "A101BATUKARU-RINJANIPANORAMIC",
+      "name": "BATUKARU - RINJANI PANORAMIC",
+      "location": "BATUKARU - RINJANI",
+      "description": "Simpang Batukaru - Rinjani",
+      "url": "https://atcs.denpasarkota.go.id/stream/A101BATUKARU-RINJANIPANORAMIC/",
+      "latitude": -8.660056,
+      "longitude": 115.198809
+    },
+    {
+      "id": "A102UDAYANA-BELITON",
+      "name": "BELITON - UDAYANA",
+      "location": "BELITON - UDAYANA",
+      "description": "Simpang Udayana - Beliton",
+      "url": "https://atcs.denpasarkota.go.id/stream/A102UDAYANA-BELITON/",
+      "latitude": -8.658082,
+      "longitude": 115.216731
+    },
+    {
+      "id": "A102UDAYANA-BELITONPANORAMIC",
+      "name": "BELITON - UDAYANA PANORAMIC",
+      "location": "BELITON - UDAYANA",
+      "description": "Simpang Udayana - Beliton",
+      "url": "https://atcs.denpasarkota.go.id/stream/A102UDAYANA-BELITONPANORAMIC/",
+      "latitude": -8.658082,
+      "longitude": 115.216731
+    },
+    {
+      "id": "A103GAJAHMADABARATPTZ",
+      "name": "GAJAH MADA - THAMRIN",
+      "location": "GAJAH MADA - THAMRIN",
+      "description": "Simpang Gajah Mada - Thamrin",
+      "url": "https://atcs.denpasarkota.go.id/stream/A103GAJAHMADABARATPTZ/",
+      "latitude": -8.655004,
+      "longitude": 115.210508
+    },
+    {
+      "id": "A103GAJAHMADABARATPANORAMIC",
+      "name": "GAJAH MADA - THAMRIN PANORAMIC",
+      "location": "GAJAH MADA - THAMRIN",
+      "description": "Simpang Gajah Mada - Thamrin",
+      "url": "https://atcs.denpasarkota.go.id/stream/A103GAJAHMADABARATPANORAMIC/",
+      "latitude": -8.655004,
+      "longitude": 115.210508
+    },
+    {
+      "id": "A104SUTOYO-HASANUDINPTZ",
+      "name": "SUTOYO - HASANUDIN",
+      "location": "SUTOYO - HASANUDIN",
+      "description": "Simpang Sutoyo - Hasanudin",
+      "url": "https://atcs.denpasarkota.go.id/stream/A104SUTOYO-HASANUDINPTZ/",
+      "latitude": -8.65902,
+      "longitude": 115.216724
+    },
+    {
+      "id": "A104SUTOYO-HASANUDINPANORAMIC",
+      "name": "SUTOYO - HASANUDIN PANORAMIC",
+      "location": "SUTOYO - HASANUDIN",
+      "description": "Simpang Sutoyo - Hasanudin",
+      "url": "https://atcs.denpasarkota.go.id/stream/A104SUTOYO-HASANUDINPANORAMIC/",
+      "latitude": -8.65902,
+      "longitude": 115.216724
+    },
+    {
+      "id": "A105RSADUDAYANAPTZ",
+      "name": "RSAD UDAYANA",
+      "location": "RSAD UDAYANA",
+      "description": "Simpang PB Sudirman -RSAD",
+      "url": "https://atcs.denpasarkota.go.id/stream/A105RSADUDAYANAPTZ/",
+      "latitude": -8.663913,
+      "longitude": 115.218086
+    },
+    {
+      "id": "A105RSADUDAYANAPANORAMIC",
+      "name": "RSAD UDAYANA PANORAMIC",
+      "location": "RSAD UDAYANA",
+      "description": "Simpang PB Sudirman -RSAD",
+      "url": "https://atcs.denpasarkota.go.id/stream/A105RSADUDAYANAPANORAMIC/",
+      "latitude": -8.663913,
+      "longitude": 115.218086
+    },
+    {
+      "id": "A106ENGGANO-BUNGINPTZ",
+      "name": "ENGGANO - BUNGIN",
+      "location": "ENGGANO - BUNGIN",
+      "description": "Simpang Pulau Bungin - Pulau Enggano",
+      "url": "https://atcs.denpasarkota.go.id/stream/A106ENGGANO-BUNGINPTZ/",
+      "latitude": -8.690105,
+      "longitude": 115.19892
+    },
+    {
+      "id": "A106ENGGANO-BUNGINPANORAMIC",
+      "name": "ENGGANO - BUNGIN PANORAMIC",
+      "location": "ENGGANO - BUNGIN",
+      "description": "Simpang Pulau Bungin - Pulau Enggano",
+      "url": "https://atcs.denpasarkota.go.id/stream/A106ENGGANO-BUNGINPANORAMIC/",
+      "latitude": -8.690105,
+      "longitude": 115.19892
+    },
+    {
+      "id": "A107GATSUBARAT-GUNUNGCATURPTZ",
+      "name": "GATSU BARAT - GUNUNG CATUR",
+      "location": "GATSU BARAT - GUNUNG CATUR",
+      "description": "Simpang Gatot Subroto Barat - Gunung Catur",
+      "url": "https://atcs.denpasarkota.go.id/stream/A107GATSUBARAT-GUNUNGCATURPTZ/",
+      "latitude": -8.63632,
+      "longitude": 115.191602
+    },
+    {
+      "id": "A107GATSUBARAT-GUNUNGCATURPANORAMIC",
+      "name": "GATSU BARAT - GUNUNG CATUR PANORAMIC",
+      "location": "GATSU BARAT - GUNUNG CATUR",
+      "description": "Simpang Gatot Subroto Barat - Gunung Catur",
+      "url": "https://atcs.denpasarkota.go.id/stream/A107GATSUBARAT-GUNUNGCATURPANORAMIC/",
+      "latitude": -8.63632,
+      "longitude": 115.191602
+    },
+    {
+      "id": "A108PASARSANGLAHPTZ",
+      "name": "PASAR SANGLAH",
+      "location": "PASAR SANGLAH",
+      "description": "Simpang Diponegoro - Waturenggong",
+      "url": "https://atcs.denpasarkota.go.id/stream/A108PASARSANGLAHPTZ/",
+      "latitude": -8.676385,
+      "longitude": 115.215372
+    },
+    {
+      "id": "A109TEUKUUMAR-PULAUSERAMPTZ",
+      "name": "TEUKU UMAR - PULAU SERAM",
+      "location": "TEUKU UMAR - PULAU SERAM",
+      "description": "Simpang Teuku Umar - Pulau Seram",
+      "url": "https://atcs.denpasarkota.go.id/stream/A109TEUKUUMAR-PULAUSERAMPTZ/",
+      "latitude": -8.669547,
+      "longitude": 115.213532
+    },
+    {
+      "id": "A109TEUKUUMAR-PULAUSERAMPANORAMIC",
+      "name": "TEUKU UMAR - PULAU SERAM PANORAMIC",
+      "location": "TEUKU UMAR - PULAU SERAM",
+      "description": "Simpang Teuku Umar - Pulau Seram",
+      "url": "https://atcs.denpasarkota.go.id/stream/A109TEUKUUMAR-PULAUSERAMPANORAMIC/",
+      "latitude": -8.669547,
+      "longitude": 115.213532
+    },
+    {
+      "id": "A110PULAUKAWE-SATELITPTZ",
+      "name": "PULAU KAWE - SATELIT",
+      "location": "PULAU KAWE - SATELIT",
+      "description": "Simpang Pulau Kawe - Satelit",
+      "url": "https://atcs.denpasarkota.go.id/stream/A110PULAUKAWE-SATELITPTZ/",
+      "latitude": -8.68003,
+      "longitude": 115.207153
+    },
+    {
+      "id": "A110PULAUKAWE-SATELITPANORAMIC",
+      "name": "PULAU KAWE - SATELIT PANORAMIC",
+      "location": "PULAU KAWE - SATELIT",
+      "description": "Simpang Pulau Kawe - Satelit",
+      "url": "https://atcs.denpasarkota.go.id/stream/A110PULAUKAWE-SATELITPANORAMIC/",
+      "latitude": -8.68003,
+      "longitude": 115.207153
+    },
+    {
+      "id": "A119TAMANPANCINGPTZ",
+      "name": "TAMAN PANCING",
+      "location": "SIMPANG TAMAN PANCING",
+      "description": "Simpang Taman Pancing - Pemogan",
+      "url": "https://atcs.denpasarkota.go.id/stream/A119TAMANPANCINGPTZ/",
+      "latitude": -8.693559,
+      "longitude": 115.196306
+    },
+    {
+      "id": "A119TAMANPANCINGPANORAMIC",
+      "name": "TAMAN PANCING PANORAMIC",
+      "location": "SIMPANG TAMAN PANCING",
+      "description": "Simpang Taman Pancing - Pemogan",
+      "url": "https://atcs.denpasarkota.go.id/stream/A119TAMANPANCINGPANORAMIC/",
+      "latitude": -8.693559,
+      "longitude": 115.196306
+    },
+    {
+      "id": "A120TUKADPAKERISANPTZ",
+      "name": "TUKAD PAKERISAN",
+      "location": "SIMPANG TUKAD PAKERISAN",
+      "description": "Simpang Tukad Pakerisan - Tukad Barito",
+      "url": "https://atcs.denpasarkota.go.id/stream/A120TUKADPAKERISANPTZ/",
+      "latitude": -8.684517,
+      "longitude": 115.226223
+    },
+    {
+      "id": "A120TUKADPAKERISANPANORAMIC",
+      "name": "TUKAD PAKERISAN PANORAMIC",
+      "location": "SIMPANG TUKAD PAKERISAN",
+      "description": "Simpang Tukad Pakerisan - Tukad Barito",
+      "url": "https://atcs.denpasarkota.go.id/stream/A120TUKADPAKERISANPANORAMIC/",
+      "latitude": -8.684517,
+      "longitude": 115.226223
+    },
+    {
+      "id": "A050JALANGUNUNGAGUNGPTZ",
+      "name": "JALAN GUNUNG AGUNG",
+      "location": "RUAS GUNUNG AGUNG",
+      "description": "Ruas Jalan Gunung Agung",
+      "url": "https://atcs.denpasarkota.go.id/stream/A050JALANGUNUNGAGUNGPTZ/",
+      "latitude": -8.653456,
+      "longitude": 115.204221
+    },
+    {
+      "id": "A050JALANGUNUNGAGUNGPANORAMIC",
+      "name": "JALAN GUNUNG AGUNG PANORAMIC",
+      "location": "RUAS GUNUNG AGUNG",
+      "description": "Ruas Jalan Gunung Agung",
+      "url": "https://atcs.denpasarkota.go.id/stream/A050JALANGUNUNGAGUNGPANORAMIC/",
+      "latitude": -8.653456,
+      "longitude": 115.204221
+    },
+    {
+      "id": "A051MAHENDRADATTA-SOPUTANPTZ",
+      "name": "MAHENDRADATA - SOPUTAN",
+      "location": "SIMPANG MAHENDRADATA - SOPUTAN",
+      "description": "Simpang Mahendradata - Soputan",
+      "url": "https://atcs.denpasarkota.go.id/stream/A051MAHENDRADATTA-SOPUTANPTZ/",
+      "latitude": -8.687003,
+      "longitude": 115.186424
+    },
+    {
+      "id": "A051MAHENDRADATTA-SOPUTANPANORAMIC",
+      "name": "MAHENDRADATA - SOPUTAN PANORAMIC",
+      "location": "SIMPANG MAHENDRADATA - SOPUTAN",
+      "description": "Simpang Mahendradata - Soputan",
+      "url": "https://atcs.denpasarkota.go.id/stream/A051MAHENDRADATTA-SOPUTANPANORAMIC/",
+      "latitude": -8.687003,
+      "longitude": 115.186424
+    },
+    {
+      "id": "A055PASARBADUNGPTZ",
+      "name": "PASAR BADUNG",
+      "location": "PASAR BADUNG",
+      "description": "Simpang Gajah Mada - Sulawesi",
+      "url": "https://atcs.denpasarkota.go.id/stream/A055PASARBADUNGPTZ/",
+      "latitude": -8.655369,
+      "longitude": 115.213057
+    },
+    {
+      "id": "A055PASARBADUNGPANORAMIC",
+      "name": "PASAR BADUNG PANORAMIC",
+      "location": "PASAR BADUNG",
+      "description": "Simpang Gajah Mada - Sulawesi",
+      "url": "https://atcs.denpasarkota.go.id/stream/A055PASARBADUNGPANORAMIC/",
+      "latitude": -8.655369,
+      "longitude": 115.213057
+    }
+  ],
+  "updatedAt": "2026-10-16"
+}

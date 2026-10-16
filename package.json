@@ -1,0 +1,13 @@
+{
+  "name": "denpasar-camera-desk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A searchable viewer for public Denpasar ATCS CCTV feeds",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test",
+    "sync": "node scripts/sync-cameras.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
