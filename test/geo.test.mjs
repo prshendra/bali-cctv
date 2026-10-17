@@ -81,6 +81,8 @@ test('fuel sync keeps only active amenity=fuel stations and drops nitrogen-only 
   assert.deepEqual(stationData(elements).map(station => station.id), ['node/2']);
   const bounds = paddedBounds([{ latitude: -8.7, longitude: 115.2 }, { latitude: -8.6, longitude: 115.3 }]);
   assert.deepEqual(bounds, [-8.75, 115.15, -8.549999999999999, 115.35]);
+  const corridorBounds = paddedBounds([{ latitude: -8.7, longitude: 115.2 }], [{ latitude: -8.73, longitude: 115.15 }]);
+  [-8.78, 115.1, -8.65, 115.25].forEach((value, index) => assert.ok(Math.abs(corridorBounds[index] - value) < 1e-9));
   const snapshot = createSnapshot([elements[1]], bounds, '2026-10-16T00:00:00.000Z');
   assert.equal(snapshot.stations.length, 1);
   assert.throws(() => createSnapshot([elements[1]], [], '2026-10-16T00:00:00.000Z'), /empty or invalid/);

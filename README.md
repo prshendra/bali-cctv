@@ -1,6 +1,6 @@
-# Denpasar Camera Desk
+# Bali Camera Desk
 
-A lightweight browser viewer for all public CCTV feeds in the [Denpasar ATCS catalogue](https://atcs.denpasarkota.go.id/streaming). The initial catalogue contains 164 cameras at 109 locations, checked on 16 October 2026.
+A lightweight browser viewer combining the [Denpasar ATCS catalogue](https://atcs.denpasarkota.go.id/streaming), [Bali Satu Data](https://balisatudata.baliprov.go.id/peta-cctv), and the CCTV location layer of the [Badung Smart City map](https://map.badungkab.go.id/). Camera ownership is not consistently exposed by the aggregators; source labels identify the publishing portal.
 
 ## Run locally
 
@@ -16,6 +16,8 @@ Open http://127.0.0.1:4173. Use `PORT=8080 npm start` to choose another port. Op
 ## Use the viewer
 
 - Search by camera name, junction, or street, or filter by location.
+- Pilih **Sumber CCTV** untuk menampilkan Denpasar, Bali Satu Data/Pemprov Bali, atau Peta Smart City/Pemkab Badung. Label sumber tampil di kartu dan popup peta.
+- Klik **Sunset Road**, pilih kawasan **Sekitar Sunset Road**, atau ketik tepat **Sunset Road** pada pencarian. Kamera dan SPBU disaring berdasarkan jarak ke segmen jalan terdekat, bukan kecocokan nama. Pilih jarak 250 m–5 km. Garis ungu menandai koridor jalan; nama kamera yang tidak menyebut Sunset Road tetap bisa muncul.
 - Choose 4, 9, or 16 cameras per page. Use the page controls to reach the entire catalogue.
 - Play individual feeds or connect the whole visible page. Changing pages or filters stops the previous page's streams.
 - Star cameras to save favorites in this browser. Favorites stay on this device.
@@ -27,6 +29,10 @@ Open http://127.0.0.1:4173. Use `PORT=8080 npm start` to choose another port. Op
 
 Live video comes directly from the city's public HTTPS HLS endpoints. Internet access is required. Availability and footage are controlled by Denpasar ATCS. Playing many cameras at once consumes bandwidth and device resources. This viewer is independent of the city and does not record video or provide camera control.
 
+Katalog Bali Satu Data memuat status sumber `unknown`. Kamera HLS Pemprov ditampilkan melalui pemutar resmi yang dapat disematkan, karena server medianya mengirim header CORS ganda yang menghalangi pemutaran langsung lintas situs. Status iframe diberi label **Pemutar resmi**, bukan live; keberhasilan memuat halaman tidak memastikan videonya tersedia. Tujuh URL video publik Buleleng memakai video browser. Tautan/katalog tidak berarti semua kamera sedang online. Peta Badung menyediakan titik kamera, tetapi empat konfigurasi stream lamanya tidak menghasilkan feed HTTPS yang terverifikasi; titik tanpa feed publik diberi label **Lokasi terdaftar**, bukan live. Klik **Info** untuk membuka sumber resmi. Tidak ada koneksi RTSP/RTMP atau akses ke perangkat internal.
+
+Kamera dengan URL feed yang sama digabung. Entri lokasi tanpa feed juga digabung dengan kamera bersiaran dari portal lain hanya jika nama tempat cocok setelah penghapusan kode/annotasi dan koordinat berjarak maksimum 10 m. Atribusi kedua portal dipertahankan di filter sumber. Sudut kamera yang berbeda tetap dipertahankan.
+
 ## Refresh the catalogue
 
 ```sh
@@ -35,9 +41,23 @@ npm run sync
 
 This reads the same public camera catalogue as the official page and saves only camera names, descriptions, map coordinates, and public HTTPS playback URLs. Upstream device configuration and web-client headers are never saved. A failed refresh preserves the current catalogue. If the official website changes its page/API format, the sync script may need an update. Re-publish the static site after syncing to update its hosted catalogue.
 
+Perbarui katalog Pemprov Bali dan peta Badung secara terpisah:
+
+```sh
+npm run sync:sources
+```
+
+Katalog tambahan disimpan di `dist/additional-cameras.json`, terpisah dari Denpasar sehingga refresh Denpasar tidak menghapus sumber lain. Proses Badung menggunakan sesi publik serta CSRF normal dari halaman resminya; cookie dan token hanya disimpan sementara dalam memori, tidak dicatat atau dikirim ke browser viewer. Jika salah satu sumber gagal, snapshot sumber tersebut dipertahankan.
+
+Perbarui geometri Sunset Road dari OpenStreetMap:
+
+```sh
+npm run sync:roads
+```
+
 ## Peta dan data SPBU
 
-Peta menggunakan Leaflet dan ubin OpenStreetMap. Data titik SPBU disimpan di `dist/fuel-stations.json` dari objek OpenStreetMap bertag `amenity=fuel`, termasuk pom bensin kecil yang dipetakan warga. Cakupan mencakup area CCTV Denpasar dan sekitarnya. Data mungkin belum lengkap atau akurat dan bukan daftar resmi SPBU. Nama yang belum tersedia diberi label generik; tautan setiap titik mengarah ke data sumbernya di OpenStreetMap.
+Peta menggunakan Leaflet dan ubin OpenStreetMap. Data titik SPBU disimpan di `dist/fuel-stations.json` dari objek OpenStreetMap bertag `amenity=fuel`, termasuk pom bensin kecil yang dipetakan warga. Cakupan meliputi Denpasar, koridor Sunset Road, dan sekitarnya; bukan seluruh pulau Bali. Data mungkin belum lengkap atau akurat dan bukan daftar resmi SPBU. Nama yang belum tersedia diberi label generik; tautan setiap titik mengarah ke data sumbernya di OpenStreetMap.
 
 Jarak memakai rumus Haversine (garis lurus), bukan rute berkendara. Kamera yang dekat SPBU belum tentu menghadap ke SPBU. Untuk objek SPBU berbentuk area, posisi memakai pusat batas area dari Overpass sehingga jarak bersifat perkiraan.
 

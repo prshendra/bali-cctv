@@ -21,14 +21,17 @@ export function createCameraMap({ onPlayCamera, onSelectStation, onMapWarning })
   const camerasLayer = L.layerGroup().addTo(map);
   const stationsLayer = L.layerGroup().addTo(map);
   const radiusLayer = L.layerGroup().addTo(map);
+  const roadLayer = L.layerGroup().addTo(map);
   let currentPoints = [];
   let cameraMarkers = new Map();
   let latest = { cameras: [], stations: [], selectedStationId: '', nearbyOnly: false, radiusMeters: 500 };
   const cameraDivIcon = L.divIcon({ className: 'map-pin camera-pin', html: cameraIcon, iconSize: [30, 36], iconAnchor: [15, 35], popupAnchor: [0, -28] });
+  const locationDivIcon = L.divIcon({ className: 'map-pin camera-pin location-pin', html: cameraIcon.replace('#13866e', '#647a83'), iconSize: [30, 36], iconAnchor: [15, 35], popupAnchor: [0, -28] });
 
-  function update(cameras, stations, { selectedStationId = '', nearbyOnly = false, radiusMeters = 500 } = {}) {
-    latest = { cameras, stations, selectedStationId, nearbyOnly, radiusMeters };
-    camerasLayer.clearLayers(); stationsLayer.clearLayers(); radiusLayer.clearLayers(); cameraMarkers.clear();
+  function update(cameras, stations, { selectedStationId = '', nearbyOnly = false, radiusMeters = 500, road = null } = {}) {
+    latest = { cameras, stations, selectedStationId, nearbyOnly, radiusMeters, road };
+    camerasLayer.clearLayers(); stationsLayer.clearLayers(); radiusLayer.clearLayers(); roadLayer.clearLayers(); cameraMarkers.clear();
+    if (road) L.polyline(road.paths, { color: '#7448c4', weight: 5, opacity: .85 }).bindTooltip(road.name).addTo(roadLayer);
     const groups = new Map();
     for (const camera of cameras.filter(validCoordinate)) {
       const key = `${camera.latitude.toFixed(6)},${camera.longitude.toFixed(6)}`;
@@ -41,10 +44,12 @@ export function createCameraMap({ onPlayCamera, onSelectStation, onMapWarning })
       const first = group[0]; const point = [first.latitude, first.longitude]; currentPoints.push(point);
       const popup = node('div'); popup.className = 'map-popup';
       popup.append(node('strong', first.location), node('p', `${group.length} kamera · ${first.description}`));
+      const locationOnly = group.every(camera => camera.playback === 'link');
+      if (locationOnly) popup.append(node('p', 'Lokasi terdaftar; siaran publik belum tersedia dari sumber ini.'));
       const nearest = nearestStation(first, comparisonStations);
       if (nearest) popup.append(node('p', `${formatDistance(nearest.distanceMeters)} dari ${stationDisplayName(nearest.station)} (garis lurus)`));
-      for (const camera of group) popup.append(action(`▶ ${camera.name}`, () => onPlayCamera(camera)));
-      const marker = L.marker(point, { icon: cameraDivIcon, title: `CCTV: ${first.location} (${group.length} kamera)`, alt: `CCTV ${first.location}`, riseOnHover: true }).bindPopup(popup).addTo(camerasLayer);
+      for (const camera of group) popup.append(action(`${camera.playback === 'link' ? 'ⓘ' : '▶'} ${camera.name} · ${camera.sourceLabel || 'ATCS Denpasar'}`, () => onPlayCamera(camera)));
+      const marker = L.marker(point, { icon: locationOnly ? locationDivIcon : cameraDivIcon, title: `${locationOnly ? 'Lokasi CCTV' : 'CCTV'}: ${first.location} (${group.length} kamera)`, alt: `CCTV ${first.location}`, riseOnHover: true }).bindPopup(popup).addTo(camerasLayer);
       for (const camera of group) cameraMarkers.set(camera.id, marker);
     }
     for (const station of stations.filter(validCoordinate)) {
@@ -73,6 +78,10 @@ export function createCameraMap({ onPlayCamera, onSelectStation, onMapWarning })
     if (selected && latest.nearbyOnly) {
       const bounds = L.latLng(selected.latitude, selected.longitude).toBounds(latest.radiusMeters * 2);
       map.fitBounds(bounds, { padding: [24, 24], maxZoom: 16, animate: false });
+    } else if (latest.road) {
+      const bounds = L.latLngBounds(latest.road.paths.flat());
+      for (const point of currentPoints) bounds.extend(point);
+      map.fitBounds(bounds.pad(.12), { padding: [25, 25], maxZoom: 15, animate: false });
     } else if (currentPoints.length) map.fitBounds(currentPoints, { padding: [25, 25], maxZoom: 15, animate: false });
     else if (latest.stations.length) map.fitBounds(latest.stations.filter(validCoordinate).map(s => [s.latitude, s.longitude]), { padding: [25, 25], maxZoom: 14, animate: false });
   }

@@ -1,9 +1,10 @@
-import { normalizeCatalogue, filterCameras, paginate } from './catalog.js';
+import { normalizeCatalogue, filterCameras, paginate, mergeCameras, SOURCES } from './catalog.js';
 import { normalizeStations, nearbyCameras, nearestStation, validCoordinate } from './geo.js';
 import { createCameraMap, formatDistance, stationDisplayName } from './camera-map.js';
+import { normalizeRoads, distanceToRoadMeters, nearRoad, isSunsetSearch } from './roads.js';
 
 const $ = id => document.getElementById(id);
-const state = { cameras: [], stations: [], fuelReady: false, favorites: new Set(), favoritesOnly: false, page: 1, pageSize: 9, players: new Map(), focus: null, map: null };
+const state = { cameras: [], stations: [], roads: [], fuelReady: false, fuelOptionsKey: null, favorites: new Set(), favoritesOnly: false, page: 1, pageSize: 9, players: new Map(), focus: null, map: null };
 try { const stored = JSON.parse(localStorage.getItem('denpasar-favorites') || '[]'); if (Array.isArray(stored)) state.favorites = new Set(stored.filter(x => typeof x === 'string')); } catch {}
 
 function element(tag, className, text) {
@@ -28,8 +29,9 @@ function saveFavorites() {
 }
 function placeholder(camera) {
   const holder = element('div', 'placeholder');
-  holder.append(element('span', 'camera-symbol', '◉'), element('span', '', 'Ready when you are'), element('small', '', 'Select play to connect to this camera'));
-  holder.append(button('start-button', '▶  Play camera', `Play ${camera.name}`, () => playCard(camera)));
+  const linkOnly = camera.playback === 'link';
+  holder.append(element('span', 'camera-symbol', '◉'), element('span', '', linkOnly ? 'Lokasi kamera terdaftar' : 'Ready when you are'), element('small', '', linkOnly ? 'Siaran publik belum tersedia dari sumber ini' : camera.playback === 'iframe' ? 'Menggunakan pemutar situs resmi' : 'Select play to connect to this camera'));
+  holder.append(button('start-button', linkOnly ? 'Lihat informasi' : '▶  Play camera', `${linkOnly ? 'Detail' : 'Play'} ${camera.name}`, () => playCard(camera)));
   return holder;
 }
 function updateStatus(card, text, kind = '') {
@@ -42,9 +44,10 @@ function destroyPlayer(key) {
   if (!player) return;
   clearTimeout(player.timeout);
   player.hls?.destroy();
-  player.video.pause();
-  player.video.removeAttribute('src');
-  player.video.load();
+  player.video?.pause();
+  player.video?.removeAttribute('src');
+  player.video?.load();
+  player.iframe?.remove();
   state.players.delete(key);
   updatePlaying();
 }
@@ -53,14 +56,34 @@ function stopCard(camera) {
   const card = document.getElementById(`camera-${camera.id}`);
   if (!card) return;
   card.querySelector('.media').replaceChildren(placeholder(camera));
-  card.querySelector('.play-toggle').textContent = '▶ Play';
-  card.querySelector('.play-toggle').setAttribute('aria-label', `Play ${camera.name}`);
-  updateStatus(card, 'On demand');
+  card.querySelector('.play-toggle').textContent = camera.playback === 'link' ? 'Info' : '▶ Play';
+  card.querySelector('.play-toggle').setAttribute('aria-label', `${camera.playback === 'link' ? 'Detail' : 'Play'} ${camera.name}`);
+  updateStatus(card, camera.playback === 'link' ? 'Lokasi terdaftar' : 'On demand');
 }
 function stopGrid() { for (const camera of state.cameras) if (state.players.has(camera.id)) stopCard(camera); }
 
 function startStream(camera, host, key, onStatus, onFailure) {
   destroyPlayer(key);
+  if (camera.playback === 'link') {
+    const info = element('div', 'stream-error');
+    info.append(element('strong', '', 'Lokasi dari katalog resmi'), element('small', '', 'Sumber belum menyediakan siaran publik yang dapat diputar di viewer ini.'));
+    const link = element('a', 'source-link', 'Buka peta resmi ↗'); link.href = camera.url; link.target = '_blank'; link.rel = 'noopener noreferrer'; info.append(link);
+    host.replaceChildren(info); onStatus('Lokasi terdaftar'); return;
+  }
+  // The province server currently sends duplicate CORS headers on HLS assets.
+  // Its public player runs on that origin and is explicitly frameable.
+  if (camera.playback === 'iframe' || (camera.sourceId === 'bali' && camera.playback === 'hls')) {
+    const iframe = element('iframe'); iframe.title = `Pemutar resmi: ${camera.name}`; iframe.src = camera.url;
+    iframe.allow = 'autoplay; fullscreen; picture-in-picture'; iframe.allowFullscreen = true;
+    iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation');
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    const note = element('span', 'embedded-note', 'Pemutar resmi · status siaran belum terverifikasi');
+    host.replaceChildren(iframe, note);
+    const player = { iframe, timeout: null }; state.players.set(key, player); updatePlaying();
+    onStatus('Memuat pemutar…', 'connecting');
+    iframe.addEventListener('load', () => { if (state.players.get(key) === player) onStatus('Pemutar resmi'); });
+    return;
+  }
   const video = element('video');
   video.controls = true;
   video.muted = true;
@@ -86,15 +109,17 @@ function startStream(camera, host, key, onStatus, onFailure) {
   };
   player.timeout = setTimeout(fail, 25000);
   onStatus('Connecting…', 'connecting');
-  video.addEventListener('playing', () => { clearTimeout(player.timeout); onStatus('Live', 'live'); });
+  video.addEventListener('playing', () => { clearTimeout(player.timeout); onStatus(camera.playback === 'mp4' ? 'Memutar' : 'Live', 'live'); });
   video.addEventListener('waiting', () => {
     onStatus('Buffering…', 'connecting');
     clearTimeout(player.timeout); player.timeout = setTimeout(fail, 25000);
   });
   video.addEventListener('error', fail);
   const attemptPlay = () => video.play().catch(() => onStatus('Press play in video', 'connecting'));
-  const source = `${camera.url}index.m3u8`;
-  if (window.Hls?.isSupported()) {
+  const source = camera.playback === 'mp4' ? camera.url : camera.streamUrl || `${camera.url}index.m3u8`;
+  if (camera.playback === 'mp4') {
+    video.src = source; attemptPlay();
+  } else if (window.Hls?.isSupported()) {
     player.hls = new window.Hls({ maxBufferLength: 10, maxMaxBufferLength: 20, backBufferLength: 0, capLevelToPlayerSize: true });
     player.hls.on(window.Hls.Events.ERROR, (_event, data) => { if (data.fatal) fail(); });
     player.hls.on(window.Hls.Events.MANIFEST_PARSED, attemptPlay);
@@ -109,6 +134,7 @@ function startStream(camera, host, key, onStatus, onFailure) {
   }
 }
 function playCard(camera) {
+  if (camera.playback === 'link') { openFocus(camera); return; }
   const card = document.getElementById(`camera-${camera.id}`);
   if (!card) return;
   card.querySelector('.play-toggle').textContent = '■ Stop';
@@ -147,12 +173,15 @@ function card(camera) {
   head.append(favorite);
   const title = element('h2', '', camera.name.replace(/^SIMPANG /, ''));
   meta.append(head, title, element('p', 'description', camera.description));
+  meta.append(element('span', 'provider-label', [camera.sourceLabel || 'ATCS Denpasar', ...(camera.alsoListedBy || []).map(id => SOURCES[id].label)].join(' / ')));
+  const road = activeRoad();
+  if (road) meta.append(element('span', 'road-distance', `${formatDistance(distanceToRoadMeters(camera, road))} dari koridor ${road.name}`));
   const nearest = nearestStation(camera, selectedStations());
   if (nearest) meta.append(element('span', 'fuel-distance', `${formatDistance(nearest.distanceMeters)} · ${stationDisplayName(nearest.station)}`));
   const controls = element('div', 'card-controls');
-  controls.append(element('span', 'status', 'On demand'));
+  controls.append(element('span', 'status', camera.playback === 'link' ? 'Lokasi terdaftar' : 'On demand'));
   const actions = element('div', 'card-actions');
-  actions.append(button('play-toggle', '▶ Play', `Play ${camera.name}`, () => state.players.has(camera.id) ? stopCard(camera) : playCard(camera)));
+  actions.append(button('play-toggle', camera.playback === 'link' ? 'Info' : '▶ Play', `${camera.playback === 'link' ? 'Detail' : 'Play'} ${camera.name}`, () => state.players.has(camera.id) ? stopCard(camera) : playCard(camera)));
   actions.append(button('expand', '⛶', `Expand ${camera.name}`, () => openFocus(camera)));
   if (validCoordinate(camera)) {
     actions.append(button('map-link map-location-button', '⌖', `Tampilkan ${camera.name} di peta`, () => {
@@ -166,11 +195,40 @@ function card(camera) {
   return node;
 }
 function selectedStations() {
-  return $('fuel-filter').value ? state.stations.filter(station => station.id === $('fuel-filter').value) : state.stations;
+  return $('fuel-filter').value ? scopedStations().filter(station => station.id === $('fuel-filter').value) : scopedStations();
+}
+function activeRoad() {
+  return ($('area-filter').value || isSunsetSearch($('search').value)) ? state.roads.find(road => road.id === 'sunset-road') : null;
+}
+function scopedStations() {
+  const road = activeRoad();
+  return road ? nearRoad(state.stations, road, Number($('area-radius').value)) : state.stations;
+}
+function refreshFuelOptions() {
+  const road = activeRoad();
+  const key = `${state.stations.length}:${road?.id || ''}:${$('area-radius').value}`;
+  if (key === state.fuelOptionsKey) return;
+  state.fuelOptionsKey = key;
+  const selectedId = $('fuel-filter').value;
+  $('fuel-filter').replaceChildren(element('option', '', road ? 'Semua SPBU sekitar Sunset Road' : 'Semua SPBU'));
+  $('fuel-filter').firstElementChild.value = '';
+  const options = scopedStations().map(station => {
+    const camera = nearestStation(station, state.cameras);
+    const area = station.address || (camera ? `dekat ${camera.station.location}` : `${station.latitude.toFixed(4)}, ${station.longitude.toFixed(4)}`);
+    return { station, label: `${stationDisplayName(station)} — ${area}` };
+  }).sort((a, b) => a.label.localeCompare(b.label));
+  for (const { station, label } of options) {
+    const duplicate = options.filter(option => option.label === label).length > 1;
+    const option = element('option', '', `${label}${duplicate ? ` (${station.latitude.toFixed(4)}, ${station.longitude.toFixed(4)})` : ''}`);
+    option.value = station.id; $('fuel-filter').append(option);
+  }
+  if (options.some(option => option.station.id === selectedId)) $('fuel-filter').value = selectedId;
 }
 function filteredCameras() {
-  let cameras = filterCameras(state.cameras, { query: $('search').value, location: $('location-filter').value, favoritesOnly: state.favoritesOnly, favorites: state.favorites });
-  if ($('near-fuel').checked) cameras = nearbyCameras(cameras, state.stations, { stationId: $('fuel-filter').value, radiusMeters: Number($('fuel-radius').value) }).map(result => result.camera);
+  const road = activeRoad();
+  let cameras = filterCameras(state.cameras, { query: road && isSunsetSearch($('search').value) ? '' : $('search').value, location: $('location-filter').value, sourceId: $('source-filter').value, favoritesOnly: state.favoritesOnly, favorites: state.favorites });
+  if (road) cameras = nearRoad(cameras, road, Number($('area-radius').value));
+  if ($('near-fuel').checked) cameras = nearbyCameras(cameras, scopedStations(), { stationId: $('fuel-filter').value, radiusMeters: Number($('fuel-radius').value) }).map(result => result.camera);
   return cameras;
 }
 function currentPage() {
@@ -179,15 +237,17 @@ function currentPage() {
 }
 function render({ fitMap = false } = {}) {
   stopGrid();
+  refreshFuelOptions();
   const page = currentPage(); state.page = page.page;
   $('grid').dataset.layout = String(state.pageSize);
   $('grid').replaceChildren(...page.items.map(card));
   $('empty-state').hidden = page.total > 0;
   $('empty-state').textContent = state.favoritesOnly && !state.favorites.size ? 'Your favorites will appear here. Star a camera to save it.' : $('near-fuel').checked ? 'Tidak ada CCTV dalam radius dan filter ini. Perbesar radius, pilih SPBU lain, atau hapus pencarian.' : 'No cameras match. Try another street or clear the filters.';
-  $('result-summary').textContent = `${page.total} camera${page.total === 1 ? '' : 's'}${state.favoritesOnly ? ' in favorites' : ' in the catalogue'}${$('near-fuel').checked ? ' · terdekat dari SPBU lebih dulu' : ''}`;
+  const publicPlayers = filteredCameras().filter(camera => camera.playback !== 'link').length;
+  $('result-summary').textContent = `${page.total} titik kamera${state.favoritesOnly ? ' favorit' : ''} · ${publicPlayers} tautan pemutar${$('near-fuel').checked ? ' · terdekat dari SPBU lebih dulu' : ''}`;
   $('page-label').textContent = `Page ${page.page} of ${page.pages}`;
   $('previous').disabled = page.page <= 1; $('next').disabled = page.page >= page.pages;
-  $('play-page').disabled = !page.items.length;
+  $('play-page').disabled = !page.items.some(camera => camera.playback !== 'link');
   $('all-tab').setAttribute('aria-pressed', String(!state.favoritesOnly));
   $('favorites-tab').setAttribute('aria-pressed', String(state.favoritesOnly));
   $('all-tab').classList.toggle('is-active', !state.favoritesOnly);
@@ -198,21 +258,27 @@ function render({ fitMap = false } = {}) {
     const station = state.stations.find(item => item.id === $('fuel-filter').value);
     $('fuel-summary').textContent = $('near-fuel').checked
       ? `${page.total} CCTV dalam radius ${formatDistance(Number($('fuel-radius').value))} dari ${station ? stationDisplayName(station) : 'salah satu SPBU'}. Pencarian, lokasi, dan favorit tetap berlaku.`
-      : `${state.stations.length} titik SPBU tersedia. Aktifkan “CCTV dekat SPBU” atau pilih titik SPBU di peta untuk menyaring kamera.`;
+      : `${scopedStations().length} titik SPBU${activeRoad() ? ' sekitar Sunset Road' : ''} tersedia. Aktifkan “CCTV dekat SPBU” atau pilih titik SPBU di peta untuk menyaring kamera.`;
   }
-  state.map?.update(filteredCameras(), state.stations, { selectedStationId: $('fuel-filter').value, nearbyOnly: $('near-fuel').checked, radiusMeters: Number($('fuel-radius').value) });
+  const road = activeRoad();
+  $('area-summary').textContent = road ? `Sekitar ${road.name}: ${page.total} CCTV dan ${scopedStations().length} SPBU dalam ${formatDistance(Number($('area-radius').value))} dari koridor jalan. Filter sumber, nama, dan favorit tetap berlaku.` : 'Pilih kawasan atau ketik “Sunset Road” untuk mencari CCTV dan SPBU di sekitar jalan.';
+  state.map?.update(filteredCameras(), scopedStations(), { selectedStationId: $('fuel-filter').value, nearbyOnly: $('near-fuel').checked, radiusMeters: Number($('fuel-radius').value), road });
   if (fitMap && !$('map-content').hidden) state.map?.fit();
 }
 const resetAndRender = () => { state.page = 1; render({ fitMap: true }); };
 $('search').addEventListener('input', resetAndRender);
 $('location-filter').addEventListener('change', resetAndRender);
+$('source-filter').addEventListener('change', resetAndRender);
+$('area-filter').addEventListener('change', () => { if (!$('area-filter').value && isSunsetSearch($('search').value)) $('search').value = ''; resetAndRender(); });
+$('area-radius').addEventListener('change', resetAndRender);
+$('sunset-shortcut').addEventListener('click', () => { $('area-filter').value = 'sunset-road'; $('search').value = ''; $('location-filter').value = ''; resetAndRender(); setMapVisible(true); });
 $('layout').addEventListener('change', () => { state.pageSize = Number($('layout').value); resetAndRender(); });
 $('all-tab').addEventListener('click', () => { state.favoritesOnly = false; resetAndRender(); });
 $('favorites-tab').addEventListener('click', () => { state.favoritesOnly = true; resetAndRender(); });
 $('previous').addEventListener('click', () => { state.page--; render(); });
 $('next').addEventListener('click', () => { state.page++; render(); });
 $('play-page').addEventListener('click', () => {
-  for (const camera of currentPage().items) if (!state.players.has(camera.id)) playCard(camera);
+  for (const camera of currentPage().items) if (camera.playback !== 'link' && !state.players.has(camera.id)) playCard(camera);
   notify('Connecting this page. More simultaneous streams use more bandwidth.');
 });
 $('stop-all').addEventListener('click', () => { stopGrid(); if ($('focus-dialog').open) $('focus-dialog').close(); notify('All streams stopped.'); });
@@ -230,6 +296,7 @@ function setMapVisible(visible) {
 }
 $('map-toggle').addEventListener('click', () => setMapVisible($('map-content').hidden));
 $('map-fit').addEventListener('click', () => state.map?.fit());
+document.querySelector('.topbar .source-link').addEventListener('click', () => { $('source-details').open = true; });
 window.addEventListener('pagehide', () => { for (const key of [...state.players.keys()]) destroyPlayer(key); });
 document.addEventListener('keydown', event => {
   if (event.key === '/' && !['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName) && !$('focus-dialog').open) { event.preventDefault(); $('search').focus(); }
@@ -241,16 +308,39 @@ async function init() {
     const fuelRequest = fetch('./fuel-stations.json', { cache: 'no-cache', signal: AbortSignal.timeout(10000) })
       .then(response => { if (!response.ok) throw new Error('SPBU unavailable'); return response.json(); })
       .then(normalizeStations).catch(() => null);
+    const roadsRequest = fetch('./roads.json', { cache: 'no-cache', signal: AbortSignal.timeout(10000) })
+      .then(response => response.ok ? response.json() : null).then(normalizeRoads).catch(() => []);
+    const additionalRequest = fetch('./additional-cameras.json', { cache: 'no-cache', signal: AbortSignal.timeout(10000) })
+      .then(response => response.ok ? response.json() : { cameras: [] }).catch(() => ({ cameras: [] }));
     const response = await fetch('./cameras.json', { cache: 'no-cache' });
     if (!response.ok) throw new Error('Camera catalogue request failed');
     const data = normalizeCatalogue(await response.json());
-    state.cameras = data.cameras;
+    const additional = await additionalRequest;
+    let additionalCameras = [];
+    if (additional.cameras?.length) {
+      try { additionalCameras = normalizeCatalogue(additional).cameras; }
+      catch { notify('Katalog tambahan tidak dapat dimuat. Kamera Denpasar tetap tersedia.'); }
+    }
+    state.cameras = mergeCameras(data.cameras, additionalCameras);
+    const sourceIds = [...new Set(state.cameras.flatMap(camera => [camera.sourceId, ...(camera.alsoListedBy || [])]))];
+    $('source-count').textContent = `${sourceIds.length} sumber`;
+    for (const id of sourceIds) {
+      const option = element('option', '', SOURCES[id].label); option.value = id; $('source-filter').append(option);
+      const status = element('p'); const link = element('a', '', SOURCES[id].label);
+      link.href = SOURCES[id].url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+      const cameras = state.cameras.filter(camera => camera.sourceId === id || camera.alsoListedBy?.includes(id));
+      const playable = cameras.filter(camera => camera.playback !== 'link').length;
+      status.append(link, document.createTextNode(` — ${cameras.length} kamera; ${playable} tautan pemutar publik. ${additional.sources?.find(source => source.id === id)?.note || ''}`));
+      $('source-status').append(status);
+    }
     $('total-count').textContent = String(state.cameras.length);
     $('sidebar-camera-count').textContent = String(state.cameras.length);
     const locations = [...new Set(state.cameras.map(camera => camera.location))].sort();
     $('location-count').textContent = String(locations.length);
     for (const location of locations) { const option = element('option', '', location); option.value = location; $('location-filter').append(option); }
     $('catalog-date').textContent = data.updatedAt;
+    state.roads = await roadsRequest;
+    if (state.roads.some(road => road.id === 'sunset-road')) for (const id of ['area-filter', 'area-radius', 'sunset-shortcut']) $(id).disabled = false;
     try {
       state.map = createCameraMap({
         onPlayCamera: openFocus,
@@ -267,16 +357,7 @@ async function init() {
     if (fuel?.stations.length) {
       state.stations = fuel.stations;
       state.fuelReady = true;
-      const stationOptions = [...fuel.stations].map(station => {
-        const camera = nearestStation(station, state.cameras);
-        const area = station.address || (camera ? `dekat ${camera.station.location}` : `${station.latitude.toFixed(4)}, ${station.longitude.toFixed(4)}`);
-        return { station, label: `${stationDisplayName(station)} — ${area}` };
-      }).sort((a, b) => a.label.localeCompare(b.label));
-      for (const { station, label } of stationOptions) {
-        const duplicateLabel = stationOptions.filter(option => option.label === label).length > 1;
-        const option = element('option', '', `${label}${duplicateLabel ? ` (${station.latitude.toFixed(4)}, ${station.longitude.toFixed(4)})` : ''}`);
-        option.value = station.id; $('fuel-filter').append(option);
-      }
+      refreshFuelOptions();
       for (const id of ['near-fuel', 'fuel-filter', 'fuel-radius', 'fuel-reset']) $(id).disabled = false;
       const attribution = element('a', '', '© OpenStreetMap contributors');
       attribution.href = 'https://www.openstreetmap.org/copyright'; attribution.target = '_blank'; attribution.rel = 'noopener noreferrer';

@@ -3,6 +3,7 @@ import { readFile, rename, rm, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { distanceMeters, normalizeStations, validCoordinate } from '../dist/geo.js';
+import { normalizeRoads } from '../dist/roads.js';
 
 const endpoints = [
   'https://overpass-api.de/api/interpreter',
@@ -13,8 +14,8 @@ const sourceUrl = 'https://www.openstreetmap.org/copyright';
 const destination = new URL('../dist/fuel-stations.json', import.meta.url);
 const temporary = new URL('../dist/fuel-stations.json.tmp', import.meta.url);
 
-export function paddedBounds(cameras) {
-  const valid = cameras.filter(validCoordinate);
+export function paddedBounds(cameras, roadPoints = []) {
+  const valid = [...cameras, ...roadPoints].filter(validCoordinate);
   if (!valid.length) throw new Error('Camera catalogue has no valid coordinates');
   const padding = 0.05;
   return [
@@ -135,7 +136,11 @@ async function fetchElements(query) {
 async function main() {
   const cameras = JSON.parse(await readFile(new URL('../dist/cameras.json', import.meta.url), 'utf8')).cameras;
   if (!Array.isArray(cameras)) throw new Error('Camera catalogue is invalid');
-  const bounds = paddedBounds(cameras);
+  const roadsPayload = JSON.parse(await readFile(new URL('../dist/roads.json', import.meta.url), 'utf8'));
+  const road = normalizeRoads(roadsPayload).find(candidate => candidate.id === 'sunset-road');
+  if (!road?.paths.length) throw new Error('Sunset Road geometry is unavailable; the existing fuel snapshot was preserved');
+  const roadPoints = road.paths.flat().map(([latitude, longitude]) => ({ latitude, longitude }));
+  const bounds = paddedBounds(cameras, roadPoints);
   const query = `[out:json][timeout:40];nwr["amenity"="fuel"](${bounds.join(',')});out center tags;`;
   const elements = await fetchElements(query);
   const dataset = createSnapshot(elements, bounds);

@@ -8,7 +8,9 @@
     "start": "node scripts/serve.mjs",
     "test": "node --test",
     "sync": "node scripts/sync-cameras.mjs",
-    "sync:spbu": "node scripts/sync-fuel.mjs"
+    "sync:spbu": "node scripts/sync-fuel.mjs",
+    "sync:roads": "node scripts/sync-roads.mjs",
+    "sync:sources": "node scripts/sync-additional-cameras.mjs"
   },
   "engines": { "node": ">=20" }
 }

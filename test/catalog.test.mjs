@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { filterCameras, normalizeCatalogue, paginate, validStream } from '../dist/catalog.js';
+import { filterCameras, normalizeCatalogue, paginate, validStream, validHlsSource, mergeCameras } from '../dist/catalog.js';
 
 const data = JSON.parse(await readFile(new URL('../dist/cameras.json', import.meta.url)));
 const cameras = normalizeCatalogue(data).cameras;
@@ -10,9 +10,32 @@ test('catalogue contains every published camera, including multiple cameras at a
   assert.ok(cameras.length > new Set(cameras.map(c => c.location)).size);
   assert.equal(new Set(cameras.map(c => c.id)).size, cameras.length);
   for (const camera of data.cameras) {
-    assert.deepEqual(Object.keys(camera).sort(), ['description', 'id', 'latitude', 'location', 'longitude', 'name', 'url']);
+    const allowed = new Set(['description', 'id', 'latitude', 'location', 'longitude', 'name', 'url', 'sourceId', 'sourceLabel', 'officialUrl', 'playback']);
+    assert.ok(Object.keys(camera).every(key => allowed.has(key)));
     assert.ok(validStream(camera.url));
   }
+});
+
+test('government playback hosts are allowed without admitting arbitrary streams or private devices', () => {
+  assert.ok(validStream('https://transcode.baliprov.go.id/cctv-player.html?id=kantor-lurah-seminyak'));
+  assert.ok(validStream('https://shinobi.bulelengkab.go.id/public/feed/stream.mp4'));
+  assert.ok(validHlsSource('https://transcode.baliprov.go.id/cctv/kantor-lurah-seminyak/index.m3u8'));
+  for (const url of ['https://evil.example/cctv/cam/index.m3u8', 'http://transcode.baliprov.go.id/cctv/cam/index.m3u8', 'https://user:secret@transcode.baliprov.go.id/cctv/cam/index.m3u8', 'https://transcode.baliprov.go.id/cctv/../private/index.m3u8']) assert.equal(validHlsSource(url), false);
+});
+
+test('metadata duplicates merge with their public player while separate camera views survive', () => {
+  const location = { id: 'badung-place', name: 'SEM 002 - Kantor Lurah Seminyak (Sunset Road)', sourceId: 'badung', sourceLabel: 'Badung', playback: 'link', url: 'https://map.badungkab.go.id/', latitude: -8.68792, longitude: 115.17574 };
+  const camera = { ...location, id: 'bali-player', name: 'Kantor Lurah Seminyak', sourceId: 'bali', sourceLabel: 'Bali', playback: 'hls', url: 'https://transcode.baliprov.go.id/cctv-player.html?id=kantor-lurah-seminyak' };
+  const other = { ...camera, id: 'other-angle', name: 'Kantor Lurah Seminyak C02', url: 'https://transcode.baliprov.go.id/cctv-player.html?id=kantor-lurah-seminyak-c02' };
+  const merged = mergeCameras([location], [camera, other]);
+  assert.equal(merged.length, 2);
+  assert.equal(merged[0].id, 'bali-player');
+  assert.deepEqual(merged[0].alsoListedBy, ['badung']);
+  assert.equal(filterCameras(merged, { sourceId: 'badung' }).length, 1);
+  assert.equal(filterCameras(merged, { query: 'SEM 002' }).length, 1);
+  assert.equal(filterCameras(merged, { sourceId: 'bali', query: 'c02' }).length, 1);
+  assert.equal(location.playback, 'link');
+  assert.equal(mergeCameras([camera], [camera]).length, 1);
 });
 test('pagination reaches every camera without duplicates and clamps after filtering', () => {
   for (const size of [4, 9, 16]) {

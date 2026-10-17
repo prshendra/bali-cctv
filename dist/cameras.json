@@ -8,7 +8,11 @@
       "description": "Simpang Wahidin - Gunung Agung",
       "url": "https://atcs.denpasarkota.go.id/stream/A001GUNUNGAGUNGPTZ/",
       "latitude": -8.654504,
-      "longitude": 115.208528
+      "longitude": 115.208528,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A002KAPTENSUJANAPTZ",
@@ -17,7 +21,11 @@
       "description": "Simpang Buluh indah - Gunung Agung",
       "url": "https://atcs.denpasarkota.go.id/stream/A002KAPTENSUJANAPTZ/",
       "latitude": -8.651533,
-      "longitude": 115.195416
+      "longitude": 115.195416,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A003GUNUNGSALAKPTZ",
@@ -26,7 +34,11 @@
       "description": "Simpang Teuku Umar Barat - Gunung Salak",
       "url": "https://atcs.denpasarkota.go.id/stream/A003GUNUNGSALAKPTZ/",
       "latitude": -8.673437,
-      "longitude": 115.180975
+      "longitude": 115.180975,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A004TEUKUUMARPTZ1",
@@ -35,7 +47,11 @@
       "description": "Simpang Imam Bonjol -Teuku Umar",
       "url": "https://atcs.denpasarkota.go.id/stream/A004TEUKUUMARPTZ1/",
       "latitude": -8.681704,
-      "longitude": 115.197039
+      "longitude": 115.197039,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A004TEUKUUMARPTZ2",
@@ -44,7 +60,11 @@
       "description": "Simpang Imam Bonjol -Teuku Umar",
       "url": "https://atcs.denpasarkota.go.id/stream/A004TEUKUUMARPTZ2/",
       "latitude": -8.681704,
-      "longitude": 115.197039
+      "longitude": 115.197039,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A005BATANTAPTZ",
@@ -53,7 +73,11 @@
       "description": "Simpang Teuku Umar - Batanta",
       "url": "https://atcs.denpasarkota.go.id/stream/A005BATANTAPTZ/",
       "latitude": -8.681066,
-      "longitude": 115.201098
+      "longitude": 115.201098,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A006SOPUTANPTZ",
@@ -62,7 +86,11 @@
       "description": "Simpang Imam Bonjol - Gunung Soputan",
       "url": "https://atcs.denpasarkota.go.id/stream/A006SOPUTANPTZ/",
       "latitude": -8.68923,
-      "longitude": 115.191711
+      "longitude": 115.191711,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A008MAHENDRADATTAPTZ",
@@ -71,7 +99,11 @@
       "description": "Simpang Teuku Umar Barat - Western Ring Road",
       "url": "https://atcs.denpasarkota.go.id/stream/A008MAHENDRADATTAPTZ/",
       "latitude": -8.681271,
-      "longitude": 115.189278
+      "longitude": 115.189278,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A007BALUNPTZ",
@@ -80,7 +112,11 @@
       "description": "Simpang Cokroaminoto - Maruti",
       "url": "https://atcs.denpasarkota.go.id/stream/A007BALUNPTZ/",
       "latitude": -8.644593,
-      "longitude": 115.20929
+      "longitude": 115.20929,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A009PERUMNASPTZ",
@@ -89,7 +125,11 @@
       "description": "Simpang Western Ring Road - Buana Raya",
       "url": "https://atcs.denpasarkota.go.id/stream/A009PERUMNASPTZ/",
       "latitude": -8.668488,
-      "longitude": 115.190472
+      "longitude": 115.190472,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A010PERMATAHIJAUPTZ",
@@ -98,7 +138,11 @@
       "description": "Simpang Western Ring Road - Permata Hijau ",
       "url": "https://atcs.denpasarkota.go.id/stream/A010PERMATAHIJAUPTZ/",
       "latitude": -8.660082,
-      "longitude": 115.190896
+      "longitude": 115.190896,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A011MERPATIPTZ",
@@ -107,7 +151,11 @@
       "description": "Simpang Mahendradatta Utara - Merpati",
       "url": "https://atcs.denpasarkota.go.id/stream/A011MERPATIPTZ/",
       "latitude": -8.653811,
-      "longitude": 115.194837
+      "longitude": 115.194837,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A012PULAUSAELUSPTZ",
@@ -116,7 +164,11 @@
       "description": "Simpang Diponegoro - Pulau Saelus",
       "url": "https://atcs.denpasarkota.go.id/stream/A012PULAUSAELUSPTZ/",
       "latitude": -8.684409,
-      "longitude": 115.215794
+      "longitude": 115.215794,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A013SIDAKARYAPTZ",
@@ -125,7 +177,11 @@
       "description": "Simpang Diponegoro - Sidakarya",
       "url": "https://atcs.denpasarkota.go.id/stream/A013SIDAKARYAPTZ/",
       "latitude": -8.700536,
-      "longitude": 115.219351
+      "longitude": 115.219351,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A014KAPTENJAPAPTZ",
@@ -134,7 +190,11 @@
       "description": "Simpang Hayam Wuruk - Kapten Japa",
       "url": "https://atcs.denpasarkota.go.id/stream/A014KAPTENJAPAPTZ/",
       "latitude": -8.65701,
-      "longitude": 115.225096
+      "longitude": 115.225096,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A015MELATIPTZ",
@@ -143,7 +203,11 @@
       "description": "Simpang Hayam Wuruk - Melati",
       "url": "https://atcs.denpasarkota.go.id/stream/A015MELATIPTZ/",
       "latitude": -8.656731,
-      "longitude": 115.222208
+      "longitude": 115.222208,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A016YOSSUDARSOPTZ",
@@ -152,7 +216,11 @@
       "description": "Simpang PB Sudirman - Yos Sudarso",
       "url": "https://atcs.denpasarkota.go.id/stream/A016YOSSUDARSOPTZ/",
       "latitude": -8.667677,
-      "longitude": 115.217885
+      "longitude": 115.217885,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A017PUPUTANPTZ",
@@ -161,7 +229,11 @@
       "description": "Simpang PB Sudirman - Raya Puputan",
       "url": "https://atcs.denpasarkota.go.id/stream/A017PUPUTANPTZ/",
       "latitude": -8.669779,
-      "longitude": 115.21807
+      "longitude": 115.21807,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A018DEWISARTIKAPTZ",
@@ -170,7 +242,11 @@
       "description": "Simpang Diponegoro - Dewi Sartika",
       "url": "https://atcs.denpasarkota.go.id/stream/A018DEWISARTIKAPTZ/",
       "latitude": -8.669495,
-      "longitude": 115.215466
+      "longitude": 115.215466,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A019FEUNUDPTZ",
@@ -179,7 +255,11 @@
       "description": "Simpang PB Sudirman - Serma Mendra",
       "url": "https://atcs.denpasarkota.go.id/stream/A019FEUNUDPTZ/",
       "latitude": -8.673658,
-      "longitude": 115.217913
+      "longitude": 115.217913,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A020WATURENGGONGPTZ",
@@ -188,7 +268,11 @@
       "description": "Simpang PB Sudirman - Waturenggong",
       "url": "https://atcs.denpasarkota.go.id/stream/A020WATURENGGONGPTZ/",
       "latitude": -8.677048,
-      "longitude": 115.217383
+      "longitude": 115.217383,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A021PULAUBUTONPTZ",
@@ -197,7 +281,11 @@
       "description": "Simpang Diponegoro - Pulau Buton",
       "url": "https://atcs.denpasarkota.go.id/stream/A021PULAUBUTONPTZ/",
       "latitude": -8.677417,
-      "longitude": 115.215227
+      "longitude": 115.215227,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A021PULAUBUTONPANORAMIC",
@@ -206,7 +294,11 @@
       "description": "Simpang Diponegoro - Pulau Buton",
       "url": "https://atcs.denpasarkota.go.id/stream/A021PULAUBUTONPANORAMIC/",
       "latitude": -8.677417,
-      "longitude": 115.215227
+      "longitude": 115.215227,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A022UBUNGPTZ1",
@@ -215,7 +307,11 @@
       "description": "Simpang Gatot Subroto - Cokroaminoto",
       "url": "https://atcs.denpasarkota.go.id/stream/A022UBUNGPTZ1/",
       "latitude": -8.638915,
-      "longitude": 115.207555
+      "longitude": 115.207555,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A022UBUNGPTZ2",
@@ -224,7 +320,11 @@
       "description": "Simpang Gatot Subroto - Cokroaminoto",
       "url": "https://atcs.denpasarkota.go.id/stream/A022UBUNGPTZ2/",
       "latitude": -8.638915,
-      "longitude": 115.207555
+      "longitude": 115.207555,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A023CATURMUKAPTZ",
@@ -233,7 +333,11 @@
       "description": "Simpang Udayana - Surapati",
       "url": "https://atcs.denpasarkota.go.id/stream/A023CATURMUKAPTZ/",
       "latitude": -8.655997,
-      "longitude": 115.216935
+      "longitude": 115.216935,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A024ARJUNAPTZ",
@@ -242,7 +346,11 @@
       "description": "Simpang Gajah Mada - Arjuna",
       "url": "https://atcs.denpasarkota.go.id/stream/A024ARJUNAPTZ/",
       "latitude": -8.655727,
-      "longitude": 115.214959
+      "longitude": 115.214959,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A025THAMRINPTZ",
@@ -251,7 +359,11 @@
       "description": "Simpang Imam Bonjol - Thamrin",
       "url": "https://atcs.denpasarkota.go.id/stream/A025THAMRINPTZ/",
       "latitude": -8.658417,
-      "longitude": 115.209792
+      "longitude": 115.209792,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A026PULAUBIAKPTZ",
@@ -260,7 +372,11 @@
       "description": "Simpang Imam Bonjol - Pulau Biak",
       "url": "https://atcs.denpasarkota.go.id/stream/A026PULAUBIAKPTZ/",
       "latitude": -8.666804,
-      "longitude": 115.206455
+      "longitude": 115.206455,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A027GUNUNGSUBURPTZ",
@@ -269,7 +385,11 @@
       "description": "Simpang Imam Bonjol - Gunung Subur",
       "url": "https://atcs.denpasarkota.go.id/stream/A027GUNUNGSUBURPTZ/",
       "latitude": -8.669307,
-      "longitude": 115.205273
+      "longitude": 115.205273,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A028PULAUGALANGPTZ",
@@ -278,7 +398,11 @@
       "description": "Simpang Imam Bonjol - Pulau Galang",
       "url": "https://atcs.denpasarkota.go.id/stream/A028PULAUGALANGPTZ/",
       "latitude": -8.695513,
-      "longitude": 115.187122
+      "longitude": 115.187122,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A029TANGKUBANPERAHUPTZ",
@@ -287,7 +411,11 @@
       "description": "Simpang Teuku Umar Barat - Gunung Lumut",
       "url": "https://atcs.denpasarkota.go.id/stream/A029TANGKUBANPERAHUPTZ/",
       "latitude": -8.673392,
-      "longitude": 115.182498
+      "longitude": 115.182498,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A030CARGOPTZ",
@@ -296,7 +424,11 @@
       "description": "Simpang Gatot Subroto - Cargo",
       "url": "https://atcs.denpasarkota.go.id/stream/A030CARGOPTZ/",
       "latitude": -8.63684,
-      "longitude": 115.196699
+      "longitude": 115.196699,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A031PIDADAPTZ",
@@ -305,7 +437,11 @@
       "description": "Simpang Gatot Subroto - Pidada",
       "url": "https://atcs.denpasarkota.go.id/stream/A031PIDADAPTZ/",
       "latitude": -8.638815,
-      "longitude": 115.202483
+      "longitude": 115.202483,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A032AHMADYANIPTZ",
@@ -314,7 +450,11 @@
       "description": "Simpang Gatot Subroto - Ahmad Yani",
       "url": "https://atcs.denpasarkota.go.id/stream/A032AHMADYANIPTZ/",
       "latitude": -8.637791,
-      "longitude": 115.210857
+      "longitude": 115.210857,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A033NANGKAPTZ1",
@@ -323,7 +463,11 @@
       "description": "Simpang Gatot Subroto - Nangka",
       "url": "https://atcs.denpasarkota.go.id/stream/A033NANGKAPTZ1/",
       "latitude": -8.635554,
-      "longitude": 115.22301
+      "longitude": 115.22301,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A033NANGKAPTZ2",
@@ -332,7 +476,11 @@
       "description": "Simpang Gatot Subroto - Nangka",
       "url": "https://atcs.denpasarkota.go.id/stream/A033NANGKAPTZ2/",
       "latitude": -8.635554,
-      "longitude": 115.22301
+      "longitude": 115.22301,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A034KENYERIPTZ",
@@ -341,7 +489,11 @@
       "description": "Simpang Gatot Subroto - Kenyeri",
       "url": "https://atcs.denpasarkota.go.id/stream/A034KENYERIPTZ/",
       "latitude": -8.635617,
-      "longitude": 115.229601
+      "longitude": 115.229601,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A035NOJAPTZ",
@@ -350,7 +502,11 @@
       "description": "Simpang Gatot Subroto - Noja",
       "url": "https://atcs.denpasarkota.go.id/stream/A035NOJAPTZ/",
       "latitude": -8.635957,
-      "longitude": 115.235335
+      "longitude": 115.235335,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A036TRENGGULIPTZ",
@@ -359,7 +515,11 @@
       "description": "Simpang Gatot Subroto - Trenggana",
       "url": "https://atcs.denpasarkota.go.id/stream/A036TRENGGULIPTZ/",
       "latitude": -8.635862,
-      "longitude": 115.241562
+      "longitude": 115.241562,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A037KENAROKPTZ",
@@ -368,7 +528,11 @@
       "description": "Simpang Ahmad Yani - Ken Arok",
       "url": "https://atcs.denpasarkota.go.id/stream/A037KENAROKPTZ/",
       "latitude": -8.628757,
-      "longitude": 115.208686
+      "longitude": 115.208686,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A038TOHPATIPTZ",
@@ -377,7 +541,11 @@
       "description": "Simpang Gatot Subroto - WR Supratman",
       "url": "https://atcs.denpasarkota.go.id/stream/A038TOHPATIPTZ/",
       "latitude": -8.639083,
-      "longitude": 115.253783
+      "longitude": 115.253783,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A039KEBOIWAPTZ",
@@ -386,7 +554,11 @@
       "description": "Simpang Gatot Subroto - Kebo Iwa",
       "url": "https://atcs.denpasarkota.go.id/stream/A039KEBOIWAPTZ/",
       "latitude": -8.63667,
-      "longitude": 115.185144
+      "longitude": 115.185144,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A040SEKARSARIPTZ",
@@ -395,7 +567,11 @@
       "description": "Simpang IB Mantra - Sekarsari ",
       "url": "https://atcs.denpasarkota.go.id/stream/A040SEKARSARIPTZ/",
       "latitude": -8.649191,
-      "longitude": 115.262936
+      "longitude": 115.262936,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A041GEMITIRPTZ",
@@ -404,7 +580,11 @@
       "description": "Simpang IB Mantra - Gemitir",
       "url": "https://atcs.denpasarkota.go.id/stream/A041GEMITIRPTZ/",
       "latitude": -8.648386,
-      "longitude": 115.269318
+      "longitude": 115.269318,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A042SEDAPMALAMPTZ",
@@ -413,7 +593,11 @@
       "description": "Simpang Hang Tuah - Sedap Malam",
       "url": "https://atcs.denpasarkota.go.id/stream/A042SEDAPMALAMPTZ/",
       "latitude": -8.67415,
-      "longitude": 115.252166
+      "longitude": 115.252166,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A043GUNUNGGALUNGGUNGPTZ",
@@ -422,7 +606,11 @@
       "description": "Simpang Cokroaminoto - Gunung Galunggung",
       "url": "https://atcs.denpasarkota.go.id/stream/A043GUNUNGGALUNGGUNGPTZ/",
       "latitude": -8.617052,
-      "longitude": 115.194985
+      "longitude": 115.194985,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A044WARIBANGPTZ",
@@ -431,7 +619,11 @@
       "description": "Simpang WR Supratman - Waribang",
       "url": "https://atcs.denpasarkota.go.id/stream/A044WARIBANGPTZ/",
       "latitude": -8.646279,
-      "longitude": 115.245138
+      "longitude": 115.245138,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A045SURABIPTZ",
@@ -440,7 +632,11 @@
       "description": "Simpang WR Supratman - Surabi",
       "url": "https://atcs.denpasarkota.go.id/stream/A045SURABIPTZ/",
       "latitude": -8.64813,
-      "longitude": 115.23987
+      "longitude": 115.23987,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A046SUBITAPTZ",
@@ -449,7 +645,11 @@
       "description": "Simpang WR Supratman - Subita",
       "url": "https://atcs.denpasarkota.go.id/stream/A046SUBITAPTZ/",
       "latitude": -8.648683,
-      "longitude": 115.23358
+      "longitude": 115.23358,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A047KECUBUNGPTZ",
@@ -458,7 +658,11 @@
       "description": "Simpang WR Supratman - Kecubung",
       "url": "https://atcs.denpasarkota.go.id/stream/A047KECUBUNGPTZ/",
       "latitude": -8.648971,
-      "longitude": 115.229862
+      "longitude": 115.229862,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A048NUSAINDAHPTZ",
@@ -467,7 +671,11 @@
       "description": "Simpang Hayam Wuruk - Nusa Indah",
       "url": "https://atcs.denpasarkota.go.id/stream/A048NUSAINDAHPTZ/",
       "latitude": -8.657105,
-      "longitude": 115.235051
+      "longitude": 115.235051,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A049TUKADUNDAPTZ",
@@ -476,7 +684,11 @@
       "description": "Simpang Raya Puputan - Tukad Unda",
       "url": "https://atcs.denpasarkota.go.id/stream/A049TUKADUNDAPTZ/",
       "latitude": -8.673085,
-      "longitude": 115.232181
+      "longitude": 115.232181,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A113TUKADBARITOPTZ",
@@ -485,7 +697,11 @@
       "description": "Simpang Tukad Barito - Tukad Batanghari",
       "url": "https://atcs.denpasarkota.go.id/stream/A113TUKADBARITOPTZ/",
       "latitude": -8.684425,
-      "longitude": 115.230308
+      "longitude": 115.230308,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A113TUKADBARITOPANORAMIC",
@@ -494,7 +710,11 @@
       "description": "Simpang Tukad Barito - Tukad Batanghari",
       "url": "https://atcs.denpasarkota.go.id/stream/A113TUKADBARITOPANORAMIC/",
       "latitude": -8.684425,
-      "longitude": 115.230308
+      "longitude": 115.230308,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A114SURADIPAPTZ",
@@ -503,7 +723,11 @@
       "description": "Simpang Ahmad Yani Utara - Suradipa",
       "url": "https://atcs.denpasarkota.go.id/stream/A114SURADIPAPTZ/",
       "latitude": -8.612413,
-      "longitude": 115.213186
+      "longitude": 115.213186,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A114SURADIPAPANORAMIC",
@@ -512,7 +736,11 @@
       "description": "Simpang Ahmad Yani Utara - Suradipa",
       "url": "https://atcs.denpasarkota.go.id/stream/A114SURADIPAPANORAMIC/",
       "latitude": -8.612413,
-      "longitude": 115.213186
+      "longitude": 115.213186,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A115ANTASURAPTZ",
@@ -521,7 +749,11 @@
       "description": "Simpang Antasura - Astasura",
       "url": "https://atcs.denpasarkota.go.id/stream/A115ANTASURAPTZ/",
       "latitude": -8.6111,
-      "longitude": 115.22136
+      "longitude": 115.22136,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A115ANTASURAPANORAMIC",
@@ -530,7 +762,11 @@
       "description": "Simpang Antasura - Astasura",
       "url": "https://atcs.denpasarkota.go.id/stream/A115ANTASURAPANORAMIC/",
       "latitude": -8.6111,
-      "longitude": 115.22136
+      "longitude": 115.22136,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A116PEMOGANPTZ",
@@ -539,7 +775,11 @@
       "description": "Simpang Pemogan - Pulau Galang",
       "url": "https://atcs.denpasarkota.go.id/stream/A116PEMOGANPTZ/",
       "latitude": -8.694226,
-      "longitude": 115.197449
+      "longitude": 115.197449,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A116PEMOGANPANORAMIC",
@@ -548,7 +788,11 @@
       "description": "Simpang Pemogan - Pulau Galang",
       "url": "https://atcs.denpasarkota.go.id/stream/A116PEMOGANPANORAMIC/",
       "latitude": -8.694226,
-      "longitude": 115.197449
+      "longitude": 115.197449,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A117GUNUNGSANGHYANGPTZ",
@@ -557,7 +801,11 @@
       "description": "Simpang Gunung Agung - Gunung Tangkuban Perahu",
       "url": "https://atcs.denpasarkota.go.id/stream/A117GUNUNGSANGHYANGPTZ/",
       "latitude": -8.650745,
-      "longitude": 115.186492
+      "longitude": 115.186492,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A117GUNUNGSANGHYANGPANORAMIC",
@@ -566,7 +814,11 @@
       "description": "Simpang Gunung Agung - Gunung Tangkuban Perahu",
       "url": "https://atcs.denpasarkota.go.id/stream/A117GUNUNGSANGHYANGPANORAMIC/",
       "latitude": -8.650745,
-      "longitude": 115.186492
+      "longitude": 115.186492,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A052KAPTENAGUNGPTZ",
@@ -575,7 +827,11 @@
       "description": "Simpang Surapati - Kapten Agung",
       "url": "https://atcs.denpasarkota.go.id/stream/A052KAPTENAGUNGPTZ/",
       "latitude": -8.656452,
-      "longitude": 115.220013
+      "longitude": 115.220013,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A053SIMPANG6TEUKUUMARPTZ",
@@ -584,7 +840,11 @@
       "description": "Simpang 6 Teuku Umar",
       "url": "https://atcs.denpasarkota.go.id/stream/A053SIMPANG6TEUKUUMARPTZ/",
       "latitude": -8.676351,
-      "longitude": 115.206754
+      "longitude": 115.206754,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A053SIMPANG6TEUKUUMARPANORAMIC",
@@ -593,7 +853,11 @@
       "description": "Simpang 6 Teuku Umar",
       "url": "https://atcs.denpasarkota.go.id/stream/A053SIMPANG6TEUKUUMARPANORAMIC/",
       "latitude": -8.676351,
-      "longitude": 115.206754
+      "longitude": 115.206754,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A054GAJAHMADATIMURPTZ",
@@ -602,7 +866,11 @@
       "description": "Simpang Wahidin - Gajah Mada",
       "url": "https://atcs.denpasarkota.go.id/stream/A054GAJAHMADATIMURPTZ/",
       "latitude": -8.655006,
-      "longitude": 115.210509
+      "longitude": 115.210509,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A103GAJAHBADABARATPANORAMIC",
@@ -611,7 +879,11 @@
       "description": "Simpang Wahidin - Gajah Mada",
       "url": "https://atcs.denpasarkota.go.id/stream/A103GAJAHBADABARATPANORAMIC/",
       "latitude": -8.655006,
-      "longitude": 115.210509
+      "longitude": 115.210509,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A063PANTAIMATAHARITERBITPTZ",
@@ -620,7 +892,11 @@
       "description": "Pelabuhan Matahari Terbit",
       "url": "https://atcs.denpasarkota.go.id/stream/A063PANTAIMATAHARITERBITPTZ/",
       "latitude": -8.67106,
-      "longitude": 115.261123
+      "longitude": 115.261123,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A064PANTAIMATAHARITERBITPTZ2",
@@ -629,7 +905,11 @@
       "description": "Pelabuhan Matahari Terbit",
       "url": "https://atcs.denpasarkota.go.id/stream/A064PANTAIMATAHARITERBITPTZ2/",
       "latitude": -8.67106,
-      "longitude": 115.261123
+      "longitude": 115.261123,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A065UDAYANAPTZ",
@@ -638,7 +918,11 @@
       "description": "Jalan Udayana ",
       "url": "https://atcs.denpasarkota.go.id/stream/A065UDAYANAPTZ/",
       "latitude": -8.657155,
-      "longitude": 115.216821
+      "longitude": 115.216821,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A066PUPUTANPTZ",
@@ -647,7 +931,11 @@
       "description": "Jalan Raya Puputan",
       "url": "https://atcs.denpasarkota.go.id/stream/A066PUPUTANPTZ/",
       "latitude": -8.673208,
-      "longitude": 115.234403
+      "longitude": 115.234403,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A067NANGKAUTARAPTZ",
@@ -656,7 +944,11 @@
       "description": "Simpang Nangka Utara - Kemuda",
       "url": "https://atcs.denpasarkota.go.id/stream/A067NANGKAUTARAPTZ/",
       "latitude": -8.625117,
-      "longitude": 115.223868
+      "longitude": 115.223868,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A068SEROJAPTZ",
@@ -665,7 +957,11 @@
       "description": "Simpang Kemuda - Seroja",
       "url": "https://atcs.denpasarkota.go.id/stream/A068SEROJAPTZ/",
       "latitude": -8.625458,
-      "longitude": 115.226717
+      "longitude": 115.226717,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A069PADMAPTZ",
@@ -674,7 +970,11 @@
       "description": "Simpang Trenggana - Padma",
       "url": "https://atcs.denpasarkota.go.id/stream/A069PADMAPTZ/",
       "latitude": -8.623589,
-      "longitude": 115.241037
+      "longitude": 115.241037,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A070TITIBANDAPTZ",
@@ -683,7 +983,11 @@
       "description": "Patung Titi Banda",
       "url": "https://atcs.denpasarkota.go.id/stream/A070TITIBANDAPTZ/",
       "latitude": -8.649487,
-      "longitude": 115.255443
+      "longitude": 115.255443,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A071BUNDARANHANGTUAHPTZ",
@@ -692,7 +996,11 @@
       "description": "Bundaran Hang Tuah",
       "url": "https://atcs.denpasarkota.go.id/stream/A071BUNDARANHANGTUAHPTZ/",
       "latitude": -8.67353,
-      "longitude": 115.244644
+      "longitude": 115.244644,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A072DURIAN-KALIASEMPTZ",
@@ -701,7 +1009,11 @@
       "description": "Simpang Durian - Kaliasem",
       "url": "https://atcs.denpasarkota.go.id/stream/A072DURIAN-KALIASEMPTZ/",
       "latitude": -8.654323,
-      "longitude": 115.218775
+      "longitude": 115.218775,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "072DURIAN-KALIASEMPANORAMIC",
@@ -710,7 +1022,11 @@
       "description": "Simpang Durian - Kaliasem",
       "url": "https://atcs.denpasarkota.go.id/stream/072DURIAN-KALIASEMPANORAMIC/",
       "latitude": -8.654323,
-      "longitude": 115.218775
+      "longitude": 115.218775,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A073AHMADYANI-MARUTIPTZ",
@@ -719,7 +1035,11 @@
       "description": "Simpang Ahmad Yani - Maruti",
       "url": "https://atcs.denpasarkota.go.id/stream/A073AHMADYANI-MARUTIPTZ/",
       "latitude": -8.64478,
-      "longitude": 115.212768
+      "longitude": 115.212768,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A073AHMADYANI-MARUTIPANORAMIC",
@@ -728,7 +1048,11 @@
       "description": "Simpang Ahmad Yani - Maruti",
       "url": "https://atcs.denpasarkota.go.id/stream/A073AHMADYANI-MARUTIPANORAMIC/",
       "latitude": -8.64478,
-      "longitude": 115.212768
+      "longitude": 115.212768,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A074AHMADYANI-MULAWARMANPTZ",
@@ -737,7 +1061,11 @@
       "description": "Simpang Ahmad Yani - Mulawarman",
       "url": "https://atcs.denpasarkota.go.id/stream/A074AHMADYANI-MULAWARMANPTZ/",
       "latitude": -8.634948,
-      "longitude": 115.210516
+      "longitude": 115.210516,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A074AHMADYANI-MULAWARMANPANORAMIC",
@@ -746,7 +1074,11 @@
       "description": "Simpang Ahmad Yani - Mulawarman",
       "url": "https://atcs.denpasarkota.go.id/stream/A074AHMADYANI-MULAWARMANPANORAMIC/",
       "latitude": -8.634948,
-      "longitude": 115.210516
+      "longitude": 115.210516,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A075PASARSATRIAPTZ",
@@ -755,7 +1087,11 @@
       "description": "Ruas Jalan Veteran",
       "url": "https://atcs.denpasarkota.go.id/stream/A075PASARSATRIAPTZ/",
       "latitude": -8.650485,
-      "longitude": 115.217447
+      "longitude": 115.217447,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A075PASARSATRIAPANORAMIC",
@@ -764,7 +1100,11 @@
       "description": "Ruas Jalan Veteran",
       "url": "https://atcs.denpasarkota.go.id/stream/A075PASARSATRIAPANORAMIC/",
       "latitude": -8.650485,
-      "longitude": 115.217447
+      "longitude": 115.217447,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A076BANJARTAINSIATPTZ",
@@ -773,7 +1113,11 @@
       "description": "Simpang Nangka Selatan - Pattimura",
       "url": "https://atcs.denpasarkota.go.id/stream/A076BANJARTAINSIATPTZ/",
       "latitude": -8.649025,
-      "longitude": 115.217574
+      "longitude": 115.217574,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A076BANJARTAINSIATPANORAMIC",
@@ -782,7 +1126,11 @@
       "description": "Simpang Nangka Selatan - Pattimura",
       "url": "https://atcs.denpasarkota.go.id/stream/A076BANJARTAINSIATPANORAMIC/",
       "latitude": -8.649025,
-      "longitude": 115.217574
+      "longitude": 115.217574,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A077BANJARBALUNPTZ",
@@ -791,7 +1139,11 @@
       "description": "Simpang Setiabudi - Sutomo",
       "url": "https://atcs.denpasarkota.go.id/stream/A077BANJARBALUNPTZ/",
       "latitude": -8.647429,
-      "longitude": 115.209338
+      "longitude": 115.209338,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A077BANJARBALUNPANORAMIC",
@@ -800,7 +1152,11 @@
       "description": "Simpang Setiabudi - Sutomo",
       "url": "https://atcs.denpasarkota.go.id/stream/A077BANJARBALUNPANORAMIC/",
       "latitude": -8.647429,
-      "longitude": 115.209338
+      "longitude": 115.209338,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A078WIBISANA-SETIABUDIPTZ",
@@ -809,7 +1165,11 @@
       "description": "Simpang Setiabudi - Wibisana",
       "url": "https://atcs.denpasarkota.go.id/stream/A078WIBISANA-SETIABUDIPTZ/",
       "latitude": -8.650645,
-      "longitude": 115.208828
+      "longitude": 115.208828,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A078WIBISANA-SETIABUDIPANORAMIC",
@@ -818,7 +1178,11 @@
       "description": "Simpang Setiabudi - Wibisana",
       "url": "https://atcs.denpasarkota.go.id/stream/A078WIBISANA-SETIABUDIPANORAMIC/",
       "latitude": -8.650645,
-      "longitude": 115.208828
+      "longitude": 115.208828,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A079LAPANGPUPUTANUTARAPTZ",
@@ -827,7 +1191,11 @@
       "description": "Ruas Jalan Surapati",
       "url": "https://atcs.denpasarkota.go.id/stream/A079LAPANGPUPUTANUTARAPTZ/",
       "latitude": -8.656091,
-      "longitude": 115.217569
+      "longitude": 115.217569,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A079LAPANGPUPUTANUTARAPANORAMIC",
@@ -836,7 +1204,11 @@
       "description": "Ruas Jalan Surapati",
       "url": "https://atcs.denpasarkota.go.id/stream/A079LAPANGPUPUTANUTARAPANORAMIC/",
       "latitude": -8.656091,
-      "longitude": 115.217569
+      "longitude": 115.217569,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A080SULI-SARIGADINGPTZ",
@@ -845,7 +1217,11 @@
       "description": "Simpang Suli - Sari Gading",
       "url": "https://atcs.denpasarkota.go.id/stream/A080SULI-SARIGADINGPTZ/",
       "latitude": -8.636585,
-      "longitude": 115.225267
+      "longitude": 115.225267,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A080SULI-SARIGADINGPANORAMIC",
@@ -854,7 +1230,11 @@
       "description": "Simpang Suli - Sari Gading",
       "url": "https://atcs.denpasarkota.go.id/stream/A080SULI-SARIGADINGPANORAMIC/",
       "latitude": -8.636585,
-      "longitude": 115.225267
+      "longitude": 115.225267,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A081BANJARTAMPAKGANGSULPTZ",
@@ -863,7 +1243,11 @@
       "description": "Simpang Nakula - Werkudara",
       "url": "https://atcs.denpasarkota.go.id/stream/A081BANJARTAMPAKGANGSULPTZ/",
       "latitude": -8.651422,
-      "longitude": 115.215655
+      "longitude": 115.215655,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A081BANJARTAMPAKGANGSULPANORAMIC",
@@ -872,7 +1256,11 @@
       "description": "Simpang Nakula - Werkudara",
       "url": "https://atcs.denpasarkota.go.id/stream/A081BANJARTAMPAKGANGSULPANORAMIC/",
       "latitude": -8.651422,
-      "longitude": 115.215655
+      "longitude": 115.215655,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A082VETERAN-ABIMANYUPTZ",
@@ -881,7 +1269,11 @@
       "description": "Simpang Veteran - Abimanyu",
       "url": "https://atcs.denpasarkota.go.id/stream/A082VETERAN-ABIMANYUPTZ/",
       "latitude": -8.651511,
-      "longitude": 115.217356
+      "longitude": 115.217356,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A082VETERAN-ABIMANYUPANORAMIC",
@@ -890,7 +1282,11 @@
       "description": "Simpang Veteran - Abimanyu",
       "url": "https://atcs.denpasarkota.go.id/stream/A082VETERAN-ABIMANYUPANORAMIC/",
       "latitude": -8.651511,
-      "longitude": 115.217356
+      "longitude": 115.217356,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A083PURADALEMYANGBATUPTZ",
@@ -899,7 +1295,11 @@
       "description": "Ruas Jalan Cok Agung Tresna",
       "url": "https://atcs.denpasarkota.go.id/stream/A083PURADALEMYANGBATUPTZ/",
       "latitude": -8.666791,
-      "longitude": 115.224992
+      "longitude": 115.224992,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A083PURADALEMYANGBATUPANORAMIC",
@@ -908,7 +1308,11 @@
       "description": "Ruas Jalan Cok Agung Tresna",
       "url": "https://atcs.denpasarkota.go.id/stream/A083PURADALEMYANGBATUPANORAMIC/",
       "latitude": -8.666791,
-      "longitude": 115.224992
+      "longitude": 115.224992,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A084POJOKSELATANMUSEUMBALIPTZ",
@@ -917,7 +1321,11 @@
       "description": "Simpang Sugianyar - Mudita",
       "url": "https://atcs.denpasarkota.go.id/stream/A084POJOKSELATANMUSEUMBALIPTZ/",
       "latitude": -8.658257,
-      "longitude": 115.218274
+      "longitude": 115.218274,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A084POJOKSELATANMUSEUMBALIPANORAMIC",
@@ -926,7 +1334,11 @@
       "description": "Simpang Sugianyar - Mudita",
       "url": "https://atcs.denpasarkota.go.id/stream/A084POJOKSELATANMUSEUMBALIPANORAMIC/",
       "latitude": -8.658257,
-      "longitude": 115.218274
+      "longitude": 115.218274,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A085POJOKUTARAJAGATNATHAPTZ",
@@ -935,7 +1347,11 @@
       "description": "Simpang Surapati - Kaliasem",
       "url": "https://atcs.denpasarkota.go.id/stream/A085POJOKUTARAJAGATNATHAPTZ/",
       "latitude": -8.656148,
-      "longitude": 115.218609
+      "longitude": 115.218609,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A085POJOKUTARAJAGATNATHAPANORAMIC",
@@ -944,7 +1360,11 @@
       "description": "Simpang Surapati - Kaliasem",
       "url": "https://atcs.denpasarkota.go.id/stream/A085POJOKUTARAJAGATNATHAPANORAMIC/",
       "latitude": -8.656148,
-      "longitude": 115.218609
+      "longitude": 115.218609,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A086TRENGGANA-SIULANPTZ",
@@ -953,7 +1373,11 @@
       "description": "Simpang Trenggana - Siulan",
       "url": "https://atcs.denpasarkota.go.id/stream/A086TRENGGANA-SIULANPTZ/",
       "latitude": -8.617573,
-      "longitude": 115.240702
+      "longitude": 115.240702,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A086TRENGGANA-SIULANPANORAMIC",
@@ -962,7 +1386,11 @@
       "description": "Simpang Trenggana - Siulan",
       "url": "https://atcs.denpasarkota.go.id/stream/A086TRENGGANA-SIULANPANORAMIC/",
       "latitude": -8.617573,
-      "longitude": 115.240702
+      "longitude": 115.240702,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A087PASARAGUNGPENINJOANPTZ",
@@ -971,7 +1399,11 @@
       "description": "Simpang Padma - Cekomaria",
       "url": "https://atcs.denpasarkota.go.id/stream/A087PASARAGUNGPENINJOANPTZ/",
       "latitude": -8.623191,
-      "longitude": 115.230313
+      "longitude": 115.230313,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A087PASARAGUNGPENINJOANPANORAMIC",
@@ -980,7 +1412,11 @@
       "description": "Simpang Padma - Cekomaria",
       "url": "https://atcs.denpasarkota.go.id/stream/A087PASARAGUNGPENINJOANPANORAMICZ/",
       "latitude": -8.623191,
-      "longitude": 115.230313
+      "longitude": 115.230313,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A088TERMINALKERENENGPTZ",
@@ -989,7 +1425,11 @@
       "description": "Simpang Lely - Rampai",
       "url": "https://atcs.denpasarkota.go.id/stream/A088TERMINALKERENENGPTZ/",
       "latitude": -8.655851,
-      "longitude": 115.224251
+      "longitude": 115.224251,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A088TERMINALKERENENGPANORAMIC",
@@ -998,7 +1438,11 @@
       "description": "Simpang Lely - Rampai",
       "url": "https://atcs.denpasarkota.go.id/stream/A088TERMINALKERENENGPANORAMIC/",
       "latitude": -8.655851,
-      "longitude": 115.224251
+      "longitude": 115.224251,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A089RAYAPUPUTAN-LETDATANTULARPTZ",
@@ -1007,7 +1451,11 @@
       "description": "Simpang Raya Puputan - Tantular",
       "url": "https://atcs.denpasarkota.go.id/stream/A089RAYAPUPUTAN-LETDATANTULARPTZ/",
       "latitude": -8.672975,
-      "longitude": 115.228219
+      "longitude": 115.228219,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A089RAYAPUPUTAN-LETDATANTULARPANORAMIC",
@@ -1016,7 +1464,11 @@
       "description": "Simpang Raya Puputan - Tantular",
       "url": "https://atcs.denpasarkota.go.id/stream/A089RAYAPUPUTAN-LETDATANTULARPANORAMIC/",
       "latitude": -8.672975,
-      "longitude": 115.228219
+      "longitude": 115.228219,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A090KAPTENAGUNG-KAPTENREGUGPTZ",
@@ -1025,7 +1477,11 @@
       "description": "Simpang Kapten Agung - Kapten Regug",
       "url": "https://atcs.denpasarkota.go.id/stream/A090KAPTENAGUNG-KAPTENREGUGPTZ/",
       "latitude": -8.658304,
-      "longitude": 115.219882
+      "longitude": 115.219882,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A090KAPTENAGUNG-KAPTENREGUGPANORAMIC",
@@ -1034,7 +1490,11 @@
       "description": "Simpang Kapten Agung - Kapten Regug",
       "url": "https://atcs.denpasarkota.go.id/stream/A090KAPTENAGUNG-KAPTENREGUGPANORAMIC/",
       "latitude": -8.658304,
-      "longitude": 115.219882
+      "longitude": 115.219882,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A091KAMBOJA-ANGSOKAPTZ",
@@ -1043,7 +1503,11 @@
       "description": "Simpang Kamboja - Angsoka",
       "url": "https://atcs.denpasarkota.go.id/stream/A091KAMBOJA-ANGSOKAPTZ/",
       "latitude": -8.65211,
-      "longitude": 115.224543
+      "longitude": 115.224543,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A091KAMBOJA-ANGSOKAPANORAMIC",
@@ -1052,7 +1516,11 @@
       "description": "Simpang Kamboja - Angsoka",
       "url": "https://atcs.denpasarkota.go.id/stream/A091KAMBOJA-ANGSOKAPANORAMIC/",
       "latitude": -8.65211,
-      "longitude": 115.224543
+      "longitude": 115.224543,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A092KAMBOJA-RIJASAPTZ",
@@ -1061,7 +1529,11 @@
       "description": "Simpang Kamboja - Rijasa",
       "url": "https://atcs.denpasarkota.go.id/stream/A092KAMBOJA-RIJASAPTZ/",
       "latitude": -8.656227,
-      "longitude": 115.225563
+      "longitude": 115.225563,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A092KAMBOJA-RIJASAPANORAMIC",
@@ -1070,7 +1542,11 @@
       "description": "Simpang Kamboja - Rijasa",
       "url": "https://atcs.denpasarkota.go.id/stream/A092KAMBOJA-RIJASAPANORAMIC/",
       "latitude": -8.656227,
-      "longitude": 115.225563
+      "longitude": 115.225563,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A093DPRDKOTADENPASARPTZ",
@@ -1079,7 +1555,11 @@
       "description": "Simpang Melati - Cempaka",
       "url": "https://atcs.denpasarkota.go.id/stream/A093DPRDKOTADENPASARPTZ/",
       "latitude": -8.655554,
-      "longitude": 115.222527
+      "longitude": 115.222527,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A093DPRDKOTADENPASARPANORAMIC",
@@ -1088,7 +1568,11 @@
       "description": "Simpang Melati - Cempaka",
       "url": "https://atcs.denpasarkota.go.id/stream/A093DPRDKOTADENPASARPANORAMIC/",
       "latitude": -8.655554,
-      "longitude": 115.222527
+      "longitude": 115.222527,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A094KAMBOJA-RAMPAIPTZ",
@@ -1097,7 +1581,11 @@
       "description": "Simpang Kamboja - Rampai",
       "url": "https://atcs.denpasarkota.go.id/stream/A094KAMBOJA-RAMPAIPTZ/",
       "latitude": -8.654875,
-      "longitude": 115.225309
+      "longitude": 115.225309,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A094KAMBOJA-RAMPAIPANORAMIC",
@@ -1106,7 +1594,11 @@
       "description": "Simpang Kamboja - Rampai",
       "url": "https://atcs.denpasarkota.go.id/stream/A094KAMBOJA-RAMPAIPANORAMIC/",
       "latitude": -8.654875,
-      "longitude": 115.225309
+      "longitude": 115.225309,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A095HAYAMWURUK-LELYPTZ",
@@ -1115,7 +1607,11 @@
       "description": "Simpang Hayam Wuruk - Lely",
       "url": "https://atcs.denpasarkota.go.id/stream/A095HAYAMWURUK-LELYPTZ/",
       "latitude": -8.65697,
-      "longitude": 115.224158
+      "longitude": 115.224158,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A095HAYAMWURUK-LELYPANORAMIC",
@@ -1124,7 +1620,11 @@
       "description": "Simpang Hayam Wuruk - Lely",
       "url": "https://atcs.denpasarkota.go.id/stream/A095HAYAMWURUK-LELYPTZPANORAMIC/",
       "latitude": -8.65697,
-      "longitude": 115.224158
+      "longitude": 115.224158,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A096SIDAKARYA-BEDUGULPTZ",
@@ -1133,7 +1633,11 @@
       "description": "Simpang Bedugul - Sidakarya",
       "url": "https://atcs.denpasarkota.go.id/stream/A096SIDAKARYA-BEDUGULPTZ/",
       "latitude": -8.700615,
-      "longitude": 115.227192
+      "longitude": 115.227192,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A096SIDAKARYA-BEDUGULPANORAMIC",
@@ -1142,7 +1646,11 @@
       "description": "Simpang Bedugul - Sidakarya",
       "url": "https://atcs.denpasarkota.go.id/stream/A096SIDAKARYA-BEDUGULPANORAMIC/",
       "latitude": -8.700615,
-      "longitude": 115.227192
+      "longitude": 115.227192,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A097WATURENGGONG-TUKADYEHAYAPTZ",
@@ -1151,7 +1659,11 @@
       "description": "Simpang Waturenggong - Tukad Yeh Aya",
       "url": "https://atcs.denpasarkota.go.id/stream/A097WATURENGGONG-TUKADYEHAYAPTZ/",
       "latitude": -8.678759,
-      "longitude": 115.225824
+      "longitude": 115.225824,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A097WATURENGGONG-TUKADYEHAYAPANORAMIC",
@@ -1160,7 +1672,11 @@
       "description": "Simpang Waturenggong - Tukad Yeh Aya",
       "url": "https://atcs.denpasarkota.go.id/stream/A097WATURENGGONG-TUKADYEHAYAPANORAMIC/",
       "latitude": -8.678759,
-      "longitude": 115.225824
+      "longitude": 115.225824,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A098TUKADBARITO-TUKADBADUNGPTZ",
@@ -1169,7 +1685,11 @@
       "description": "Simpang Tukad Barito - Tukad Badung",
       "url": "https://atcs.denpasarkota.go.id/stream/A098TUKADBARITO-TUKADBADUNGPTZ/",
       "latitude": -8.68415,
-      "longitude": 115.23789
+      "longitude": 115.23789,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A098TUKADBARITO-TUKADBADUNGPANORAMIC",
@@ -1178,7 +1698,11 @@
       "description": "Simpang Tukad Barito - Tukad Badung",
       "url": "https://atcs.denpasarkota.go.id/stream/A098TUKADBARITO-TUKADBADUNGPANORAMIC/",
       "latitude": -8.68415,
-      "longitude": 115.23789
+      "longitude": 115.23789,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A099SUCIPTZ",
@@ -1187,7 +1711,11 @@
       "description": "Simpang Hasanudin - Sumatera",
       "url": "https://atcs.denpasarkota.go.id/stream/A099SUCIPTZ/",
       "latitude": -8.658713,
-      "longitude": 115.214574
+      "longitude": 115.214574,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A099SUCIPANORAMIC",
@@ -1196,7 +1724,11 @@
       "description": "Simpang Hasanudin - Sumatera",
       "url": "https://atcs.denpasarkota.go.id/stream/A099SUCIPANORAMIC/",
       "latitude": -8.658713,
-      "longitude": 115.214574
+      "longitude": 115.214574,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A100PURADEMAKPTZ",
@@ -1205,7 +1737,11 @@
       "description": "Simpang Teuku Umar Barat - Pura Demak",
       "url": "https://atcs.denpasarkota.go.id/stream/A100PURADEMAKPTZ/",
       "latitude": -8.681748,
-      "longitude": 115.192763
+      "longitude": 115.192763,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A100PURADEMAKPANORAMIC",
@@ -1214,7 +1750,11 @@
       "description": "Simpang Teuku Umar Barat - Pura Demak",
       "url": "https://atcs.denpasarkota.go.id/stream/A100PURADEMAKPANORAMIC/",
       "latitude": -8.681748,
-      "longitude": 115.192763
+      "longitude": 115.192763,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "/A101BATUKARU-RINJANIPTZ",
@@ -1223,7 +1763,11 @@
       "description": "Simpang Batukaru - Rinjani",
       "url": "https://atcs.denpasarkota.go.id/stream//A101BATUKARU-RINJANIPTZ/",
       "latitude": -8.660056,
-      "longitude": 115.198809
+      "longitude": 115.198809,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A101BATUKARU-RINJANIPANORAMIC",
@@ -1232,7 +1776,11 @@
       "description": "Simpang Batukaru - Rinjani",
       "url": "https://atcs.denpasarkota.go.id/stream/A101BATUKARU-RINJANIPANORAMIC/",
       "latitude": -8.660056,
-      "longitude": 115.198809
+      "longitude": 115.198809,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A102UDAYANA-BELITON",
@@ -1241,7 +1789,11 @@
       "description": "Simpang Udayana - Beliton",
       "url": "https://atcs.denpasarkota.go.id/stream/A102UDAYANA-BELITON/",
       "latitude": -8.658082,
-      "longitude": 115.216731
+      "longitude": 115.216731,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A102UDAYANA-BELITONPANORAMIC",
@@ -1250,7 +1802,11 @@
       "description": "Simpang Udayana - Beliton",
       "url": "https://atcs.denpasarkota.go.id/stream/A102UDAYANA-BELITONPANORAMIC/",
       "latitude": -8.658082,
-      "longitude": 115.216731
+      "longitude": 115.216731,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A103GAJAHMADABARATPTZ",
@@ -1259,7 +1815,11 @@
       "description": "Simpang Gajah Mada - Thamrin",
       "url": "https://atcs.denpasarkota.go.id/stream/A103GAJAHMADABARATPTZ/",
       "latitude": -8.655004,
-      "longitude": 115.210508
+      "longitude": 115.210508,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A103GAJAHMADABARATPANORAMIC",
@@ -1268,7 +1828,11 @@
       "description": "Simpang Gajah Mada - Thamrin",
       "url": "https://atcs.denpasarkota.go.id/stream/A103GAJAHMADABARATPANORAMIC/",
       "latitude": -8.655004,
-      "longitude": 115.210508
+      "longitude": 115.210508,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A104SUTOYO-HASANUDINPTZ",
@@ -1277,7 +1841,11 @@
       "description": "Simpang Sutoyo - Hasanudin",
       "url": "https://atcs.denpasarkota.go.id/stream/A104SUTOYO-HASANUDINPTZ/",
       "latitude": -8.65902,
-      "longitude": 115.216724
+      "longitude": 115.216724,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A104SUTOYO-HASANUDINPANORAMIC",
@@ -1286,7 +1854,11 @@
       "description": "Simpang Sutoyo - Hasanudin",
       "url": "https://atcs.denpasarkota.go.id/stream/A104SUTOYO-HASANUDINPANORAMIC/",
       "latitude": -8.65902,
-      "longitude": 115.216724
+      "longitude": 115.216724,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A105RSADUDAYANAPTZ",
@@ -1295,7 +1867,11 @@
       "description": "Simpang PB Sudirman -RSAD",
       "url": "https://atcs.denpasarkota.go.id/stream/A105RSADUDAYANAPTZ/",
       "latitude": -8.663913,
-      "longitude": 115.218086
+      "longitude": 115.218086,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A105RSADUDAYANAPANORAMIC",
@@ -1304,7 +1880,11 @@
       "description": "Simpang PB Sudirman -RSAD",
       "url": "https://atcs.denpasarkota.go.id/stream/A105RSADUDAYANAPANORAMIC/",
       "latitude": -8.663913,
-      "longitude": 115.218086
+      "longitude": 115.218086,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A106ENGGANO-BUNGINPTZ",
@@ -1313,7 +1893,11 @@
       "description": "Simpang Pulau Bungin - Pulau Enggano",
       "url": "https://atcs.denpasarkota.go.id/stream/A106ENGGANO-BUNGINPTZ/",
       "latitude": -8.690105,
-      "longitude": 115.19892
+      "longitude": 115.19892,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A106ENGGANO-BUNGINPANORAMIC",
@@ -1322,7 +1906,11 @@
       "description": "Simpang Pulau Bungin - Pulau Enggano",
       "url": "https://atcs.denpasarkota.go.id/stream/A106ENGGANO-BUNGINPANORAMIC/",
       "latitude": -8.690105,
-      "longitude": 115.19892
+      "longitude": 115.19892,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A107GATSUBARAT-GUNUNGCATURPTZ",
@@ -1331,7 +1919,11 @@
       "description": "Simpang Gatot Subroto Barat - Gunung Catur",
       "url": "https://atcs.denpasarkota.go.id/stream/A107GATSUBARAT-GUNUNGCATURPTZ/",
       "latitude": -8.63632,
-      "longitude": 115.191602
+      "longitude": 115.191602,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A107GATSUBARAT-GUNUNGCATURPANORAMIC",
@@ -1340,7 +1932,11 @@
       "description": "Simpang Gatot Subroto Barat - Gunung Catur",
       "url": "https://atcs.denpasarkota.go.id/stream/A107GATSUBARAT-GUNUNGCATURPANORAMIC/",
       "latitude": -8.63632,
-      "longitude": 115.191602
+      "longitude": 115.191602,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A108PASARSANGLAHPTZ",
@@ -1349,7 +1945,11 @@
       "description": "Simpang Diponegoro - Waturenggong",
       "url": "https://atcs.denpasarkota.go.id/stream/A108PASARSANGLAHPTZ/",
       "latitude": -8.676385,
-      "longitude": 115.215372
+      "longitude": 115.215372,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A109TEUKUUMAR-PULAUSERAMPTZ",
@@ -1358,7 +1958,11 @@
       "description": "Simpang Teuku Umar - Pulau Seram",
       "url": "https://atcs.denpasarkota.go.id/stream/A109TEUKUUMAR-PULAUSERAMPTZ/",
       "latitude": -8.669547,
-      "longitude": 115.213532
+      "longitude": 115.213532,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A109TEUKUUMAR-PULAUSERAMPANORAMIC",
@@ -1367,7 +1971,11 @@
       "description": "Simpang Teuku Umar - Pulau Seram",
       "url": "https://atcs.denpasarkota.go.id/stream/A109TEUKUUMAR-PULAUSERAMPANORAMIC/",
       "latitude": -8.669547,
-      "longitude": 115.213532
+      "longitude": 115.213532,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A110PULAUKAWE-SATELITPTZ",
@@ -1376,7 +1984,11 @@
       "description": "Simpang Pulau Kawe - Satelit",
       "url": "https://atcs.denpasarkota.go.id/stream/A110PULAUKAWE-SATELITPTZ/",
       "latitude": -8.68003,
-      "longitude": 115.207153
+      "longitude": 115.207153,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A110PULAUKAWE-SATELITPANORAMIC",
@@ -1385,7 +1997,11 @@
       "description": "Simpang Pulau Kawe - Satelit",
       "url": "https://atcs.denpasarkota.go.id/stream/A110PULAUKAWE-SATELITPANORAMIC/",
       "latitude": -8.68003,
-      "longitude": 115.207153
+      "longitude": 115.207153,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A119TAMANPANCINGPTZ",
@@ -1394,7 +2010,11 @@
       "description": "Simpang Taman Pancing - Pemogan",
       "url": "https://atcs.denpasarkota.go.id/stream/A119TAMANPANCINGPTZ/",
       "latitude": -8.693559,
-      "longitude": 115.196306
+      "longitude": 115.196306,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A119TAMANPANCINGPANORAMIC",
@@ -1403,7 +2023,11 @@
       "description": "Simpang Taman Pancing - Pemogan",
       "url": "https://atcs.denpasarkota.go.id/stream/A119TAMANPANCINGPANORAMIC/",
       "latitude": -8.693559,
-      "longitude": 115.196306
+      "longitude": 115.196306,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A120TUKADPAKERISANPTZ",
@@ -1412,7 +2036,11 @@
       "description": "Simpang Tukad Pakerisan - Tukad Barito",
       "url": "https://atcs.denpasarkota.go.id/stream/A120TUKADPAKERISANPTZ/",
       "latitude": -8.684517,
-      "longitude": 115.226223
+      "longitude": 115.226223,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A120TUKADPAKERISANPANORAMIC",
@@ -1421,7 +2049,11 @@
       "description": "Simpang Tukad Pakerisan - Tukad Barito",
       "url": "https://atcs.denpasarkota.go.id/stream/A120TUKADPAKERISANPANORAMIC/",
       "latitude": -8.684517,
-      "longitude": 115.226223
+      "longitude": 115.226223,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A050JALANGUNUNGAGUNGPTZ",
@@ -1430,7 +2062,11 @@
       "description": "Ruas Jalan Gunung Agung",
       "url": "https://atcs.denpasarkota.go.id/stream/A050JALANGUNUNGAGUNGPTZ/",
       "latitude": -8.653456,
-      "longitude": 115.204221
+      "longitude": 115.204221,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A050JALANGUNUNGAGUNGPANORAMIC",
@@ -1439,7 +2075,11 @@
       "description": "Ruas Jalan Gunung Agung",
       "url": "https://atcs.denpasarkota.go.id/stream/A050JALANGUNUNGAGUNGPANORAMIC/",
       "latitude": -8.653456,
-      "longitude": 115.204221
+      "longitude": 115.204221,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A051MAHENDRADATTA-SOPUTANPTZ",
@@ -1448,7 +2088,11 @@
       "description": "Simpang Mahendradata - Soputan",
       "url": "https://atcs.denpasarkota.go.id/stream/A051MAHENDRADATTA-SOPUTANPTZ/",
       "latitude": -8.687003,
-      "longitude": 115.186424
+      "longitude": 115.186424,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A051MAHENDRADATTA-SOPUTANPANORAMIC",
@@ -1457,7 +2101,11 @@
       "description": "Simpang Mahendradata - Soputan",
       "url": "https://atcs.denpasarkota.go.id/stream/A051MAHENDRADATTA-SOPUTANPANORAMIC/",
       "latitude": -8.687003,
-      "longitude": 115.186424
+      "longitude": 115.186424,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A055PASARBADUNGPTZ",
@@ -1466,7 +2114,11 @@
       "description": "Simpang Gajah Mada - Sulawesi",
       "url": "https://atcs.denpasarkota.go.id/stream/A055PASARBADUNGPTZ/",
       "latitude": -8.655369,
-      "longitude": 115.213057
+      "longitude": 115.213057,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     },
     {
       "id": "A055PASARBADUNGPANORAMIC",
@@ -1475,8 +2127,12 @@
       "description": "Simpang Gajah Mada - Sulawesi",
       "url": "https://atcs.denpasarkota.go.id/stream/A055PASARBADUNGPANORAMIC/",
       "latitude": -8.655369,
-      "longitude": 115.213057
+      "longitude": 115.213057,
+      "sourceId": "denpasar",
+      "sourceLabel": "ATCS Denpasar",
+      "officialUrl": "https://atcs.denpasarkota.go.id/streaming",
+      "playback": "hls"
     }
   ],
-  "updatedAt": "2026-10-16"
+  "updatedAt": "2026-10-17"
 }

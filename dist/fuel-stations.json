@@ -1,10 +1,10 @@
 {
   "source": "OpenStreetMap contributors",
   "sourceUrl": "https://www.openstreetmap.org/copyright",
-  "updatedAt": "2026-10-16T06:04:11.614Z",
+  "updatedAt": "2026-10-17T04:51:59.485Z",
   "bounds": [
-    -8.750615000000002,
-    115.130975,
+    -8.7735982,
+    115.1145522,
     -8.5611,
     115.319318
   ],
@@ -215,6 +215,15 @@
       "latitude": -8.67308,
       "longitude": 115.2401219,
       "osmUrl": "https://www.openstreetmap.org/node/2498046488"
+    },
+    {
+      "id": "node/2849702811",
+      "name": "SPBU (OSM node/2849702811)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.757882,
+      "longitude": 115.1687409,
+      "osmUrl": "https://www.openstreetmap.org/node/2849702811"
     },
     {
       "id": "node/2872212679",
@@ -568,6 +577,15 @@
       "osmUrl": "https://www.openstreetmap.org/node/5529682390"
     },
     {
+      "id": "node/5539012614",
+      "name": "Pertamina",
+      "brand": "Pertamina",
+      "address": "",
+      "latitude": -8.770381,
+      "longitude": 115.1781931,
+      "osmUrl": "https://www.openstreetmap.org/node/5539012614"
+    },
+    {
       "id": "node/5546845704",
       "name": "SPBU (OSM node/5546845704)",
       "brand": "",
@@ -622,6 +640,24 @@
       "osmUrl": "https://www.openstreetmap.org/node/6400253085"
     },
     {
+      "id": "node/6460723863",
+      "name": "SPBU (OSM node/6460723863)",
+      "brand": "",
+      "address": "",
+      "latitude": -8.7691092,
+      "longitude": 115.1718247,
+      "osmUrl": "https://www.openstreetmap.org/node/6460723863"
+    },
+    {
+      "id": "node/6875260470",
+      "name": "Pertamina Buwit",
+      "brand": "",
+      "address": "",
+      "latitude": -8.6173884,
+      "longitude": 115.1161502,
+      "osmUrl": "https://www.openstreetmap.org/node/6875260470"
+    },
+    {
       "id": "node/941307526",
       "name": "SPBU Gas Station Sunset Road 54.803.31",
       "brand": "Pertamina",
@@ -629,6 +665,15 @@
       "latitude": -8.7129491,
       "longitude": 115.1859091,
       "osmUrl": "https://www.openstreetmap.org/node/941307526"
+    },
+    {
+      "id": "node/945648527",
+      "name": "Pertamina",
+      "brand": "",
+      "address": "",
+      "latitude": -8.7526054,
+      "longitude": 115.2180897,
+      "osmUrl": "https://www.openstreetmap.org/node/945648527"
     },
     {
       "id": "node/963276323",
