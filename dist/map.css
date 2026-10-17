@@ -22,9 +22,9 @@
 .map-popup button { min-height: 44px; padding: 0 9px; color: #09271c; background: #81dfbd; border: 0; border-radius: 5px; font-size: 11px; text-align: left; cursor: pointer; }
 .map-popup button:hover { background: #a1f3d5; }
 .map-pin { background: none; border: 0; }
-.map-pin svg { width: 30px; height: 35px; filter: drop-shadow(0 2px 2px #0008); }
+.map-pin svg { width: 30px; height: 35px;  }
 .map-pin:focus-visible { outline: 3px solid #113c33; outline-offset: 3px; }
-.fuel-pin.is-selected svg { filter: drop-shadow(0 0 5px #f4ab37); }
+.fuel-pin.is-selected { outline: 3px solid #b8750d; border-radius: 6px; }
 .embedded-note { position: absolute; z-index: 2; right: 8px; bottom: 5px; left: 8px; padding: 4px 7px; color: #f4d6a3; background: #071b20e8; border-radius: 4px; font-size: 9px; text-align: center; pointer-events: none; }
 .map-caption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.4; }
 .map-caption a { color: var(--soft); }
@@ -54,3 +54,9 @@
   .map-legend i { width: 7px; height: 7px; }
   .map-topline .button { padding: 0 5px; font-size: 9px; }
 }
+
+.map-cluster { display: grid; place-items: center; border: 2px solid #fff; border-radius: 50%; color: #fff; font: 700 12px/1 system-ui, sans-serif; }
+.cluster-camera { background: #13866e; }
+.cluster-location { background: #647a83; }
+.cluster-fuel { background: #e99b22; color: #38250a; border-radius: 7px; }
+.map-cluster:focus-visible { outline: 3px solid #103b32; outline-offset: 3px; }

@@ -2,10 +2,35 @@ import { normalizeCatalogue, filterCameras, paginate, mergeCameras, SOURCES } fr
 import { normalizeStations, nearbyCameras, nearestStation, validCoordinate } from './geo.js';
 import { createCameraMap, formatDistance, stationDisplayName } from './camera-map.js';
 import { normalizeRoads, distanceToRoadMeters, nearRoad, isSunsetSearch } from './roads.js';
+import { playbackLimit, playerKeysToStop } from './playback-policy.js';
 
 const $ = id => document.getElementById(id);
-const state = { cameras: [], stations: [], roads: [], fuelReady: false, fuelOptionsKey: null, favorites: new Set(), favoritesOnly: false, page: 1, pageSize: 9, players: new Map(), focus: null, map: null };
+const compactViewport = window.matchMedia('(max-width: 640px)');
+const coarsePointer = window.matchMedia('(pointer: coarse)');
+function isCompactPlayback() { return compactViewport.matches || coarsePointer.matches; }
+const state = { cameras: [], stations: [], roads: [], fuelReady: false, fuelOptionsKey: null, favorites: new Set(), favoritesOnly: false, page: 1, pageSize: isCompactPlayback() ? 4 : 9, players: new Map(), focus: null, map: null, mapInputs: null };
 try { const stored = JSON.parse(localStorage.getItem('denpasar-favorites') || '[]'); if (Array.isArray(stored)) state.favorites = new Set(stored.filter(x => typeof x === 'string')); } catch {}
+$('layout').value = String(state.pageSize);
+if (isCompactPlayback()) $('play-page').textContent = '▶ Putar kamera';
+
+const playingObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+  if (!isCompactPlayback()) return;
+  for (const entry of entries) {
+    if (entry.isIntersecting) continue;
+    const camera = state.cameras.find(item => `camera-${item.id}` === entry.target.id);
+    if (camera && state.players.has(camera.id)) stopCard(camera);
+  }
+}, { rootMargin: '80px 0px', threshold: 0.01 }) : null;
+function observePlayingCard(key) {
+  if (!isCompactPlayback() || !playingObserver) return;
+  const card = document.getElementById(`camera-${key}`);
+  if (card) playingObserver.observe(card);
+}
+function unobservePlayingCard(key) {
+  if (!playingObserver) return;
+  const card = document.getElementById(`camera-${key}`);
+  if (card) playingObserver.unobserve(card);
+}
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
@@ -42,19 +67,20 @@ function updateStatus(card, text, kind = '') {
 function destroyPlayer(key) {
   const player = state.players.get(key);
   if (!player) return;
+  state.players.delete(key);
   clearTimeout(player.timeout);
+  unobservePlayingCard(key);
   player.hls?.destroy();
   player.video?.pause();
   player.video?.removeAttribute('src');
   player.video?.load();
   player.iframe?.remove();
-  state.players.delete(key);
   updatePlaying();
 }
 function stopCard(camera) {
   destroyPlayer(camera.id);
   const card = document.getElementById(`camera-${camera.id}`);
-  if (!card) return;
+  if (!card?.isConnected) return;
   card.querySelector('.media').replaceChildren(placeholder(camera));
   card.querySelector('.play-toggle').textContent = camera.playback === 'link' ? 'Info' : '▶ Play';
   card.querySelector('.play-toggle').setAttribute('aria-label', `${camera.playback === 'link' ? 'Detail' : 'Play'} ${camera.name}`);
@@ -62,7 +88,38 @@ function stopCard(camera) {
 }
 function stopGrid() { for (const camera of state.cameras) if (state.players.has(camera.id)) stopCard(camera); }
 
+function enforcePlayerLimit(targetKey) {
+  const limit = playbackLimit(isCompactPlayback());
+  for (const key of playerKeysToStop([...state.players.keys()], targetKey, limit)) {
+    const camera = state.cameras.find(item => item.id === key);
+    if (camera) stopCard(camera);
+    else {
+      destroyPlayer(key);
+      if (key === 'focus') $('focus-media').replaceChildren();
+    }
+  }
+}
+
+let hlsScriptPromise;
+function loadHls() {
+  if (window.Hls) return Promise.resolve(window.Hls);
+  if (!hlsScriptPromise) hlsScriptPromise = new Promise(resolve => {
+    const script = document.createElement('script');
+    script.src = './assets/hls.min.js';
+    script.async = true;
+    script.addEventListener('load', () => {
+      const Hls = window.Hls || null;
+      if (!Hls) hlsScriptPromise = null;
+      resolve(Hls);
+    }, { once: true });
+    script.addEventListener('error', () => { hlsScriptPromise = null; script.remove(); resolve(null); }, { once: true });
+    document.head.append(script);
+  });
+  return hlsScriptPromise;
+}
+
 function startStream(camera, host, key, onStatus, onFailure) {
+  enforcePlayerLimit(key);
   destroyPlayer(key);
   if (camera.playback === 'link') {
     const info = element('div', 'stream-error');
@@ -80,6 +137,7 @@ function startStream(camera, host, key, onStatus, onFailure) {
     const note = element('span', 'embedded-note', 'Pemutar resmi · status siaran belum terverifikasi');
     host.replaceChildren(iframe, note);
     const player = { iframe, timeout: null }; state.players.set(key, player); updatePlaying();
+    observePlayingCard(key);
     onStatus('Memuat pemutar…', 'connecting');
     iframe.addEventListener('load', () => { if (state.players.get(key) === player) onStatus('Pemutar resmi'); });
     return;
@@ -107,39 +165,54 @@ function startStream(camera, host, key, onStatus, onFailure) {
     onStatus('Unavailable', 'error');
     onFailure?.();
   };
-  player.timeout = setTimeout(fail, 25000);
+  player.timeout = setTimeout(() => { if (state.players.get(key) === player) fail(); }, 25000);
   onStatus('Connecting…', 'connecting');
-  video.addEventListener('playing', () => { clearTimeout(player.timeout); onStatus(camera.playback === 'mp4' ? 'Memutar' : 'Live', 'live'); });
+  video.addEventListener('playing', () => {
+    if (state.players.get(key) !== player) return;
+    clearTimeout(player.timeout); onStatus(camera.playback === 'mp4' ? 'Memutar' : 'Live', 'live');
+  });
   video.addEventListener('waiting', () => {
+    if (state.players.get(key) !== player) return;
     onStatus('Buffering…', 'connecting');
-    clearTimeout(player.timeout); player.timeout = setTimeout(fail, 25000);
+    clearTimeout(player.timeout); player.timeout = setTimeout(() => { if (state.players.get(key) === player) fail(); }, 25000);
   });
   video.addEventListener('error', fail);
-  const attemptPlay = () => video.play().catch(() => onStatus('Press play in video', 'connecting'));
+  const attemptPlay = () => {
+    if (state.players.get(key) !== player) return;
+    video.play().catch(() => { if (state.players.get(key) === player) onStatus('Press play in video', 'connecting'); });
+  };
   const source = camera.playback === 'mp4' ? camera.url : camera.streamUrl || `${camera.url}index.m3u8`;
   if (camera.playback === 'mp4') {
     video.src = source; attemptPlay();
-  } else if (window.Hls?.isSupported()) {
-    player.hls = new window.Hls({ maxBufferLength: 10, maxMaxBufferLength: 20, backBufferLength: 0, capLevelToPlayerSize: true });
-    player.hls.on(window.Hls.Events.ERROR, (_event, data) => { if (data.fatal) fail(); });
-    player.hls.on(window.Hls.Events.MANIFEST_PARSED, attemptPlay);
-    player.hls.loadSource(source);
-    player.hls.attachMedia(video);
   } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
     video.src = source;
     attemptPlay();
   } else {
-    fail();
-    notify('This browser cannot play HLS video. Use the official player link or a current Chrome, Firefox, Edge, or Safari browser.');
+    void loadHls().then(Hls => {
+      if (state.players.get(key) !== player) return;
+      if (!Hls?.isSupported()) {
+        fail();
+        notify('This browser cannot play HLS video. Use the official player link or a current Chrome, Firefox, Edge, or Safari browser.');
+        return;
+      }
+      player.hls = new Hls({ maxBufferLength: 10, maxMaxBufferLength: 20, backBufferLength: 0, capLevelToPlayerSize: true });
+      player.hls.on(Hls.Events.ERROR, (_event, data) => { if (state.players.get(key) === player && data.fatal) fail(); });
+      player.hls.on(Hls.Events.MANIFEST_PARSED, attemptPlay);
+      player.hls.loadSource(source);
+      player.hls.attachMedia(video);
+    });
   }
+  observePlayingCard(key);
 }
-function playCard(camera) {
+function playCard(camera, { scroll = false } = {}) {
   if (camera.playback === 'link') { openFocus(camera); return; }
   const card = document.getElementById(`camera-${camera.id}`);
   if (!card) return;
+  if (scroll && isCompactPlayback()) card.scrollIntoView({ behavior: 'auto', block: 'center' });
   card.querySelector('.play-toggle').textContent = '■ Stop';
   card.querySelector('.play-toggle').setAttribute('aria-label', `Stop ${camera.name}`);
   startStream(camera, card.querySelector('.media'), camera.id, (text, kind) => {
+    if (!card.isConnected) return;
     updateStatus(card, text, kind);
     const active = state.players.has(camera.id);
     card.querySelector('.play-toggle').textContent = active ? '■ Stop' : '▶ Play';
@@ -147,11 +220,12 @@ function playCard(camera) {
   });
 }
 function openFocus(camera) {
+  stopGrid();
+  destroyPlayer('focus');
   state.focus = camera;
-  stopCard(camera);
   $('focus-title').textContent = camera.name;
   $('focus-source').href = camera.url;
-  $('focus-dialog').showModal();
+  if (!$('focus-dialog').open) $('focus-dialog').showModal();
   startStream(camera, $('focus-media'), 'focus', (text) => { $('focus-title').textContent = `${camera.name} · ${text}`; });
 }
 function card(camera) {
@@ -234,15 +308,21 @@ function currentPage() {
   const cameras = filteredCameras();
   return { ...paginate(cameras, state.page, state.pageSize), total: cameras.length };
 }
+function sameItems(left, right) {
+  return left?.length === right.length && left.every((item, index) => item === right[index]);
+}
 function render({ fitMap = false } = {}) {
   stopGrid();
   refreshFuelOptions();
-  const page = currentPage(); state.page = page.page;
+  const cameras = filteredCameras();
+  const stations = scopedStations();
+  const page = { ...paginate(cameras, state.page, state.pageSize), total: cameras.length };
+  state.page = page.page;
   $('grid').dataset.layout = String(state.pageSize);
   $('grid').replaceChildren(...page.items.map(card));
   $('empty-state').hidden = page.total > 0;
   $('empty-state').textContent = state.favoritesOnly && !state.favorites.size ? 'Belum ada favorit. Tekan ☆ pada kamera untuk menyimpannya.' : $('near-fuel').checked ? 'Tidak ada CCTV dalam radius dan filter ini. Perbesar radius, pilih SPBU lain, atau hapus pencarian.' : 'Tidak ada kamera yang cocok. Coba pencarian lain atau reset filter.';
-  const publicPlayers = filteredCameras().filter(camera => camera.playback !== 'link').length;
+  const publicPlayers = cameras.filter(camera => camera.playback !== 'link').length;
   $('result-summary').textContent = `${page.total} kamera${state.favoritesOnly ? ' favorit' : ''} · ${publicPlayers} pemutar`;
   $('page-label').textContent = `Halaman ${page.page} / ${page.pages}`;
   $('previous').disabled = page.page <= 1; $('next').disabled = page.page >= page.pages;
@@ -262,7 +342,15 @@ function render({ fitMap = false } = {}) {
   const road = activeRoad();
   $('area-summary').textContent = road ? `Sekitar ${road.name}: ${page.total} CCTV dan ${scopedStations().length} SPBU dalam ${formatDistance(Number($('area-radius').value))} dari koridor jalan. Filter sumber, nama, dan favorit tetap berlaku.` : 'Pilih kawasan atau ketik “Sunset Road” untuk mencari CCTV dan SPBU di sekitar jalan.';
   updateFilterSummary();
-  state.map?.update(filteredCameras(), scopedStations(), { selectedStationId: $('fuel-filter').value, nearbyOnly: $('near-fuel').checked, radiusMeters: Number($('fuel-radius').value), road });
+  const mapOptions = { selectedStationId: $('fuel-filter').value, nearbyOnly: $('near-fuel').checked, radiusMeters: Number($('fuel-radius').value), road };
+  const previous = state.mapInputs;
+  const changed = !previous || !sameItems(previous.cameras, cameras) || !sameItems(previous.stations, stations) ||
+    previous.selectedStationId !== mapOptions.selectedStationId || previous.nearbyOnly !== mapOptions.nearbyOnly ||
+    previous.radiusMeters !== mapOptions.radiusMeters || previous.road !== mapOptions.road;
+  if (state.map && changed) {
+    state.map.update(cameras, stations, mapOptions);
+    state.mapInputs = { cameras: [...cameras], stations: [...stations], ...mapOptions };
+  }
   if (fitMap && !$('map-content').hidden) state.map?.fit();
 }
 function updateFilterSummary() {
@@ -289,25 +377,40 @@ $('filters-close').addEventListener('click', () => { setFiltersVisible(false); $
 $('filter-panel').addEventListener('keydown', event => {
   if (event.key === 'Escape') { setFiltersVisible(false); $('filters-toggle').focus(); }
 });
-const resetAndRender = () => { state.page = 1; render({ fitMap: true }); };
+let searchTimer = null;
+const cancelSearchRender = () => { clearTimeout(searchTimer); searchTimer = null; };
+const resetAndRender = () => { cancelSearchRender(); state.page = 1; render({ fitMap: true }); };
+const resetAndRenderNow = resetAndRender;
 $('reset-filters').addEventListener('click', () => {
+  cancelSearchRender();
   for (const id of ['search', 'source-filter', 'location-filter', 'area-filter', 'fuel-filter']) $(id).value = '';
   $('near-fuel').checked = false;
   $('area-radius').value = '1000'; $('fuel-radius').value = '500';
   resetAndRender();
 });
-$('search').addEventListener('input', resetAndRender);
-$('location-filter').addEventListener('change', resetAndRender);
-$('source-filter').addEventListener('change', resetAndRender);
-$('area-filter').addEventListener('change', () => { if (!$('area-filter').value && isSunsetSearch($('search').value)) $('search').value = ''; resetAndRender(); });
-$('area-radius').addEventListener('change', resetAndRender);
-$('layout').addEventListener('change', () => { state.pageSize = Number($('layout').value); resetAndRender(); });
-$('all-tab').addEventListener('click', () => { state.favoritesOnly = false; resetAndRender(); });
-$('favorites-tab').addEventListener('click', () => { state.favoritesOnly = true; resetAndRender(); });
-$('previous').addEventListener('click', () => { state.page--; render(); });
-$('next').addEventListener('click', () => { state.page++; render(); });
+$('search').addEventListener('input', () => {
+  cancelSearchRender();
+  searchTimer = setTimeout(resetAndRenderNow, 180);
+});
+$('location-filter').addEventListener('change', resetAndRenderNow);
+$('source-filter').addEventListener('change', resetAndRenderNow);
+$('area-filter').addEventListener('change', () => { if (!$('area-filter').value && isSunsetSearch($('search').value)) $('search').value = ''; resetAndRenderNow(); });
+$('area-radius').addEventListener('change', resetAndRenderNow);
+$('layout').addEventListener('change', () => { state.pageSize = Number($('layout').value); resetAndRenderNow(); });
+$('all-tab').addEventListener('click', () => { state.favoritesOnly = false; resetAndRenderNow(); });
+$('favorites-tab').addEventListener('click', () => { state.favoritesOnly = true; resetAndRenderNow(); });
+$('previous').addEventListener('click', () => { if (searchTimer) { resetAndRenderNow(); return; } state.page--; render(); });
+$('next').addEventListener('click', () => { if (searchTimer) { resetAndRenderNow(); return; } state.page++; render(); });
 $('play-page').addEventListener('click', () => {
-  for (const camera of currentPage().items) if (camera.playback !== 'link' && !state.players.has(camera.id)) playCard(camera);
+  if (searchTimer) resetAndRenderNow();
+  const pageItems = currentPage().items;
+  const playable = pageItems.find(camera => camera.playback !== 'link');
+  if (isCompactPlayback()) {
+    if (playable) playCard(playable, { scroll: true });
+    notify(playable ? 'Menghubungkan kamera.' : 'Tidak ada siaran kamera pada halaman ini.');
+    return;
+  }
+  for (const camera of pageItems) if (camera.playback !== 'link' && !state.players.has(camera.id)) playCard(camera);
   notify('Menghubungkan kamera pada halaman ini.');
 });
 $('stop-all').addEventListener('click', () => { stopGrid(); if ($('focus-dialog').open) $('focus-dialog').close(); notify('Semua siaran dihentikan.'); });
@@ -317,6 +420,22 @@ $('near-fuel').addEventListener('change', resetAndRender);
 $('fuel-filter').addEventListener('change', () => { $('near-fuel').checked = true; resetAndRender(); });
 $('fuel-radius').addEventListener('change', () => { $('near-fuel').checked = true; resetAndRender(); });
 $('fuel-reset').addEventListener('click', () => { $('near-fuel').checked = false; $('fuel-filter').value = ''; $('fuel-radius').value = '500'; resetAndRender(); });
+function syncResponsivePlayback() {
+  const compact = isCompactPlayback();
+  const wantedSize = compact ? 4 : 9;
+  if (state.pageSize !== wantedSize) { state.pageSize = wantedSize; $('layout').value = String(wantedSize); }
+  $('play-page').textContent = compact ? '▶ Putar kamera' : '▶ Putar halaman';
+  $('play-page').title = compact ? 'Putar kamera pertama pada halaman ini' : 'Putar kamera pada halaman ini';
+  if (compact) {
+    const keep = state.players.has('focus') ? 'focus' : state.players.keys().next().value;
+    if (keep) enforcePlayerLimit(keep);
+  } else if (playingObserver) {
+    for (const key of state.players.keys()) unobservePlayingCard(key);
+  }
+  resetAndRenderNow();
+}
+compactViewport.addEventListener('change', syncResponsivePlayback);
+coarsePointer.addEventListener('change', syncResponsivePlayback);
 function setMapVisible(visible) {
   $('map-content').hidden = !visible;
   $('map-toggle').textContent = visible ? 'Tutup peta' : 'Buka peta';
@@ -326,7 +445,13 @@ function setMapVisible(visible) {
 $('map-toggle').addEventListener('click', () => setMapVisible($('map-content').hidden));
 $('map-fit').addEventListener('click', () => state.map?.fit());
 document.querySelector('.topbar .source-link').addEventListener('click', () => { $('source-details').open = true; });
-window.addEventListener('pagehide', () => { for (const key of [...state.players.keys()]) destroyPlayer(key); });
+function stopAllPlayers() {
+  stopGrid();
+  if ($('focus-dialog').open) $('focus-dialog').close();
+  else destroyPlayer('focus');
+}
+document.addEventListener('visibilitychange', () => { if (document.hidden) stopAllPlayers(); });
+window.addEventListener('pagehide', stopAllPlayers);
 document.addEventListener('keydown', event => {
   if (event.key === '/' && !['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName) && !$('focus-dialog').open) { event.preventDefault(); $('search').focus(); }
 });
