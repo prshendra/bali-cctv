@@ -22,7 +22,7 @@ function button(className, text, label, action) {
 }
 let noticeTimer;
 function notify(message) { clearTimeout(noticeTimer); $('notice').textContent = message; noticeTimer = setTimeout(() => { $('notice').textContent = ''; }, 7000); }
-function updatePlaying() { $('playing-count').textContent = `${state.players.size} connected`; $('playing-count').parentElement.classList.toggle('is-playing', state.players.size > 0); }
+function updatePlaying() { $('playing-count').parentElement.hidden = state.players.size === 0; $('playing-count').textContent = `${state.players.size} terhubung`; $('playing-count').parentElement.classList.toggle('is-playing', state.players.size > 0); }
 function saveFavorites() {
   try { localStorage.setItem('denpasar-favorites', JSON.stringify([...state.favorites])); }
   catch { notify('Favorites work for this session. Browser storage is unavailable.'); }
@@ -30,8 +30,8 @@ function saveFavorites() {
 function placeholder(camera) {
   const holder = element('div', 'placeholder');
   const linkOnly = camera.playback === 'link';
-  holder.append(element('span', 'camera-symbol', '◉'), element('span', '', linkOnly ? 'Lokasi kamera terdaftar' : 'Ready when you are'), element('small', '', linkOnly ? 'Siaran publik belum tersedia dari sumber ini' : camera.playback === 'iframe' ? 'Menggunakan pemutar situs resmi' : 'Select play to connect to this camera'));
-  holder.append(button('start-button', linkOnly ? 'Lihat informasi' : '▶  Play camera', `${linkOnly ? 'Detail' : 'Play'} ${camera.name}`, () => playCard(camera)));
+  holder.append(element('span', 'camera-symbol', '◉'), element('span', '', linkOnly ? 'Lokasi kamera terdaftar' : 'Siaran CCTV'), element('small', '', linkOnly ? 'Siaran publik belum tersedia dari sumber ini' : camera.playback === 'iframe' ? 'Menggunakan pemutar situs resmi' : 'Putar untuk membuka siaran'));
+  holder.append(button('start-button', linkOnly ? 'Lihat informasi' : '▶ Putar', `${linkOnly ? 'Detail' : 'Play'} ${camera.name}`, () => playCard(camera)));
   return holder;
 }
 function updateStatus(card, text, kind = '') {
@@ -58,7 +58,7 @@ function stopCard(camera) {
   card.querySelector('.media').replaceChildren(placeholder(camera));
   card.querySelector('.play-toggle').textContent = camera.playback === 'link' ? 'Info' : '▶ Play';
   card.querySelector('.play-toggle').setAttribute('aria-label', `${camera.playback === 'link' ? 'Detail' : 'Play'} ${camera.name}`);
-  updateStatus(card, camera.playback === 'link' ? 'Lokasi terdaftar' : 'On demand');
+  updateStatus(card, camera.playback === 'link' ? 'Lokasi terdaftar' : 'Siap diputar');
 }
 function stopGrid() { for (const camera of state.cameras) if (state.players.has(camera.id)) stopCard(camera); }
 
@@ -160,7 +160,7 @@ function card(camera) {
   const media = element('div', 'media'); media.append(placeholder(camera));
   const meta = element('div', 'camera-meta');
   const head = element('div', 'card-heading');
-  head.append(element('span', 'location-label', camera.location));
+  head.append(element('h2', '', camera.name.replace(/^SIMPANG /, '')));
   const favorite = button('favorite', state.favorites.has(camera.id) ? '★' : '☆', `Favorite ${camera.name}`, () => {
     if (state.favorites.has(camera.id)) state.favorites.delete(camera.id); else state.favorites.add(camera.id);
     favorite.textContent = state.favorites.has(camera.id) ? '★' : '☆';
@@ -171,15 +171,14 @@ function card(camera) {
   });
   favorite.setAttribute('aria-pressed', String(state.favorites.has(camera.id)));
   head.append(favorite);
-  const title = element('h2', '', camera.name.replace(/^SIMPANG /, ''));
-  meta.append(head, title, element('p', 'description', camera.description));
+  meta.append(head, element('p', 'description', camera.description));
   meta.append(element('span', 'provider-label', [camera.sourceLabel || 'ATCS Denpasar', ...(camera.alsoListedBy || []).map(id => SOURCES[id].label)].join(' / ')));
   const road = activeRoad();
   if (road) meta.append(element('span', 'road-distance', `${formatDistance(distanceToRoadMeters(camera, road))} dari koridor ${road.name}`));
   const nearest = nearestStation(camera, selectedStations());
   if (nearest) meta.append(element('span', 'fuel-distance', `${formatDistance(nearest.distanceMeters)} · ${stationDisplayName(nearest.station)}`));
   const controls = element('div', 'card-controls');
-  controls.append(element('span', 'status', camera.playback === 'link' ? 'Lokasi terdaftar' : 'On demand'));
+  controls.append(element('span', 'status', camera.playback === 'link' ? 'Lokasi terdaftar' : 'Siap diputar'));
   const actions = element('div', 'card-actions');
   actions.append(button('play-toggle', camera.playback === 'link' ? 'Info' : '▶ Play', `${camera.playback === 'link' ? 'Detail' : 'Play'} ${camera.name}`, () => state.players.has(camera.id) ? stopCard(camera) : playCard(camera)));
   actions.append(button('expand', '⛶', `Expand ${camera.name}`, () => openFocus(camera)));
@@ -242,10 +241,10 @@ function render({ fitMap = false } = {}) {
   $('grid').dataset.layout = String(state.pageSize);
   $('grid').replaceChildren(...page.items.map(card));
   $('empty-state').hidden = page.total > 0;
-  $('empty-state').textContent = state.favoritesOnly && !state.favorites.size ? 'Your favorites will appear here. Star a camera to save it.' : $('near-fuel').checked ? 'Tidak ada CCTV dalam radius dan filter ini. Perbesar radius, pilih SPBU lain, atau hapus pencarian.' : 'No cameras match. Try another street or clear the filters.';
+  $('empty-state').textContent = state.favoritesOnly && !state.favorites.size ? 'Belum ada favorit. Tekan ☆ pada kamera untuk menyimpannya.' : $('near-fuel').checked ? 'Tidak ada CCTV dalam radius dan filter ini. Perbesar radius, pilih SPBU lain, atau hapus pencarian.' : 'Tidak ada kamera yang cocok. Coba pencarian lain atau reset filter.';
   const publicPlayers = filteredCameras().filter(camera => camera.playback !== 'link').length;
-  $('result-summary').textContent = `${page.total} titik kamera${state.favoritesOnly ? ' favorit' : ''} · ${publicPlayers} tautan pemutar${$('near-fuel').checked ? ' · terdekat dari SPBU lebih dulu' : ''}`;
-  $('page-label').textContent = `Page ${page.page} of ${page.pages}`;
+  $('result-summary').textContent = `${page.total} kamera${state.favoritesOnly ? ' favorit' : ''} · ${publicPlayers} pemutar`;
+  $('page-label').textContent = `Halaman ${page.page} / ${page.pages}`;
   $('previous').disabled = page.page <= 1; $('next').disabled = page.page >= page.pages;
   $('play-page').disabled = !page.items.some(camera => camera.playback !== 'link');
   $('all-tab').setAttribute('aria-pressed', String(!state.favoritesOnly));
@@ -258,14 +257,46 @@ function render({ fitMap = false } = {}) {
     const station = state.stations.find(item => item.id === $('fuel-filter').value);
     $('fuel-summary').textContent = $('near-fuel').checked
       ? `${page.total} CCTV dalam radius ${formatDistance(Number($('fuel-radius').value))} dari ${station ? stationDisplayName(station) : 'salah satu SPBU'}. Pencarian, lokasi, dan favorit tetap berlaku.`
-      : `${scopedStations().length} titik SPBU${activeRoad() ? ' sekitar Sunset Road' : ''} tersedia. Aktifkan “CCTV dekat SPBU” atau pilih titik SPBU di peta untuk menyaring kamera.`;
+      : `${scopedStations().length} SPBU tersedia. Pilih SPBU di peta atau aktifkan filter di atas.`;
   }
   const road = activeRoad();
   $('area-summary').textContent = road ? `Sekitar ${road.name}: ${page.total} CCTV dan ${scopedStations().length} SPBU dalam ${formatDistance(Number($('area-radius').value))} dari koridor jalan. Filter sumber, nama, dan favorit tetap berlaku.` : 'Pilih kawasan atau ketik “Sunset Road” untuk mencari CCTV dan SPBU di sekitar jalan.';
+  updateFilterSummary();
   state.map?.update(filteredCameras(), scopedStations(), { selectedStationId: $('fuel-filter').value, nearbyOnly: $('near-fuel').checked, radiusMeters: Number($('fuel-radius').value), road });
   if (fitMap && !$('map-content').hidden) state.map?.fit();
 }
+function updateFilterSummary() {
+  const filters = [];
+  if ($('source-filter').value) filters.push($('source-filter').selectedOptions[0].textContent);
+  if ($('location-filter').value) filters.push($('location-filter').value);
+  const road = activeRoad();
+  if (road) filters.push(`${road.name} · ${formatDistance(Number($('area-radius').value))}`);
+  if ($('near-fuel').checked) {
+    const station = state.stations.find(item => item.id === $('fuel-filter').value);
+    filters.push(`${station ? stationDisplayName(station) : 'Dekat SPBU'} · ${formatDistance(Number($('fuel-radius').value))}`);
+  }
+  $('filter-count').textContent = String(filters.length);
+  $('filter-count').hidden = !filters.length;
+  $('filter-summary').textContent = filters.join(' / ');
+  $('filter-summary').hidden = !filters.length;
+  $('sunset-shortcut').setAttribute('aria-pressed', String(Boolean(road)));
+}
+function setFiltersVisible(visible) {
+  $('filter-panel').hidden = !visible;
+  $('filters-toggle').setAttribute('aria-expanded', String(visible));
+}
+$('filters-toggle').addEventListener('click', () => setFiltersVisible($('filter-panel').hidden));
+$('filters-close').addEventListener('click', () => { setFiltersVisible(false); $('filters-toggle').focus(); });
+$('filter-panel').addEventListener('keydown', event => {
+  if (event.key === 'Escape') { setFiltersVisible(false); $('filters-toggle').focus(); }
+});
 const resetAndRender = () => { state.page = 1; render({ fitMap: true }); };
+$('reset-filters').addEventListener('click', () => {
+  for (const id of ['search', 'source-filter', 'location-filter', 'area-filter', 'fuel-filter']) $(id).value = '';
+  $('near-fuel').checked = false;
+  $('area-radius').value = '1000'; $('fuel-radius').value = '500';
+  resetAndRender();
+});
 $('search').addEventListener('input', resetAndRender);
 $('location-filter').addEventListener('change', resetAndRender);
 $('source-filter').addEventListener('change', resetAndRender);
@@ -279,9 +310,9 @@ $('previous').addEventListener('click', () => { state.page--; render(); });
 $('next').addEventListener('click', () => { state.page++; render(); });
 $('play-page').addEventListener('click', () => {
   for (const camera of currentPage().items) if (camera.playback !== 'link' && !state.players.has(camera.id)) playCard(camera);
-  notify('Connecting this page. More simultaneous streams use more bandwidth.');
+  notify('Menghubungkan kamera pada halaman ini.');
 });
-$('stop-all').addEventListener('click', () => { stopGrid(); if ($('focus-dialog').open) $('focus-dialog').close(); notify('All streams stopped.'); });
+$('stop-all').addEventListener('click', () => { stopGrid(); if ($('focus-dialog').open) $('focus-dialog').close(); notify('Semua siaran dihentikan.'); });
 $('focus-close').addEventListener('click', () => $('focus-dialog').close());
 $('focus-dialog').addEventListener('close', () => { destroyPlayer('focus'); $('focus-media').replaceChildren(); state.focus = null; });
 $('near-fuel').addEventListener('change', resetAndRender);
@@ -290,7 +321,7 @@ $('fuel-radius').addEventListener('change', () => { $('near-fuel').checked = tru
 $('fuel-reset').addEventListener('click', () => { $('near-fuel').checked = false; $('fuel-filter').value = ''; $('fuel-radius').value = '500'; resetAndRender(); });
 function setMapVisible(visible) {
   $('map-content').hidden = !visible;
-  $('map-toggle').textContent = visible ? 'Sembunyikan peta' : 'Tampilkan peta';
+  $('map-toggle').textContent = visible ? 'Tutup peta' : 'Buka peta';
   $('map-toggle').setAttribute('aria-expanded', String(visible));
   if (visible) state.map?.invalidate();
 }
@@ -301,7 +332,7 @@ window.addEventListener('pagehide', () => { for (const key of [...state.players.
 document.addEventListener('keydown', event => {
   if (event.key === '/' && !['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName) && !$('focus-dialog').open) { event.preventDefault(); $('search').focus(); }
 });
-function clock() { $('clock').textContent = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Makassar', hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(new Date()) + ' WITA'; }
+function clock() { $('clock').textContent = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Makassar', hour: '2-digit', minute: '2-digit' }).format(new Date()) + ' WITA'; }
 clock(); setInterval(clock, 1000);
 async function init() {
   try {

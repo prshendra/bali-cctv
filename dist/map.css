@@ -1,56 +1,56 @@
-.map-section { margin-bottom: 35px; padding: 21px; border: 1px solid var(--border); border-radius: 12px; background: rgba(12, 35, 38, .7); }
-.map-heading { align-items: center; }
-.area-toolbar { display: flex; align-items: end; flex-wrap: wrap; gap: 12px; padding-bottom: 12px; }
-.area-toolbar .fuel-select { flex: 1 1 180px; }
-.area-toolbar .radius-select { flex: 0 0 110px; }
-.area-summary { font-size: 11px; color: #9fbfb0; line-height: 1.6; margin: 0 0 16px; }
-.source-details { margin-top: 16px; padding-top: 13px; border-top: 1px solid var(--border); font-size: 11px; line-height: 1.7; color: #9ebdae; }
-.source-details summary { cursor: pointer; color: #c7e4d4; }
-.source-details p { margin: 9px 0 0; }
-.source-details a { color: #81dfbd; }
-.provider-label { font-size: 9px; color: #89c8d8; }
-.road-distance { font-size: 10px; color: #c8b6f7; line-height: 1.5; }
-.embedded-note { position: absolute; z-index: 2; left: 8px; right: 8px; bottom: 5px; padding: 4px 7px; border-radius: 4px; background: #071b20e8; color: #f4d6a3; font-size: 9px; text-align: center; pointer-events: none; }
-.fuel-toolbar { display: flex; align-items: end; flex-wrap: wrap; gap: 12px; }
-.near-toggle { min-height: 40px; display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 650; padding-right: 9px; }
-.near-toggle input { width: 17px; height: 17px; accent-color: var(--teal-strong); }
-.fuel-select { display: grid; gap: 6px; flex: 1 1 210px; min-width: 0; }
-.fuel-select > span { font-size: 10px; color: #9bb8ae; }
-.fuel-select select { width: 100%; min-height: 40px; padding: 8px 30px 8px 10px; color: var(--ink); background: #102b2e; border: 1px solid var(--border-strong); border-radius: 6px; font-size: 12px; }
-.radius-select { flex: 0 0 100px; }
-.fuel-summary { margin: 15px 0 12px; color: #b3d6c7; font-size: 12px; line-height: 1.6; }
-.map-topline { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; border: 1px solid var(--border); border-bottom: 0; background: #0b2226; border-radius: 8px 8px 0 0; }
-.map-legend { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; color: #b7cdc4; font-size: 11px; }
-.map-legend > span { display: flex; align-items: center; gap: 6px; }
-.map-legend i { display: inline-block; width: 10px; height: 10px; border: 1px solid #081b1f; }
+.map-topline { display: flex; min-height: 40px; align-items: center; justify-content: space-between; gap: 8px; padding: 3px 7px; background: #0b2226; border: 1px solid var(--border); border-bottom: 0; border-radius: 6px 6px 0 0; }
+.map-legend { display: flex; min-width: 0; align-items: center; flex-wrap: wrap; gap: 4px 12px; color: #b7cdc4; font-size: 10px; }
+.map-legend > span { display: inline-flex; align-items: center; gap: 5px; }
+.map-legend i { display: inline-block; width: 9px; height: 9px; flex: 0 0 auto; border: 1px solid #081b1f; }
 .legend-camera { border-radius: 50%; background: #41c7a3; }
 .legend-location { border-radius: 50%; background: #647a83; }
 .legend-fuel { border-radius: 2px; background: #f5ad43; }
 #map-count { color: #8daaa0; font-size: 10px; }
-.camera-map { height: 430px; min-height: 280px; background: #d9e3de; border: 1px solid var(--border); border-radius: 0 0 8px 8px; isolation: isolate; z-index: 0; color-scheme: light; }
-.camera-map .leaflet-control-attribution { font-size: 10px; background: rgba(255,255,255,.94); color: #273a35; }
+.map-topline .button { min-height: 34px; padding: 0 8px; font-size: 11px; }
+.camera-map { height: clamp(320px, 58svh, 680px); min-height: 320px; background: #d9e3de; border: 1px solid var(--border); border-radius: 0 0 6px 6px; isolation: isolate; z-index: 0; color-scheme: light; overscroll-behavior: contain; }
+.camera-map .leaflet-container { font-family: inherit; }
+.camera-map .leaflet-control-attribution { font-size: 10px; background: rgba(255, 255, 255, .94); color: #273a35; }
 .camera-map .leaflet-control-attribution a { color: #145548; }
+.camera-map .leaflet-control-zoom a { width: 32px; height: 32px; line-height: 30px; }
 .camera-map .leaflet-popup-content-wrapper, .camera-map .leaflet-popup-tip { background: #0c272b; color: #e3f4ed; }
-.camera-map .leaflet-popup-content { min-width: 205px; max-width: 260px; margin: 15px; font-family: inherit; line-height: 1.6; }
-.camera-map .leaflet-popup-close-button { color: #d5e9df; }
-.map-popup { display: grid; gap: 8px; }
-.map-popup strong { font-size: 13px; line-height: 1.4; padding-right: 8px; }
+.camera-map .leaflet-popup-content { min-width: 190px; max-width: 255px; margin: 12px; font-family: inherit; line-height: 1.5; }
+.camera-map .leaflet-popup-close-button { color: #d5e9df !important; }
+.map-popup { display: grid; gap: 6px; }
+.map-popup strong { padding-right: 8px; font-size: 13px; line-height: 1.35; }
 .map-popup p { margin: 0; color: #a5c3b5; font-size: 11px; }
 .map-popup a { color: #8ee5c7; }
-.map-popup button { color: #09271c; border: 0; border-radius: 5px; padding: 7px 10px; background: #81dfbd; font-size: 11px; text-align: left; cursor: pointer; }
+.map-popup button { min-height: 44px; padding: 0 9px; color: #09271c; background: #81dfbd; border: 0; border-radius: 5px; font-size: 11px; text-align: left; cursor: pointer; }
 .map-popup button:hover { background: #a1f3d5; }
 .map-pin { background: none; border: 0; }
 .map-pin svg { width: 30px; height: 35px; filter: drop-shadow(0 2px 2px #0008); }
 .map-pin:focus-visible { outline: 3px solid #113c33; outline-offset: 3px; }
 .fuel-pin.is-selected svg { filter: drop-shadow(0 0 5px #f4ab37); }
-.map-caption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 7px 15px; padding-top: 10px; color: #91b0a3; font-size: 10px; line-height: 1.6; }
-.map-caption a { color: #a7cbbd; }
-.map-status { margin: 7px 0 0; color: #e6bd79; font-size: 11px; }
+.embedded-note { position: absolute; z-index: 2; right: 8px; bottom: 5px; left: 8px; padding: 4px 7px; color: #f4d6a3; background: #071b20e8; border-radius: 4px; font-size: 9px; text-align: center; pointer-events: none; }
+.map-caption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.4; }
+.map-caption a { color: var(--soft); }
+.map-status { margin: 4px 0 0; color: var(--amber); font-size: 11px; }
 .map-status:empty { display: none; }
-.distance-note { margin: 13px 0 0; max-width: 850px; font-size: 10px; line-height: 1.7; color: #8da99e; }
-.fuel-distance { display: block; font-size: 10px; color: #e6c48d; line-height: 1.5; }
-.camera-map.map-unavailable { display: grid; place-items: center; padding: 20px; text-align: center; background: #132f32; color: #d9e8e0; }
-.map-location-button { background: transparent; border: 0; cursor: pointer; padding: 0; }
-.map-content-hidden { display: none; }
-@media (max-width: 760px) { .map-section { padding: 15px; } .near-toggle { flex: 1 1 100%; } .fuel-select { flex-basis: 180px; } .radius-select { flex: 0 0 90px; } .camera-map { height: 360px; } }
-@media (max-width: 480px) { .map-heading h2 { font-size: 18px; } .map-heading { gap: 8px; } .map-section { padding: 12px; } .fuel-select { flex-basis: calc(100% - 110px); } .map-topline { padding: 8px; } .map-legend { gap: 7px 12px; } #map-count { flex-basis: 100%; } .camera-map { height: 340px; } }
+.map-content-hidden, #map-content[hidden] { display: none !important; }
+.provider-label { color: #89c8d8; font-size: 10px; }
+.road-distance { color: #c8b6f7; font-size: 10px; line-height: 1.4; }
+.fuel-distance { display: block; color: #e6c48d; font-size: 10px; line-height: 1.4; }
+.map-location-button { border: 0; background: transparent; cursor: pointer; }
+
+@media (max-width: 640px) {
+  .map-topline { min-height: 36px; padding: 2px 5px; }
+  .map-legend { gap: 3px 8px; font-size: 11px; }
+  .map-legend i { width: 8px; height: 8px; }
+  #map-count { font-size: 9px; }
+  .map-topline .button { min-height: 32px; padding: 0 6px; font-size: 10px; }
+  .camera-map { height: max(260px, 43svh); min-height: 260px; }
+  .camera-map .leaflet-control-attribution { font-size: 8px; }
+  .camera-map .leaflet-control-zoom a { width: 30px; height: 30px; line-height: 28px; }
+  .camera-map .leaflet-popup-content { min-width: 175px; margin: 10px; }
+  .map-caption { font-size: 9px; }
+}
+
+@media (max-width: 370px) {
+  .map-legend { gap: 3px 6px; font-size: 8px; }
+  .map-legend i { width: 7px; height: 7px; }
+  .map-topline .button { padding: 0 5px; font-size: 9px; }
+}

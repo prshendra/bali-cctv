@@ -15,16 +15,17 @@ Open http://127.0.0.1:4173. Use `PORT=8080 npm start` to choose another port. Op
 
 ## Use the viewer
 
-- Search by camera name, junction, or street, or filter by location.
+- Cari nama CCTV atau jalan langsung di atas peta. Buka **Filter** untuk memilih sumber, lokasi, kawasan, dan SPBU; **Selesai** menutup panel tanpa menghapus filter. **Reset semua** menghapus pencarian dan filter.
 - Pilih **Sumber CCTV** untuk menampilkan Denpasar, Bali Satu Data/Pemprov Bali, atau Peta Smart City/Pemkab Badung. Label sumber tampil di kartu dan popup peta.
 - Klik **Sunset Road**, pilih kawasan **Sekitar Sunset Road**, atau ketik tepat **Sunset Road** pada pencarian. Kamera dan SPBU disaring berdasarkan jarak ke segmen jalan terdekat, bukan kecocokan nama. Pilih jarak 250 m–5 km. Garis ungu menandai koridor jalan; nama kamera yang tidak menyebut Sunset Road tetap bisa muncul.
 - Choose 4, 9, or 16 cameras per page. Use the page controls to reach the entire catalogue.
 - Play individual feeds or connect the whole visible page. Changing pages or filters stops the previous page's streams.
 - Star cameras to save favorites in this browser. Favorites stay on this device.
 - Expand a camera for a large view, or use the map link to find its junction.
+- Gulir roda mouse untuk zoom, tarik untuk menggeser peta, atau gunakan pinch pada layar sentuh.
 - Explore the interactive map: green camera pins open the available streams at a junction; amber fuel pins show SPBU information and a button to find nearby cameras.
 - Enable **CCTV dekat SPBU** to filter by the nearest mapped fuel station, or select a particular SPBU. Choose a radius from 250 m to 5 km. Matching cameras are sorted by distance, and the map shows all matching cameras across every page.
-- Camera search, location filters, and favorites combine with the SPBU filter. **Reset filter SPBU** clears only the fuel filter. **Sembunyikan peta** hides the map while keeping the filters available.
+- Camera search, location filters, and favorites combine with the SPBU filter. **Reset SPBU** clears only the fuel filter. **Tutup peta** hides the map while keeping the filters available.
 - Stop all streams when finished. Feed status reflects actual playback; unavailable feeds offer retry and an official-player link.
 
 Live video comes directly from the city's public HTTPS HLS endpoints. Internet access is required. Availability and footage are controlled by Denpasar ATCS. Playing many cameras at once consumes bandwidth and device resources. This viewer is independent of the city and does not record video or provide camera control.

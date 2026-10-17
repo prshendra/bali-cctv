@@ -12,7 +12,7 @@ export function stationDisplayName(station) { return /^SPBU \(OSM /.test(station
 export function createCameraMap({ onPlayCamera, onSelectStation, onMapWarning }) {
   const L = window.L;
   if (!L) throw new Error('Pustaka peta tidak tersedia. Filter SPBU tetap dapat digunakan.');
-  const map = L.map('camera-map', { scrollWheelZoom: false }).setView([-8.656, 115.221], 13);
+  const map = L.map('camera-map', { scrollWheelZoom: true, dragging: true, touchZoom: true }).setView([-8.656, 115.221], 13);
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>'
@@ -85,6 +85,10 @@ export function createCameraMap({ onPlayCamera, onSelectStation, onMapWarning })
     } else if (currentPoints.length) map.fitBounds(currentPoints, { padding: [25, 25], maxZoom: 15, animate: false });
     else if (latest.stations.length) map.fitBounds(latest.stations.filter(validCoordinate).map(s => [s.latitude, s.longitude]), { padding: [25, 25], maxZoom: 14, animate: false });
   }
+  // Keep tiles aligned when responsive controls or the viewport change map size.
+  const resizeObserver = new ResizeObserver(() => map.invalidateSize({ pan: false }));
+  resizeObserver.observe(document.getElementById('camera-map'));
+  map.on('unload', () => resizeObserver.disconnect());
   return {
     update, fit,
     invalidate: () => map.invalidateSize(),
