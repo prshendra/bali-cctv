@@ -17,7 +17,7 @@ Open http://127.0.0.1:4173. Use `PORT=8080 npm start` to choose another port. Op
 
 - Cari nama CCTV atau jalan langsung di atas peta. Buka **Filter** untuk memilih sumber, lokasi, kawasan, dan SPBU; **Selesai** menutup panel tanpa menghapus filter. **Reset semua** menghapus pencarian dan filter.
 - Pilih **Sumber CCTV** untuk menampilkan Denpasar, Bali Satu Data/Pemprov Bali, atau Peta Smart City/Pemkab Badung. Label sumber tampil di kartu dan popup peta.
-- Klik **Sunset Road**, pilih kawasan **Sekitar Sunset Road**, atau ketik tepat **Sunset Road** pada pencarian. Kamera dan SPBU disaring berdasarkan jarak ke segmen jalan terdekat, bukan kecocokan nama. Pilih jarak 250 m–5 km. Garis ungu menandai koridor jalan; nama kamera yang tidak menyebut Sunset Road tetap bisa muncul.
+- Pilih kawasan **Sekitar Sunset Road** di panel **Filter**, atau ketik tepat **Sunset Road** pada pencarian. Kamera dan SPBU disaring berdasarkan jarak ke segmen jalan terdekat, bukan kecocokan nama. Pilih jarak 250 m–5 km. Garis ungu menandai koridor jalan; nama kamera yang tidak menyebut Sunset Road tetap bisa muncul.
 - Choose 4, 9, or 16 cameras per page. Use the page controls to reach the entire catalogue.
 - Play individual feeds or connect the whole visible page. Changing pages or filters stops the previous page's streams.
 - Star cameras to save favorites in this browser. Favorites stay on this device.

@@ -279,7 +279,6 @@ function updateFilterSummary() {
   $('filter-count').hidden = !filters.length;
   $('filter-summary').textContent = filters.join(' / ');
   $('filter-summary').hidden = !filters.length;
-  $('sunset-shortcut').setAttribute('aria-pressed', String(Boolean(road)));
 }
 function setFiltersVisible(visible) {
   $('filter-panel').hidden = !visible;
@@ -302,7 +301,6 @@ $('location-filter').addEventListener('change', resetAndRender);
 $('source-filter').addEventListener('change', resetAndRender);
 $('area-filter').addEventListener('change', () => { if (!$('area-filter').value && isSunsetSearch($('search').value)) $('search').value = ''; resetAndRender(); });
 $('area-radius').addEventListener('change', resetAndRender);
-$('sunset-shortcut').addEventListener('click', () => { $('area-filter').value = 'sunset-road'; $('search').value = ''; $('location-filter').value = ''; resetAndRender(); setMapVisible(true); });
 $('layout').addEventListener('change', () => { state.pageSize = Number($('layout').value); resetAndRender(); });
 $('all-tab').addEventListener('click', () => { state.favoritesOnly = false; resetAndRender(); });
 $('favorites-tab').addEventListener('click', () => { state.favoritesOnly = true; resetAndRender(); });
@@ -371,7 +369,7 @@ async function init() {
     for (const location of locations) { const option = element('option', '', location); option.value = location; $('location-filter').append(option); }
     $('catalog-date').textContent = data.updatedAt;
     state.roads = await roadsRequest;
-    if (state.roads.some(road => road.id === 'sunset-road')) for (const id of ['area-filter', 'area-radius', 'sunset-shortcut']) $(id).disabled = false;
+    if (state.roads.some(road => road.id === 'sunset-road')) for (const id of ['area-filter', 'area-radius']) $(id).disabled = false;
     try {
       state.map = createCameraMap({
         onPlayCamera: openFocus,
