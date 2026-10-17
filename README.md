@@ -2,12 +2,17 @@
 
 A lightweight browser viewer combining the [Denpasar ATCS catalogue](https://atcs.denpasarkota.go.id/streaming), [Bali Satu Data](https://balisatudata.baliprov.go.id/peta-cctv), and the CCTV location layer of the [Badung Smart City map](https://map.badungkab.go.id/). Camera ownership is not consistently exposed by the aggregators; source labels identify the publishing portal.
 
+## Hosted viewer
+
+Open the [live GitHub Pages viewer](https://prshendra.github.io/bali-cctv/) or visit the [prshendra/bali-cctv repository](https://github.com/prshendra/bali-cctv).
+
 ## Run locally
 
 Requires Node.js 20 or newer. No package installation or build is needed.
 
 ```sh
-cd denpasar-viewer
+git clone https://github.com/prshendra/bali-cctv.git
+cd bali-cctv
 npm start
 ```
 
@@ -75,7 +80,14 @@ Data dan peta: [© OpenStreetMap contributors](https://www.openstreetmap.org/cop
 ## Validate
 
 ```sh
+npm run check
 npm test
 ```
 
-Static files are in `dist/` and may be served by any static web host. HLS.js 1.6.13 is bundled under its Apache 2.0 license in `dist/assets/hls.LICENSE`; Safari can use native HLS playback. Leaflet 1.9.4 is bundled under its BSD 2-Clause license in `dist/assets/leaflet/LICENSE`. No package installation or API key is required.
+## Deploy with GitHub Actions
+
+The Pages workflow checks JavaScript syntax and runs the test suite for pull requests targeting `main`. A push to `main` publishes the static files in `dist/` to GitHub Pages after both checks pass. You can also run the workflow manually from the `main` branch. Pull requests and failed checks never publish the site.
+
+The app has no build step, dependencies, or API key. GitHub Actions uses Node.js 24 to run the checks and uploads `dist/` directly as the Pages artifact. To publish refreshed catalogues, run the relevant `npm run sync` commands locally, commit the changed files, and push to `main`; the successful workflow will publish that snapshot. Catalogue refresh is not run automatically.
+
+HLS.js 1.6.13 is bundled under its Apache 2.0 license in `dist/assets/hls.LICENSE`; Safari can use native HLS playback. Leaflet 1.9.4 is bundled under its BSD 2-Clause license in `dist/assets/leaflet/LICENSE`.

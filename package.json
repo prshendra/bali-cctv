@@ -6,6 +6,7 @@
   "description": "A searchable viewer for public Denpasar ATCS CCTV feeds",
   "scripts": {
     "start": "node scripts/serve.mjs",
+    "check": "for file in dist/*.js scripts/*.mjs; do node --check \"$file\" || exit; done",
     "test": "node --test",
     "sync": "node scripts/sync-cameras.mjs",
     "sync:spbu": "node scripts/sync-fuel.mjs",
